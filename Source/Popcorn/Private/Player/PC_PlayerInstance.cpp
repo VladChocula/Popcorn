@@ -7,7 +7,9 @@
 #include "Camera/CameraComponent.h"
 
 // Sets default values
-APC_PlayerInstance::APC_PlayerInstance()
+APC_PlayerInstance::APC_PlayerInstance() :
+	PlayerCoinsCount(0),
+	PlayerStarsCount(0)
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;

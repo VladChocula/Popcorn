@@ -9,6 +9,7 @@
 class APC_PlayerAvatar;
 class UCameraComponent;
 class USpringArmComponent;
+class APC_SpaceNode;
 
 UCLASS()
 class POPCORN_API APC_PlayerInstance : public APawn
@@ -30,6 +31,21 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player Instance")
 	USceneComponent* RootComp;
 
+	UPROPERTY(BlueprintReadOnly, Category = "PlayerStats")
+	uint8 PlayerCoinsCount;
+
+	UPROPERTY(BlueprintReadOnly, Category = "PlayerStats")
+	uint8 PlayerStarsCount;
+
+	UPROPERTY(BlueprintReadOnly, Category = "PlayerStats")
+	uint8 MovesRemaining;
+
+	UFUNCTION(BlueprintCallable, Category = "PlayerStats")
+	void SetCurrentSpaceNode(APC_SpaceNode* SpaceNode) { CurrentSpaceNode = SpaceNode; }
+
+	UFUNCTION(BlueprintCallable, Category = "PlayerStats")
+	APC_SpaceNode* GetCurrentSpaceNode() { return CurrentSpaceNode; }
+
 
 protected:
 	// Called when the game starts or when spawned
@@ -44,5 +60,7 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Player Camera")
 	USpringArmComponent* SpringArmComp;
+
+	APC_SpaceNode* CurrentSpaceNode;
 
 };

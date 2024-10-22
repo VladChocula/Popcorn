@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealeditor\\inc\\playfab\\uht\\playfabutilities.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueprojects\\popcorn\\intermediate\\build\\win64\\x64\\popcorneditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\playfab\\definitions.playfab.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfab\\classes\\playfabutilities.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealeditor\\inc\\playfab\\uht\\playfabutilities.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,440 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+// IWYU pragma: private, include "PlayFabEconomyAPI.h"
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UObject;
+class UPlayFabEconomyAPI;
+struct FEconomyAddInventoryItemsRequest;
+struct FEconomyAddInventoryItemsResponse;
+struct FEconomyCreateDraftItemRequest;
+struct FEconomyCreateDraftItemResponse;
+struct FEconomyCreateUploadUrlsRequest;
+struct FEconomyCreateUploadUrlsResponse;
+struct FEconomyDeleteEntityItemReviewsRequest;
+struct FEconomyDeleteEntityItemReviewsResponse;
+struct FEconomyDeleteInventoryCollectionRequest;
+struct FEconomyDeleteInventoryCollectionResponse;
+struct FEconomyDeleteInventoryItemsRequest;
+struct FEconomyDeleteInventoryItemsResponse;
+struct FEconomyDeleteItemRequest;
+struct FEconomyDeleteItemResponse;
+struct FEconomyExecuteInventoryOperationsRequest;
+struct FEconomyExecuteInventoryOperationsResponse;
+struct FEconomyExecuteTransferOperationsRequest;
+struct FEconomyExecuteTransferOperationsResponse;
+struct FEconomyGetCatalogConfigRequest;
+struct FEconomyGetCatalogConfigResponse;
+struct FEconomyGetDraftItemRequest;
+struct FEconomyGetDraftItemResponse;
+struct FEconomyGetDraftItemsRequest;
+struct FEconomyGetDraftItemsResponse;
+struct FEconomyGetEntityDraftItemsRequest;
+struct FEconomyGetEntityDraftItemsResponse;
+struct FEconomyGetEntityItemReviewRequest;
+struct FEconomyGetEntityItemReviewResponse;
+struct FEconomyGetInventoryCollectionIdsRequest;
+struct FEconomyGetInventoryCollectionIdsResponse;
+struct FEconomyGetInventoryItemsRequest;
+struct FEconomyGetInventoryItemsResponse;
+struct FEconomyGetInventoryOperationStatusRequest;
+struct FEconomyGetInventoryOperationStatusResponse;
+struct FEconomyGetItemContainersRequest;
+struct FEconomyGetItemContainersResponse;
+struct FEconomyGetItemModerationStateRequest;
+struct FEconomyGetItemModerationStateResponse;
+struct FEconomyGetItemPublishStatusRequest;
+struct FEconomyGetItemPublishStatusResponse;
+struct FEconomyGetItemRequest;
+struct FEconomyGetItemResponse;
+struct FEconomyGetItemReviewsRequest;
+struct FEconomyGetItemReviewsResponse;
+struct FEconomyGetItemReviewSummaryRequest;
+struct FEconomyGetItemReviewSummaryResponse;
+struct FEconomyGetItemsRequest;
+struct FEconomyGetItemsResponse;
+struct FEconomyGetMicrosoftStoreAccessTokensRequest;
+struct FEconomyGetMicrosoftStoreAccessTokensResponse;
+struct FEconomyGetTransactionHistoryRequest;
+struct FEconomyGetTransactionHistoryResponse;
+struct FEconomyPublishDraftItemRequest;
+struct FEconomyPublishDraftItemResponse;
+struct FEconomyPurchaseInventoryItemsRequest;
+struct FEconomyPurchaseInventoryItemsResponse;
+struct FEconomyRedeemAppleAppStoreInventoryItemsRequest;
+struct FEconomyRedeemAppleAppStoreInventoryItemsResponse;
+struct FEconomyRedeemGooglePlayInventoryItemsRequest;
+struct FEconomyRedeemGooglePlayInventoryItemsResponse;
+struct FEconomyRedeemMicrosoftStoreInventoryItemsRequest;
+struct FEconomyRedeemMicrosoftStoreInventoryItemsResponse;
+struct FEconomyRedeemNintendoEShopInventoryItemsRequest;
+struct FEconomyRedeemNintendoEShopInventoryItemsResponse;
+struct FEconomyRedeemPlayStationStoreInventoryItemsRequest;
+struct FEconomyRedeemPlayStationStoreInventoryItemsResponse;
+struct FEconomyRedeemSteamInventoryItemsRequest;
+struct FEconomyRedeemSteamInventoryItemsResponse;
+struct FEconomyReportItemRequest;
+struct FEconomyReportItemResponse;
+struct FEconomyReportItemReviewRequest;
+struct FEconomyReportItemReviewResponse;
+struct FEconomyReviewItemRequest;
+struct FEconomyReviewItemResponse;
+struct FEconomySearchItemsRequest;
+struct FEconomySearchItemsResponse;
+struct FEconomySetItemModerationStateRequest;
+struct FEconomySetItemModerationStateResponse;
+struct FEconomySubmitItemReviewVoteRequest;
+struct FEconomySubmitItemReviewVoteResponse;
+struct FEconomySubtractInventoryItemsRequest;
+struct FEconomySubtractInventoryItemsResponse;
+struct FEconomyTakedownItemReviewsRequest;
+struct FEconomyTakedownItemReviewsResponse;
+struct FEconomyTransferInventoryItemsRequest;
+struct FEconomyTransferInventoryItemsResponse;
+struct FEconomyUpdateCatalogConfigRequest;
+struct FEconomyUpdateCatalogConfigResponse;
+struct FEconomyUpdateDraftItemRequest;
+struct FEconomyUpdateDraftItemResponse;
+struct FEconomyUpdateInventoryItemsRequest;
+struct FEconomyUpdateInventoryItemsResponse;
+struct FPlayFabBaseModel;
+struct FPlayFabError;
+#ifdef PLAYFAB_PlayFabEconomyAPI_generated_h
+#error "PlayFabEconomyAPI.generated.h already included, missing '#pragma once' in PlayFabEconomyAPI.h"
+#endif
+#define PLAYFAB_PlayFabEconomyAPI_generated_h
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_24_DELEGATE \
+PLAYFAB_API void FOnPlayFabEconomyRequestCompleted_DelegateWrapper(const FMulticastScriptDelegate& OnPlayFabEconomyRequestCompleted, FPlayFabBaseModel response, UObject* customData, bool successful);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_32_DELEGATE \
+static void FDelegateOnFailurePlayFabError_DelegateWrapper(const FScriptDelegate& DelegateOnFailurePlayFabError, FPlayFabError error, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_62_DELEGATE \
+static void FDelegateOnSuccessCreateDraftItem_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessCreateDraftItem, FEconomyCreateDraftItemResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_75_DELEGATE \
+static void FDelegateOnSuccessCreateUploadUrls_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessCreateUploadUrls, FEconomyCreateUploadUrlsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_93_DELEGATE \
+static void FDelegateOnSuccessDeleteEntityItemReviews_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessDeleteEntityItemReviews, FEconomyDeleteEntityItemReviewsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_106_DELEGATE \
+static void FDelegateOnSuccessDeleteItem_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessDeleteItem, FEconomyDeleteItemResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_119_DELEGATE \
+static void FDelegateOnSuccessGetCatalogConfig_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetCatalogConfig, FEconomyGetCatalogConfigResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_136_DELEGATE \
+static void FDelegateOnSuccessGetDraftItem_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetDraftItem, FEconomyGetDraftItemResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_153_DELEGATE \
+static void FDelegateOnSuccessGetDraftItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetDraftItems, FEconomyGetDraftItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_169_DELEGATE \
+static void FDelegateOnSuccessGetEntityDraftItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetEntityDraftItems, FEconomyGetEntityDraftItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_186_DELEGATE \
+static void FDelegateOnSuccessGetEntityItemReview_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetEntityItemReview, FEconomyGetEntityItemReviewResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_202_DELEGATE \
+static void FDelegateOnSuccessGetItem_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetItem, FEconomyGetItemResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_219_DELEGATE \
+static void FDelegateOnSuccessGetItemContainers_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetItemContainers, FEconomyGetItemContainersResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_237_DELEGATE \
+static void FDelegateOnSuccessGetItemModerationState_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetItemModerationState, FEconomyGetItemModerationStateResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_253_DELEGATE \
+static void FDelegateOnSuccessGetItemPublishStatus_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetItemPublishStatus, FEconomyGetItemPublishStatusResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_266_DELEGATE \
+static void FDelegateOnSuccessGetItemReviews_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetItemReviews, FEconomyGetItemReviewsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_282_DELEGATE \
+static void FDelegateOnSuccessGetItemReviewSummary_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetItemReviewSummary, FEconomyGetItemReviewSummaryResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_298_DELEGATE \
+static void FDelegateOnSuccessGetItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetItems, FEconomyGetItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_315_DELEGATE \
+static void FDelegateOnSuccessPublishDraftItem_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessPublishDraftItem, FEconomyPublishDraftItemResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_331_DELEGATE \
+static void FDelegateOnSuccessReportItem_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessReportItem, FEconomyReportItemResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_344_DELEGATE \
+static void FDelegateOnSuccessReportItemReview_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessReportItemReview, FEconomyReportItemReviewResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_357_DELEGATE \
+static void FDelegateOnSuccessReviewItem_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessReviewItem, FEconomyReviewItemResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_374_DELEGATE \
+static void FDelegateOnSuccessSearchItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessSearchItems, FEconomySearchItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_392_DELEGATE \
+static void FDelegateOnSuccessSetItemModerationState_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessSetItemModerationState, FEconomySetItemModerationStateResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_408_DELEGATE \
+static void FDelegateOnSuccessSubmitItemReviewVote_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessSubmitItemReviewVote, FEconomySubmitItemReviewVoteResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_421_DELEGATE \
+static void FDelegateOnSuccessTakedownItemReviews_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessTakedownItemReviews, FEconomyTakedownItemReviewsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_434_DELEGATE \
+static void FDelegateOnSuccessUpdateCatalogConfig_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessUpdateCatalogConfig, FEconomyUpdateCatalogConfigResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_451_DELEGATE \
+static void FDelegateOnSuccessUpdateDraftItem_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessUpdateDraftItem, FEconomyUpdateDraftItemResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_468_DELEGATE \
+static void FDelegateOnSuccessAddInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessAddInventoryItems, FEconomyAddInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_481_DELEGATE \
+static void FDelegateOnSuccessDeleteInventoryCollection_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessDeleteInventoryCollection, FEconomyDeleteInventoryCollectionResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_497_DELEGATE \
+static void FDelegateOnSuccessDeleteInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessDeleteInventoryItems, FEconomyDeleteInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_510_DELEGATE \
+static void FDelegateOnSuccessExecuteInventoryOperations_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessExecuteInventoryOperations, FEconomyExecuteInventoryOperationsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_528_DELEGATE \
+static void FDelegateOnSuccessExecuteTransferOperations_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessExecuteTransferOperations, FEconomyExecuteTransferOperationsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_546_DELEGATE \
+static void FDelegateOnSuccessGetInventoryCollectionIds_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetInventoryCollectionIds, FEconomyGetInventoryCollectionIdsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_563_DELEGATE \
+static void FDelegateOnSuccessGetInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetInventoryItems, FEconomyGetInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_576_DELEGATE \
+static void FDelegateOnSuccessGetInventoryOperationStatus_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetInventoryOperationStatus, FEconomyGetInventoryOperationStatusResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_592_DELEGATE \
+static void FDelegateOnSuccessGetMicrosoftStoreAccessTokens_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetMicrosoftStoreAccessTokens, FEconomyGetMicrosoftStoreAccessTokensResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_605_DELEGATE \
+static void FDelegateOnSuccessGetTransactionHistory_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetTransactionHistory, FEconomyGetTransactionHistoryResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_622_DELEGATE \
+static void FDelegateOnSuccessPurchaseInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessPurchaseInventoryItems, FEconomyPurchaseInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_638_DELEGATE \
+static void FDelegateOnSuccessRedeemAppleAppStoreInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessRedeemAppleAppStoreInventoryItems, FEconomyRedeemAppleAppStoreInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_651_DELEGATE \
+static void FDelegateOnSuccessRedeemGooglePlayInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessRedeemGooglePlayInventoryItems, FEconomyRedeemGooglePlayInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_664_DELEGATE \
+static void FDelegateOnSuccessRedeemMicrosoftStoreInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessRedeemMicrosoftStoreInventoryItems, FEconomyRedeemMicrosoftStoreInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_677_DELEGATE \
+static void FDelegateOnSuccessRedeemNintendoEShopInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessRedeemNintendoEShopInventoryItems, FEconomyRedeemNintendoEShopInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_690_DELEGATE \
+static void FDelegateOnSuccessRedeemPlayStationStoreInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessRedeemPlayStationStoreInventoryItems, FEconomyRedeemPlayStationStoreInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_703_DELEGATE \
+static void FDelegateOnSuccessRedeemSteamInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessRedeemSteamInventoryItems, FEconomyRedeemSteamInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_716_DELEGATE \
+static void FDelegateOnSuccessSubtractInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessSubtractInventoryItems, FEconomySubtractInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_729_DELEGATE \
+static void FDelegateOnSuccessTransferInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessTransferInventoryItems, FEconomyTransferInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_749_DELEGATE \
+static void FDelegateOnSuccessUpdateInventoryItems_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessUpdateInventoryItems, FEconomyUpdateInventoryItemsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_29_RPC_WRAPPERS \
+	DECLARE_FUNCTION(execHelperUpdateInventoryItems); \
+	DECLARE_FUNCTION(execUpdateInventoryItems); \
+	DECLARE_FUNCTION(execHelperTransferInventoryItems); \
+	DECLARE_FUNCTION(execTransferInventoryItems); \
+	DECLARE_FUNCTION(execHelperSubtractInventoryItems); \
+	DECLARE_FUNCTION(execSubtractInventoryItems); \
+	DECLARE_FUNCTION(execHelperRedeemSteamInventoryItems); \
+	DECLARE_FUNCTION(execRedeemSteamInventoryItems); \
+	DECLARE_FUNCTION(execHelperRedeemPlayStationStoreInventoryItems); \
+	DECLARE_FUNCTION(execRedeemPlayStationStoreInventoryItems); \
+	DECLARE_FUNCTION(execHelperRedeemNintendoEShopInventoryItems); \
+	DECLARE_FUNCTION(execRedeemNintendoEShopInventoryItems); \
+	DECLARE_FUNCTION(execHelperRedeemMicrosoftStoreInventoryItems); \
+	DECLARE_FUNCTION(execRedeemMicrosoftStoreInventoryItems); \
+	DECLARE_FUNCTION(execHelperRedeemGooglePlayInventoryItems); \
+	DECLARE_FUNCTION(execRedeemGooglePlayInventoryItems); \
+	DECLARE_FUNCTION(execHelperRedeemAppleAppStoreInventoryItems); \
+	DECLARE_FUNCTION(execRedeemAppleAppStoreInventoryItems); \
+	DECLARE_FUNCTION(execHelperPurchaseInventoryItems); \
+	DECLARE_FUNCTION(execPurchaseInventoryItems); \
+	DECLARE_FUNCTION(execHelperGetTransactionHistory); \
+	DECLARE_FUNCTION(execGetTransactionHistory); \
+	DECLARE_FUNCTION(execHelperGetMicrosoftStoreAccessTokens); \
+	DECLARE_FUNCTION(execGetMicrosoftStoreAccessTokens); \
+	DECLARE_FUNCTION(execHelperGetInventoryOperationStatus); \
+	DECLARE_FUNCTION(execGetInventoryOperationStatus); \
+	DECLARE_FUNCTION(execHelperGetInventoryItems); \
+	DECLARE_FUNCTION(execGetInventoryItems); \
+	DECLARE_FUNCTION(execHelperGetInventoryCollectionIds); \
+	DECLARE_FUNCTION(execGetInventoryCollectionIds); \
+	DECLARE_FUNCTION(execHelperExecuteTransferOperations); \
+	DECLARE_FUNCTION(execExecuteTransferOperations); \
+	DECLARE_FUNCTION(execHelperExecuteInventoryOperations); \
+	DECLARE_FUNCTION(execExecuteInventoryOperations); \
+	DECLARE_FUNCTION(execHelperDeleteInventoryItems); \
+	DECLARE_FUNCTION(execDeleteInventoryItems); \
+	DECLARE_FUNCTION(execHelperDeleteInventoryCollection); \
+	DECLARE_FUNCTION(execDeleteInventoryCollection); \
+	DECLARE_FUNCTION(execHelperAddInventoryItems); \
+	DECLARE_FUNCTION(execAddInventoryItems); \
+	DECLARE_FUNCTION(execHelperUpdateDraftItem); \
+	DECLARE_FUNCTION(execUpdateDraftItem); \
+	DECLARE_FUNCTION(execHelperUpdateCatalogConfig); \
+	DECLARE_FUNCTION(execUpdateCatalogConfig); \
+	DECLARE_FUNCTION(execHelperTakedownItemReviews); \
+	DECLARE_FUNCTION(execTakedownItemReviews); \
+	DECLARE_FUNCTION(execHelperSubmitItemReviewVote); \
+	DECLARE_FUNCTION(execSubmitItemReviewVote); \
+	DECLARE_FUNCTION(execHelperSetItemModerationState); \
+	DECLARE_FUNCTION(execSetItemModerationState); \
+	DECLARE_FUNCTION(execHelperSearchItems); \
+	DECLARE_FUNCTION(execSearchItems); \
+	DECLARE_FUNCTION(execHelperReviewItem); \
+	DECLARE_FUNCTION(execReviewItem); \
+	DECLARE_FUNCTION(execHelperReportItemReview); \
+	DECLARE_FUNCTION(execReportItemReview); \
+	DECLARE_FUNCTION(execHelperReportItem); \
+	DECLARE_FUNCTION(execReportItem); \
+	DECLARE_FUNCTION(execHelperPublishDraftItem); \
+	DECLARE_FUNCTION(execPublishDraftItem); \
+	DECLARE_FUNCTION(execHelperGetItems); \
+	DECLARE_FUNCTION(execGetItems); \
+	DECLARE_FUNCTION(execHelperGetItemReviewSummary); \
+	DECLARE_FUNCTION(execGetItemReviewSummary); \
+	DECLARE_FUNCTION(execHelperGetItemReviews); \
+	DECLARE_FUNCTION(execGetItemReviews); \
+	DECLARE_FUNCTION(execHelperGetItemPublishStatus); \
+	DECLARE_FUNCTION(execGetItemPublishStatus); \
+	DECLARE_FUNCTION(execHelperGetItemModerationState); \
+	DECLARE_FUNCTION(execGetItemModerationState); \
+	DECLARE_FUNCTION(execHelperGetItemContainers); \
+	DECLARE_FUNCTION(execGetItemContainers); \
+	DECLARE_FUNCTION(execHelperGetItem); \
+	DECLARE_FUNCTION(execGetItem); \
+	DECLARE_FUNCTION(execHelperGetEntityItemReview); \
+	DECLARE_FUNCTION(execGetEntityItemReview); \
+	DECLARE_FUNCTION(execHelperGetEntityDraftItems); \
+	DECLARE_FUNCTION(execGetEntityDraftItems); \
+	DECLARE_FUNCTION(execHelperGetDraftItems); \
+	DECLARE_FUNCTION(execGetDraftItems); \
+	DECLARE_FUNCTION(execHelperGetDraftItem); \
+	DECLARE_FUNCTION(execGetDraftItem); \
+	DECLARE_FUNCTION(execHelperGetCatalogConfig); \
+	DECLARE_FUNCTION(execGetCatalogConfig); \
+	DECLARE_FUNCTION(execHelperDeleteItem); \
+	DECLARE_FUNCTION(execDeleteItem); \
+	DECLARE_FUNCTION(execHelperDeleteEntityItemReviews); \
+	DECLARE_FUNCTION(execDeleteEntityItemReviews); \
+	DECLARE_FUNCTION(execHelperCreateUploadUrls); \
+	DECLARE_FUNCTION(execCreateUploadUrls); \
+	DECLARE_FUNCTION(execHelperCreateDraftItem); \
+	DECLARE_FUNCTION(execCreateDraftItem);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_29_INCLASS \
+private: \
+	static void StaticRegisterNativesUPlayFabEconomyAPI(); \
+	friend struct Z_Construct_UClass_UPlayFabEconomyAPI_Statics; \
+public: \
+	DECLARE_CLASS(UPlayFabEconomyAPI, UOnlineBlueprintCallProxyBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/PlayFab"), NO_API) \
+	DECLARE_SERIALIZER(UPlayFabEconomyAPI)
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_29_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UPlayFabEconomyAPI(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPlayFabEconomyAPI) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPlayFabEconomyAPI); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPlayFabEconomyAPI); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	UPlayFabEconomyAPI(UPlayFabEconomyAPI&&); \
+	UPlayFabEconomyAPI(const UPlayFabEconomyAPI&); \
+public: \
+	NO_API virtual ~UPlayFabEconomyAPI();
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_26_PROLOG
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_29_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_29_RPC_WRAPPERS \
+	FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_29_INCLASS \
+	FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h_29_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> PLAYFAB_API UClass* StaticClass<class UPlayFabEconomyAPI>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabEconomyAPI_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -8,8 +8,5 @@
 /NODEFAULTLIB
 "C:\UEProjects\Popcorn\Intermediate\Build\Win64\x64\PopcornEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "C:\UEProjects\Popcorn\Plugins\PlayFabPlugin\PlayFab\Intermediate\Build\Win64\x64\UnrealEditor\Development\PlayFabCommon\Module.PlayFabCommon.cpp.obj"
-"C:\UEProjects\Popcorn\Plugins\PlayFabPlugin\PlayFab\Intermediate\Build\Win64\x64\UnrealEditor\Development\PlayFabCommon\PlayFabAuthenticationContext.gen.cpp.obj"
-"C:\UEProjects\Popcorn\Plugins\PlayFabPlugin\PlayFab\Intermediate\Build\Win64\x64\UnrealEditor\Development\PlayFabCommon\PlayFabCommon.init.gen.cpp.obj"
-"C:\UEProjects\Popcorn\Plugins\PlayFabPlugin\PlayFab\Intermediate\Build\Win64\x64\UnrealEditor\Development\PlayFabCommon\PlayFabRuntimeSettings.gen.cpp.obj"
 "C:\UEProjects\Popcorn\Plugins\PlayFabPlugin\PlayFab\Intermediate\Build\Win64\x64\UnrealEditor\Development\PlayFabCommon\Default.rc2.res"
 /OUT:"C:\UEProjects\Popcorn\Plugins\PlayFabPlugin\PlayFab\Intermediate\Build\Win64\x64\UnrealEditor\Development\PlayFabCommon\UnrealEditor-PlayFabCommon.lib"

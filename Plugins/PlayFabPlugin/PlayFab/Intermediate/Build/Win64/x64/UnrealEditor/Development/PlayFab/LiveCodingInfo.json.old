@@ -2,122 +2,76 @@
 	"RemapUnityFiles": 
 	{
 		"Module.PlayFab.1.cpp.obj": [
+			"PlayFab.cpp.obj",
 			"PlayFab.init.gen.cpp.obj",
-			"PlayFabAddonAPI.gen.cpp.obj"
-		],
-		"Module.PlayFab.2.cpp.obj": [
+			"PlayFabAddonAPI.gen.cpp.obj",
 			"PlayFabAddonModelDecoder.gen.cpp.obj",
-			"PlayFabAddonModels.gen.cpp.obj"
-		],
-		"Module.PlayFab.3.cpp.obj": [
-			"PlayFabAdminAPI.gen.cpp.obj"
-		],
-		"Module.PlayFab.4.cpp.obj": [
-			"PlayFabAdminModelDecoder.gen.cpp.obj"
-		],
-		"Module.PlayFab.5.cpp.obj": [
-			"PlayFabAdminModels.gen.cpp.obj"
-		],
-		"Module.PlayFab.6.cpp.obj": [
+			"PlayFabAddonModels.gen.cpp.obj",
+			"PlayFabAdminAPI.gen.cpp.obj",
+			"PlayFabAdminModelDecoder.gen.cpp.obj",
+			"PlayFabAdminModels.gen.cpp.obj",
 			"PlayFabAuthenticationAPI.gen.cpp.obj",
 			"PlayFabAuthenticationModelDecoder.gen.cpp.obj",
 			"PlayFabAuthenticationModels.gen.cpp.obj",
 			"PlayFabBaseModel.gen.cpp.obj",
-			"PlayFabClientAPI.gen.cpp.obj"
-		],
-		"Module.PlayFab.7.cpp.obj": [
-			"PlayFabClientModelDecoder.gen.cpp.obj"
-		],
-		"Module.PlayFab.8.cpp.obj": [
-			"PlayFabClientModels.gen.cpp.obj"
-		],
-		"Module.PlayFab.9.cpp.obj": [
+			"PlayFabClientAPI.gen.cpp.obj",
+			"PlayFabClientModelDecoder.gen.cpp.obj",
+			"PlayFabClientModels.gen.cpp.obj",
 			"PlayFabCloudScriptAPI.gen.cpp.obj",
 			"PlayFabCloudScriptModelDecoder.gen.cpp.obj",
-			"PlayFabCloudScriptModels.gen.cpp.obj"
-		],
-		"Module.PlayFab.10.cpp.obj": [
+			"PlayFabCloudScriptModels.gen.cpp.obj",
 			"PlayFabDataAPI.gen.cpp.obj",
 			"PlayFabDataModelDecoder.gen.cpp.obj",
 			"PlayFabDataModels.gen.cpp.obj",
-			"PlayFabEconomyAPI.gen.cpp.obj"
-		],
-		"Module.PlayFab.11.cpp.obj": [
+			"PlayFabEconomyAPI.gen.cpp.obj",
 			"PlayFabEconomyModelDecoder.gen.cpp.obj",
-			"PlayFabEconomyModels.gen.cpp.obj"
-		],
-		"Module.PlayFab.12.cpp.obj": [
-			"PlayFabEnums.gen.cpp.obj"
-		],
-		"Module.PlayFab.13.cpp.obj": [
+			"PlayFabEconomyModels.gen.cpp.obj",
+			"PlayFabEnums.gen.cpp.obj",
 			"PlayFabEventsAPI.gen.cpp.obj",
 			"PlayFabEventsModelDecoder.gen.cpp.obj",
 			"PlayFabEventsModels.gen.cpp.obj",
-			"PlayFabExperimentationAPI.gen.cpp.obj"
-		],
-		"Module.PlayFab.14.cpp.obj": [
+			"PlayFabExperimentationAPI.gen.cpp.obj",
 			"PlayFabExperimentationModelDecoder.gen.cpp.obj",
 			"PlayFabExperimentationModels.gen.cpp.obj",
-			"PlayFabGroupsAPI.gen.cpp.obj"
-		],
-		"Module.PlayFab.15.cpp.obj": [
+			"PlayFabGroupsAPI.gen.cpp.obj",
 			"PlayFabGroupsModelDecoder.gen.cpp.obj",
-			"PlayFabGroupsModels.gen.cpp.obj"
-		],
-		"Module.PlayFab.16.cpp.obj": [
+			"PlayFabGroupsModels.gen.cpp.obj",
 			"PlayFabInsightsAPI.gen.cpp.obj",
 			"PlayFabInsightsModelDecoder.gen.cpp.obj",
 			"PlayFabInsightsModels.gen.cpp.obj",
 			"PlayFabJsonObject.gen.cpp.obj",
-			"PlayFabJsonValue.gen.cpp.obj"
-		],
-		"Module.PlayFab.17.cpp.obj": [
-			"PlayFabLeaderboardsAPI.gen.cpp.obj"
-		],
-		"Module.PlayFab.18.cpp.obj": [
+			"PlayFabJsonValue.gen.cpp.obj",
+			"PlayFabLeaderboardsAPI.gen.cpp.obj",
 			"PlayFabLeaderboardsModelDecoder.gen.cpp.obj",
 			"PlayFabLeaderboardsModels.gen.cpp.obj",
-			"PlayFabLocalizationAPI.gen.cpp.obj"
-		],
-		"Module.PlayFab.19.cpp.obj": [
+			"PlayFabLocalizationAPI.gen.cpp.obj",
 			"PlayFabLocalizationModelDecoder.gen.cpp.obj",
 			"PlayFabLocalizationModels.gen.cpp.obj",
 			"PlayFabLoginResultCommon.gen.cpp.obj",
-			"PlayFabMultiplayerAPI.gen.cpp.obj"
-		],
-		"Module.PlayFab.20.cpp.obj": [
+			"PlayFabMultiplayerAPI.gen.cpp.obj",
 			"PlayFabMultiplayerModelDecoder.gen.cpp.obj",
-			"PlayFabMultiplayerModels.gen.cpp.obj"
-		],
-		"Module.PlayFab.21.cpp.obj": [
+			"PlayFabMultiplayerModels.gen.cpp.obj",
 			"PlayFabProfilesAPI.gen.cpp.obj",
 			"PlayFabProfilesModelDecoder.gen.cpp.obj",
 			"PlayFabProfilesModels.gen.cpp.obj",
-			"PlayFabProgressionAPI.gen.cpp.obj"
-		],
-		"Module.PlayFab.22.cpp.obj": [
+			"PlayFabProgressionAPI.gen.cpp.obj",
 			"PlayFabProgressionModelDecoder.gen.cpp.obj",
 			"PlayFabProgressionModels.gen.cpp.obj",
 			"PlayFabRequestCommon.gen.cpp.obj",
 			"PlayFabResultCommon.gen.cpp.obj",
-			"PlayFabServerAPI.gen.cpp.obj"
+			"PlayFabServerAPI.gen.cpp.obj",
+			"PlayFabServerModelDecoder.gen.cpp.obj",
+			"PlayFabServerModels.gen.cpp.obj",
+			"PlayFabUtilities.gen.cpp.obj"
 		],
-		"Module.PlayFab.23.cpp.obj": [
-			"PlayFabServerModelDecoder.gen.cpp.obj"
-		],
-		"Module.PlayFab.24.cpp.obj": [
-			"PlayFabServerModels.gen.cpp.obj"
-		],
-		"Module.PlayFab.25.cpp.obj": [
-			"PlayFabUtilities.gen.cpp.obj",
-			"PlayFab.cpp.obj",
+		"Module.PlayFab.2.cpp.obj": [
 			"PlayFabAddonAPI.cpp.obj",
 			"PlayFabAddonModelDecoder.cpp.obj",
 			"PlayFabAddonModels.cpp.obj",
 			"PlayFabAdminAPI.cpp.obj",
 			"PlayFabAdminModelDecoder.cpp.obj"
 		],
-		"Module.PlayFab.26.cpp.obj": [
+		"Module.PlayFab.3.cpp.obj": [
 			"PlayFabAdminModels.cpp.obj",
 			"PlayFabAuthenticationAPI.cpp.obj",
 			"PlayFabAuthenticationModelDecoder.cpp.obj",
@@ -125,7 +79,7 @@
 			"PlayFabBaseModel.cpp.obj",
 			"PlayFabClientAPI.cpp.obj"
 		],
-		"Module.PlayFab.27.cpp.obj": [
+		"Module.PlayFab.4.cpp.obj": [
 			"PlayFabClientModelDecoder.cpp.obj",
 			"PlayFabClientModels.cpp.obj",
 			"PlayFabCloudScriptAPI.cpp.obj",
@@ -145,7 +99,7 @@
 			"PlayFabExperimentationModels.cpp.obj",
 			"PlayFabGroupsAPI.cpp.obj"
 		],
-		"Module.PlayFab.28.cpp.obj": [
+		"Module.PlayFab.5.cpp.obj": [
 			"PlayFabGroupsModelDecoder.cpp.obj",
 			"PlayFabGroupsModels.cpp.obj",
 			"PlayFabInsightsAPI.cpp.obj",
@@ -162,7 +116,7 @@
 			"PlayFabMultiplayerAPI.cpp.obj",
 			"PlayFabMultiplayerModelDecoder.cpp.obj"
 		],
-		"Module.PlayFab.29.cpp.obj": [
+		"Module.PlayFab.6.cpp.obj": [
 			"PlayFabMultiplayerModels.cpp.obj",
 			"PlayFabProfilesAPI.cpp.obj",
 			"PlayFabProfilesModelDecoder.cpp.obj",
@@ -172,7 +126,7 @@
 			"PlayFabProgressionModels.cpp.obj",
 			"PlayFabServerAPI.cpp.obj"
 		],
-		"Module.PlayFab.30.cpp.obj": [
+		"Module.PlayFab.7.cpp.obj": [
 			"PlayFabServerModelDecoder.cpp.obj",
 			"PlayFabServerModels.cpp.obj",
 			"PlayFabUtilities.cpp.obj"

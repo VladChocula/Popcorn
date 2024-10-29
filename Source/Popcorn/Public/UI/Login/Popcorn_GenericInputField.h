@@ -19,16 +19,29 @@ class POPCORN_API UPopcorn_GenericInputField : public UUserWidget
 
 public:
 	
-	UPROPERTY(BlueprintReadWRite, meta = (BindWidget), Category = "Input Field")
+	UPROPERTY(BlueprintReadWRite, EditInstanceOnly, meta = (BindWidget), Category = "Input Field")
 	UTextBlock* TextLabel;
 
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Input Field")
-	UEditableTextBox* InputField;
+	UPROPERTY(BlueprintReadWrite, EditInstanceOnly, meta = (BindWidget), Category = "Input Field")
+	UEditableTextBox* InputField; 
+
+	UPROPERTY(BlueprintReadWRite, EditInstanceOnly, Category = "Input Field")
+	bool ShouldObfuscate = false;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Input Field")
+	FText DefaultLabelText;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Input Field")
+	FText DefaultHintText;
 
 	UFUNCTION(BlueprintCallable, Category = "Input Field")
 	void InitializeInputField(const FText& InLabelText, const FText& InDefaultInputText);
 
-	UPROPERTY(BlueprintReadWRite, EditInstanceOnly, Category = "Input Field")
-	bool ShouldObfuscate = false;
-	
+	UFUNCTION(BlueprintCallable, Category = "Input Field")
+	void SetLabelText(const FText& InLabelText);
+
+	UFUNCTION(BlueprintCallable, Category = "Input Field")
+	void SetDefaultHintText(const FText& InDefaultHintText);
+
+	virtual void NativePreConstruct() override;
 };

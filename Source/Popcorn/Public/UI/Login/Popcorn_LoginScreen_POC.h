@@ -7,6 +7,7 @@
 #include "Popcorn_LoginScreen_POC.generated.h"
 
 class UWidgetSwitcher;
+class UPopcorn_LoginScreen_SubWidget;
 /**
  * 
  */
@@ -20,13 +21,13 @@ public:
 	UWidgetSwitcher* LoginWidgetSwitcher;
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Login Screen")
-	UUserWidget* SignupWidget;
+	UPopcorn_LoginScreen_SubWidget* SignupWidget;
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Login Screen")
-	UUserWidget* LoginWidget;
+	UPopcorn_LoginScreen_SubWidget* LoginWidget;
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Login Screen")
-	UUserWidget* ForgotPasswordWidget;
+	UPopcorn_LoginScreen_SubWidget* ForgotPasswordWidget;
 
 	UFUNCTION(BlueprintCallable, Category = "Login Screen")
 	void ShowLoginPanel();
@@ -37,7 +38,16 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Login Screen")
 	void ShowSignUpPanel();
 
-protected:
-	virtual void NativeConstruct() override;
+	virtual void NativePreConstruct() override;
+
+private:
+	UFUNCTION()
+	void ForgotPasswordHandler(const FText& Email);
+
+	UFUNCTION()
+	void LoginUserHandler(const FText& Email, const FText& Password);
+
+	UFUNCTION()
+	void SignupUserHandler(const FText& Email, const FText& Password, const FText& Username);
 	
 };

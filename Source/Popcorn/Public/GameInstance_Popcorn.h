@@ -55,6 +55,14 @@ public:
 	void OnRegistrationSuccess(const PlayFab::ClientModels::FRegisterPlayFabUserResult& Result);
 	void OnRegistrationFailure(const PlayFab::FPlayFabCppError& ErrorResult);
 
+	//Handlers for Playfab Login Screen
+	UFUNCTION(BlueprintCallable, Category = "Playfab Login")
+	void ForgotPasswordHandler(const FText& Email);
+	UFUNCTION(BlueprintCallable, Category = "Playfab Login")
+	void LoginUserHandler(const FText& Email, const FText& Password);
+	UFUNCTION(BlueprintCallable, Category = "Playfab Login")
+	void SignupUserHandler(const FText& Email, const FText& Password, const FText& Username);
+
 private:
 	
 	PlayFabClientPtr clientAPI = nullptr;

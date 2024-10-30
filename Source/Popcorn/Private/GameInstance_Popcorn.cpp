@@ -5,14 +5,20 @@
 #include "Core/PlayFabSettings.h"
 #include "Core/PlayFabClientAPI.h"
 #include "Core/PlayFabClientDataModels.h"
-#include "Core/PlayFabError.h"
+#include "Core/PlayFabResultHandler.h"
 #include "PlayFab.h"
+#include "PlayFabUtilities.h"
+#include "Utils/LevelNames.h"
+#include "Kismet/GameplayStatics.h"
+
+using namespace PlayFab;
+using namespace PlayFab::ClientModels;
 
 void UGameInstance_Popcorn::Init()
 {
 	Super::Init();
 
-	FString titleId;
+	FString titleId = TEXT("FB15D");
 
 	#if defined(TEST_BUILD)
 		titleId = TEXT("4CD53");
@@ -22,7 +28,8 @@ void UGameInstance_Popcorn::Init()
 		titleId = TEXT("E1939");
 	#endif
 	
-	GetMutableDefault<UPlayFabRuntimeSettings>()->TitleId = titleId;
+	//Rabbit hole of getting the RunTimeSettings and editing them in the Init() call
+	//GetMutableDefault<UPlayFabRuntimeSettings>()->TitleId = titleId;
 
 	UE_LOG(LogTemp, Log, TEXT("Initializing PlayFab with TitleId: %s"), *titleId);
 	InitializePlayFab(titleId);
@@ -43,13 +50,16 @@ void UGameInstance_Popcorn::StartGameInstance()
 
 	UE_LOG(LogTemp, Log, TEXT("Game Instance Started"));
 
-	UE_LOG(LogTemp, Log, TEXT("Load into Main Menu"));
+	UE_LOG(LogTemp, Log, TEXT("Load into PlayerLogin"));
+	UGameplayStatics::OpenLevel(GetWorld(), FLevelNames::PlayFabLogin);
 }
 
 void UGameInstance_Popcorn::InitializePlayFab(FString& TitleId)
 {
 
 	clientAPI = IPlayFabModuleInterface::Get().GetClientAPI();
+
+	UPlayFabUtilities::setPlayFabSettings(TitleId);
 
 }
 
@@ -113,9 +123,37 @@ void UGameInstance_Popcorn::RegisterUserWithEmail(const FString& Email, const FS
 void UGameInstance_Popcorn::OnRegistrationSuccess(const PlayFab::ClientModels::FRegisterPlayFabUserResult& Result)
 {
 	UE_LOG(LogTemp, Log, TEXT("Registration Success. Player ID: %s"), *Result.PlayFabId);
+
+	//Load into the Main Menu - Set to DebugStarter for now.
+	UGameplayStatics::OpenLevel(GetWorld(), FLevelNames::DebugStarter);
 }
 
 void UGameInstance_Popcorn::OnRegistrationFailure(const PlayFab::FPlayFabCppError& ErrorResult)
 {
 	UE_LOG(LogTemp, Error, TEXT("Registration Failed: %s"), *ErrorResult.ErrorMessage);
+}
+
+void UGameInstance_Popcorn::ForgotPasswordHandler(const FText& Email)
+{
+	UE_LOG(LogTemp, Log, TEXT("Game Instance - Forgot Password - Email: %s"), *Email.ToString());
+}
+
+void UGameInstance_Popcorn::LoginUserHandler(const FText& Email, const FText& Password)
+{
+	UE_LOG(LogTemp, Log, TEXT("Game Instance - Login - Email: %s \t Password: %s"), *Email.ToString(), *Password.ToString());
+}
+
+void UGameInstance_Popcorn::SignupUserHandler(const FText& Email, const FText& Password, const FText& Username)
+{
+	UE_LOG(LogTemp, Log, TEXT("Game Instance - Signup User - Username: %s \t Email: %s \t Password: %s"), *Username.ToString(), *Email.ToString(), *Password.ToString());
+	FRegisterPlayFabUserRequest Request;
+	Request.DisplayName = Username.ToString();
+	Request.Username = Username.ToString();
+	Request.Password = Password.ToString();
+	Request.Email = Email.ToString();
+
+	UPlayFabClientAPI::FRegisterPlayFabUserDelegate SuccessDelegate = UPlayFabClientAPI::FRegisterPlayFabUserDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRegistrationSuccess);
+	FPlayFabErrorDelegate ErrorDelegate = FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRegistrationFailure);
+
+	clientAPI->RegisterPlayFabUser(Request, SuccessDelegate, ErrorDelegate);
 }

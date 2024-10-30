@@ -4,12 +4,15 @@
 #include "UI/Login/PC_ForgotPasswordWidget_POC.h"
 #include "UI/Login/Popcorn_GenericInputField.h"
 #include "Components/EditableTextBox.h"
+#include "GameInstance_Popcorn.h"
 
 void UPC_ForgotPasswordWidget_POC::OnForgotPasswordClicked()
 {
 	if (EmailField)
 	{
-		OnForgotPasswordRequested.Broadcast(EmailField->InputField->GetText());
+		FText Email = EmailField->InputField->GetText();
+		OnForgotPasswordRequested.Broadcast(Email);
+		PCGameInstance->ForgotPasswordHandler(Email);
 	}
 }
 

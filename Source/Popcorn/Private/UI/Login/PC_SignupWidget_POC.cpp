@@ -4,13 +4,18 @@
 #include "UI/Login/PC_SignupWidget_POC.h"
 #include "UI/Login/Popcorn_GenericInputField.h"
 #include "Components/EditableTextBox.h"
+#include "GameInstance_Popcorn.h"
 
 
 void UPC_SignupWidget_POC::OnSignUpButtonClicked()
 {
 	if (EmailField && UsernameField && PasswordField)
 	{
-		OnSignUpRequested.Broadcast(EmailField->InputField->GetText(), PasswordField->InputField->GetText(), UsernameField->InputField->GetText());
+		FText Email = EmailField->InputField->GetText();
+		FText Password = PasswordField->InputField->GetText();
+		FText Username = UsernameField->InputField->GetText();
+		OnSignUpRequested.Broadcast(Email, Password, Username);
+		PCGameInstance->SignupUserHandler(Email, Password, Username);
 	}
 }
 

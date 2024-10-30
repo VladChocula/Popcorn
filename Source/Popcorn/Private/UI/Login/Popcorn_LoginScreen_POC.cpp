@@ -4,6 +4,8 @@
 #include "UI/Login/Popcorn_LoginScreen_POC.h"
 #include "Components/WidgetSwitcher.h"
 #include "UI/Login/Popcorn_LoginScreen_SubWidget.h"
+#include "Kismet/GameplayStatics.h"
+#include "GameInstance_Popcorn.h"
 
 void UPopcorn_LoginScreen_POC::ShowLoginPanel()
 {
@@ -35,18 +37,33 @@ void UPopcorn_LoginScreen_POC::NativePreConstruct()
 	{
 		SignupWidget->ParentLoginScreen = this;
 		SignupWidget->OnSignUpRequested.AddDynamic(this, &UPopcorn_LoginScreen_POC::SignupUserHandler);
+
+		if (UGameInstance_Popcorn* GI = Cast<UGameInstance_Popcorn>(UGameplayStatics::GetGameInstance(this)))
+		{
+			SignupWidget->PCGameInstance = GI;
+		}
 	}
 
 	if (LoginWidget)
 	{
 		LoginWidget->ParentLoginScreen = this;
 		LoginWidget->OnLoginRequested.AddDynamic(this, &UPopcorn_LoginScreen_POC::LoginUserHandler);
+
+		if (UGameInstance_Popcorn* GI = Cast<UGameInstance_Popcorn>(UGameplayStatics::GetGameInstance(this)))
+		{
+			LoginWidget->PCGameInstance = GI;
+		}
 	}
 
 	if (ForgotPasswordWidget)
 	{
 		ForgotPasswordWidget->ParentLoginScreen = this;
 		ForgotPasswordWidget->OnForgotPasswordRequested.AddDynamic(this, &UPopcorn_LoginScreen_POC::ForgotPasswordHandler);
+
+		if (UGameInstance_Popcorn* GI = Cast<UGameInstance_Popcorn>(UGameplayStatics::GetGameInstance(this)))
+		{
+			ForgotPasswordWidget->PCGameInstance = GI;
+		}
 	}
 
 	if (LoginWidgetSwitcher && SignupWidget)

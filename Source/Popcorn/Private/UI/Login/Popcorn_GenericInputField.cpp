@@ -4,6 +4,7 @@
 #include "UI/Login/Popcorn_GenericInputField.h"
 #include "Components/TextBlock.h"
 #include "Components/EditableTextBox.h"
+#include "Kismet/GameplayStatics.h"
 
 void UPopcorn_GenericInputField::InitializeInputField(const FText& InLabelText, const FText& InDefaultInputText)
 {
@@ -27,6 +28,17 @@ void UPopcorn_GenericInputField::SetDefaultHintText(const FText& InDefaultHintTe
 	}
 }
 
+
+
+void UPopcorn_GenericInputField::OnInputFieldFocused(const FText& Text)
+{
+	if (InputField)
+	{
+		InputField->SetUserFocus(UGameplayStatics::GetPlayerController(GetWorld(), 0));
+		InputField->SetKeyboardFocus();
+	}
+}
+
 void UPopcorn_GenericInputField::NativePreConstruct()
 {
 	Super::NativePreConstruct();
@@ -36,9 +48,14 @@ void UPopcorn_GenericInputField::NativePreConstruct()
 		TextLabel->SetText(DefaultLabelText);
 	}
 
-	if (InputField && !DefaultHintText.IsEmpty())
+	if (InputField)
 	{
-		InputField->SetHintText(DefaultHintText);
+		InputField->OnTextChanged.AddDynamic(this, &UPopcorn_GenericInputField::OnInputFieldFocused);
+
+		if (!DefaultHintText.IsEmpty())
+		{
+			InputField->SetHintText(DefaultHintText);
+		}
 	}
 
 	if (ShouldObfuscate && InputField)

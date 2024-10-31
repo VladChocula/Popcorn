@@ -40,5 +40,4 @@ private:
 
 	UFUNCTION(BlueprintCallable, meta = (AllowPrivateAccess = "true"), Category = "Signup Widget")
 	void OnLoginButtonClicked();
-	
 };

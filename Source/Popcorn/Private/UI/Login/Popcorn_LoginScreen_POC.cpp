@@ -68,7 +68,7 @@ void UPopcorn_LoginScreen_POC::NativePreConstruct()
 
 	if (LoginWidgetSwitcher && SignupWidget)
 	{
-		LoginWidgetSwitcher->SetActiveWidget(Cast<UUserWidget>(SignupWidget));
+		LoginWidgetSwitcher->SetActiveWidget(LoginWidget);
 	}
 
 

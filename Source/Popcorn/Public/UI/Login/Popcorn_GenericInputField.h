@@ -43,5 +43,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Input Field")
 	void SetDefaultHintText(const FText& InDefaultHintText);
 
+	UFUNCTION(BlueprintCallable, Category = "Input Field")
+	void OnInputFieldFocused(const FText& Text);
+
 	virtual void NativePreConstruct() override;
 };

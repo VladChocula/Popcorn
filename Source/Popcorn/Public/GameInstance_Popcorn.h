@@ -12,6 +12,7 @@ namespace PlayFab
 	{
 		struct FLoginResult;
 		struct FRegisterPlayFabUserResult;
+		struct FSendAccountRecoveryEmailResult;
 	}
 
 	struct FPlayFabCppError;
@@ -33,20 +34,17 @@ public:
 	virtual void Init() override;
 	virtual void Shutdown() override;
 	virtual void StartGameInstance() override;
+	FString GetTitleId() const { return _titleId; }
 
 	//PlayFab Initialization
-	void InitializePlayFab(FString& TitleId);
+	void InitializePlayFab();
 
 	// Login Success/Failure Callbacks
 	void OnLoginSuccess(const PlayFab::ClientModels::FLoginResult& Result);
 	void OnLoginFailure(const PlayFab::FPlayFabCppError& ErrorResult);
 
 	//Login Methods
-	void LogIntoPlayFab();
 	void LoginWithEmail(const FString& Email, const FString& Password);
-	void GooglePlayLogin(const FString& GoogleAccessToken);
-	void AppleLogin(const FString& AppleIdentityToken);
-	void TestLogin();
 
 	//Registration Methods
 	void RegisterUserWithEmail(const FString& Email, const FString& Password);
@@ -54,6 +52,10 @@ public:
 	//Registration Callbacks
 	void OnRegistrationSuccess(const PlayFab::ClientModels::FRegisterPlayFabUserResult& Result);
 	void OnRegistrationFailure(const PlayFab::FPlayFabCppError& ErrorResult);
+
+	//Account Recovery Callbacks
+	void OnAccountRecoveryRequestSuccess(const PlayFab::ClientModels::FSendAccountRecoveryEmailResult& Result);
+	void OnAccountRecoveryRequestFailure(const PlayFab::FPlayFabCppError& ErrorResult);
 
 	//Handlers for Playfab Login Screen
 	UFUNCTION(BlueprintCallable, Category = "Playfab Login")
@@ -65,5 +67,7 @@ public:
 
 private:
 	
-	PlayFabClientPtr clientAPI = nullptr;
+	PlayFabClientPtr _clientAPI = nullptr;
+	FString _sessionTicket;
+	FString _titleId = TEXT("FB15D");
 };

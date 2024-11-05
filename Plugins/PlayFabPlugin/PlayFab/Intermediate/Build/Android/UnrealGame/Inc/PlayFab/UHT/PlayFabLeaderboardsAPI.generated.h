@@ -1,0 +1,239 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+// IWYU pragma: private, include "PlayFabLeaderboardsAPI.h"
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UObject;
+class UPlayFabLeaderboardsAPI;
+struct FLeaderboardsCreateLeaderboardDefinitionRequest;
+struct FLeaderboardsCreateStatisticDefinitionRequest;
+struct FLeaderboardsDeleteLeaderboardDefinitionRequest;
+struct FLeaderboardsDeleteLeaderboardEntriesRequest;
+struct FLeaderboardsDeleteStatisticDefinitionRequest;
+struct FLeaderboardsDeleteStatisticsRequest;
+struct FLeaderboardsDeleteStatisticsResponse;
+struct FLeaderboardsEmptyResponse;
+struct FLeaderboardsGetEntityLeaderboardRequest;
+struct FLeaderboardsGetEntityLeaderboardResponse;
+struct FLeaderboardsGetFriendLeaderboardForEntityRequest;
+struct FLeaderboardsGetLeaderboardAroundEntityRequest;
+struct FLeaderboardsGetLeaderboardDefinitionRequest;
+struct FLeaderboardsGetLeaderboardDefinitionResponse;
+struct FLeaderboardsGetLeaderboardForEntitiesRequest;
+struct FLeaderboardsGetStatisticDefinitionRequest;
+struct FLeaderboardsGetStatisticDefinitionResponse;
+struct FLeaderboardsGetStatisticDefinitionsRequest;
+struct FLeaderboardsGetStatisticDefinitionsResponse;
+struct FLeaderboardsGetStatisticsForEntitiesRequest;
+struct FLeaderboardsGetStatisticsForEntitiesResponse;
+struct FLeaderboardsGetStatisticsRequest;
+struct FLeaderboardsGetStatisticsResponse;
+struct FLeaderboardsIncrementLeaderboardVersionRequest;
+struct FLeaderboardsIncrementLeaderboardVersionResponse;
+struct FLeaderboardsIncrementStatisticVersionRequest;
+struct FLeaderboardsIncrementStatisticVersionResponse;
+struct FLeaderboardsListLeaderboardDefinitionsRequest;
+struct FLeaderboardsListLeaderboardDefinitionsResponse;
+struct FLeaderboardsListStatisticDefinitionsRequest;
+struct FLeaderboardsListStatisticDefinitionsResponse;
+struct FLeaderboardsUnlinkLeaderboardFromStatisticRequest;
+struct FLeaderboardsUpdateLeaderboardEntriesRequest;
+struct FLeaderboardsUpdateStatisticsRequest;
+struct FLeaderboardsUpdateStatisticsResponse;
+struct FPlayFabBaseModel;
+struct FPlayFabError;
+#ifdef PLAYFAB_PlayFabLeaderboardsAPI_generated_h
+#error "PlayFabLeaderboardsAPI.generated.h already included, missing '#pragma once' in PlayFabLeaderboardsAPI.h"
+#endif
+#define PLAYFAB_PlayFabLeaderboardsAPI_generated_h
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_24_DELEGATE \
+PLAYFAB_API void FOnPlayFabLeaderboardsRequestCompleted_DelegateWrapper(const FMulticastScriptDelegate& OnPlayFabLeaderboardsRequestCompleted, FPlayFabBaseModel response, UObject* customData, bool successful);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_32_DELEGATE \
+static void FDelegateOnFailurePlayFabError_DelegateWrapper(const FScriptDelegate& DelegateOnFailurePlayFabError, FPlayFabError error, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_62_DELEGATE \
+static void FDelegateOnSuccessCreateLeaderboardDefinition_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessCreateLeaderboardDefinition, FLeaderboardsEmptyResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_75_DELEGATE \
+static void FDelegateOnSuccessDeleteLeaderboardDefinition_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessDeleteLeaderboardDefinition, FLeaderboardsEmptyResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_88_DELEGATE \
+static void FDelegateOnSuccessDeleteLeaderboardEntries_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessDeleteLeaderboardEntries, FLeaderboardsEmptyResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_101_DELEGATE \
+static void FDelegateOnSuccessGetLeaderboardDefinition_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetLeaderboardDefinition, FLeaderboardsGetLeaderboardDefinitionResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_114_DELEGATE \
+static void FDelegateOnSuccessIncrementLeaderboardVersion_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessIncrementLeaderboardVersion, FLeaderboardsIncrementLeaderboardVersionResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_127_DELEGATE \
+static void FDelegateOnSuccessListLeaderboardDefinitions_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessListLeaderboardDefinitions, FLeaderboardsListLeaderboardDefinitionsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_140_DELEGATE \
+static void FDelegateOnSuccessUnlinkLeaderboardFromStatistic_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessUnlinkLeaderboardFromStatistic, FLeaderboardsEmptyResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_153_DELEGATE \
+static void FDelegateOnSuccessUpdateLeaderboardEntries_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessUpdateLeaderboardEntries, FLeaderboardsEmptyResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_170_DELEGATE \
+static void FDelegateOnSuccessCreateStatisticDefinition_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessCreateStatisticDefinition, FLeaderboardsEmptyResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_183_DELEGATE \
+static void FDelegateOnSuccessDeleteStatisticDefinition_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessDeleteStatisticDefinition, FLeaderboardsEmptyResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_196_DELEGATE \
+static void FDelegateOnSuccessDeleteStatistics_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessDeleteStatistics, FLeaderboardsDeleteStatisticsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_209_DELEGATE \
+static void FDelegateOnSuccessGetFriendLeaderboardForEntity_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetFriendLeaderboardForEntity, FLeaderboardsGetEntityLeaderboardResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_222_DELEGATE \
+static void FDelegateOnSuccessGetLeaderboard_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetLeaderboard, FLeaderboardsGetEntityLeaderboardResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_235_DELEGATE \
+static void FDelegateOnSuccessGetLeaderboardAroundEntity_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetLeaderboardAroundEntity, FLeaderboardsGetEntityLeaderboardResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_248_DELEGATE \
+static void FDelegateOnSuccessGetLeaderboardForEntities_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetLeaderboardForEntities, FLeaderboardsGetEntityLeaderboardResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_261_DELEGATE \
+static void FDelegateOnSuccessGetStatisticDefinition_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetStatisticDefinition, FLeaderboardsGetStatisticDefinitionResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_274_DELEGATE \
+static void FDelegateOnSuccessGetStatisticDefinitions_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetStatisticDefinitions, FLeaderboardsGetStatisticDefinitionsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_287_DELEGATE \
+static void FDelegateOnSuccessGetStatistics_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetStatistics, FLeaderboardsGetStatisticsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_300_DELEGATE \
+static void FDelegateOnSuccessGetStatisticsForEntities_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetStatisticsForEntities, FLeaderboardsGetStatisticsForEntitiesResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_313_DELEGATE \
+static void FDelegateOnSuccessIncrementStatisticVersion_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessIncrementStatisticVersion, FLeaderboardsIncrementStatisticVersionResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_326_DELEGATE \
+static void FDelegateOnSuccessListStatisticDefinitions_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessListStatisticDefinitions, FLeaderboardsListStatisticDefinitionsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_339_DELEGATE \
+static void FDelegateOnSuccessUpdateStatistics_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessUpdateStatistics, FLeaderboardsUpdateStatisticsResponse result, UObject* customData);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_29_RPC_WRAPPERS \
+	DECLARE_FUNCTION(execHelperUpdateStatistics); \
+	DECLARE_FUNCTION(execUpdateStatistics); \
+	DECLARE_FUNCTION(execHelperListStatisticDefinitions); \
+	DECLARE_FUNCTION(execListStatisticDefinitions); \
+	DECLARE_FUNCTION(execHelperIncrementStatisticVersion); \
+	DECLARE_FUNCTION(execIncrementStatisticVersion); \
+	DECLARE_FUNCTION(execHelperGetStatisticsForEntities); \
+	DECLARE_FUNCTION(execGetStatisticsForEntities); \
+	DECLARE_FUNCTION(execHelperGetStatistics); \
+	DECLARE_FUNCTION(execGetStatistics); \
+	DECLARE_FUNCTION(execHelperGetStatisticDefinitions); \
+	DECLARE_FUNCTION(execGetStatisticDefinitions); \
+	DECLARE_FUNCTION(execHelperGetStatisticDefinition); \
+	DECLARE_FUNCTION(execGetStatisticDefinition); \
+	DECLARE_FUNCTION(execHelperGetLeaderboardForEntities); \
+	DECLARE_FUNCTION(execGetLeaderboardForEntities); \
+	DECLARE_FUNCTION(execHelperGetLeaderboardAroundEntity); \
+	DECLARE_FUNCTION(execGetLeaderboardAroundEntity); \
+	DECLARE_FUNCTION(execHelperGetLeaderboard); \
+	DECLARE_FUNCTION(execGetLeaderboard); \
+	DECLARE_FUNCTION(execHelperGetFriendLeaderboardForEntity); \
+	DECLARE_FUNCTION(execGetFriendLeaderboardForEntity); \
+	DECLARE_FUNCTION(execHelperDeleteStatistics); \
+	DECLARE_FUNCTION(execDeleteStatistics); \
+	DECLARE_FUNCTION(execHelperDeleteStatisticDefinition); \
+	DECLARE_FUNCTION(execDeleteStatisticDefinition); \
+	DECLARE_FUNCTION(execHelperCreateStatisticDefinition); \
+	DECLARE_FUNCTION(execCreateStatisticDefinition); \
+	DECLARE_FUNCTION(execHelperUpdateLeaderboardEntries); \
+	DECLARE_FUNCTION(execUpdateLeaderboardEntries); \
+	DECLARE_FUNCTION(execHelperUnlinkLeaderboardFromStatistic); \
+	DECLARE_FUNCTION(execUnlinkLeaderboardFromStatistic); \
+	DECLARE_FUNCTION(execHelperListLeaderboardDefinitions); \
+	DECLARE_FUNCTION(execListLeaderboardDefinitions); \
+	DECLARE_FUNCTION(execHelperIncrementLeaderboardVersion); \
+	DECLARE_FUNCTION(execIncrementLeaderboardVersion); \
+	DECLARE_FUNCTION(execHelperGetLeaderboardDefinition); \
+	DECLARE_FUNCTION(execGetLeaderboardDefinition); \
+	DECLARE_FUNCTION(execHelperDeleteLeaderboardEntries); \
+	DECLARE_FUNCTION(execDeleteLeaderboardEntries); \
+	DECLARE_FUNCTION(execHelperDeleteLeaderboardDefinition); \
+	DECLARE_FUNCTION(execDeleteLeaderboardDefinition); \
+	DECLARE_FUNCTION(execHelperCreateLeaderboardDefinition); \
+	DECLARE_FUNCTION(execCreateLeaderboardDefinition);
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_29_INCLASS \
+private: \
+	static void StaticRegisterNativesUPlayFabLeaderboardsAPI(); \
+	friend struct Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics; \
+public: \
+	DECLARE_CLASS(UPlayFabLeaderboardsAPI, UOnlineBlueprintCallProxyBase, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/PlayFab"), NO_API) \
+	DECLARE_SERIALIZER(UPlayFabLeaderboardsAPI)
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_29_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UPlayFabLeaderboardsAPI(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPlayFabLeaderboardsAPI) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UPlayFabLeaderboardsAPI); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPlayFabLeaderboardsAPI); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	UPlayFabLeaderboardsAPI(UPlayFabLeaderboardsAPI&&); \
+	UPlayFabLeaderboardsAPI(const UPlayFabLeaderboardsAPI&); \
+public: \
+	NO_API virtual ~UPlayFabLeaderboardsAPI();
+
+
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_26_PROLOG
+#define FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_29_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_29_RPC_WRAPPERS \
+	FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_29_INCLASS \
+	FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_29_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> PLAYFAB_API UClass* StaticClass<class UPlayFabLeaderboardsAPI>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

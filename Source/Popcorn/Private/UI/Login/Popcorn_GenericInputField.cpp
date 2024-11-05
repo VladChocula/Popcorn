@@ -28,8 +28,6 @@ void UPopcorn_GenericInputField::SetDefaultHintText(const FText& InDefaultHintTe
 	}
 }
 
-
-
 void UPopcorn_GenericInputField::OnInputFieldFocused(const FText& Text)
 {
 	if (InputField)

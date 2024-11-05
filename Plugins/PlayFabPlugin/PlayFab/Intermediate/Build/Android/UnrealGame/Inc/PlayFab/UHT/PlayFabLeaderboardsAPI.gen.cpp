@@ -1,0 +1,4607 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+#include "UObject/GeneratedCppIncludes.h"
+#include "PlayFab/Classes/PlayFabLeaderboardsAPI.h"
+#include "PlayFab/Classes/PlayFabBaseModel.h"
+#include "PlayFab/Classes/PlayFabLeaderboardsModels.h"
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+void EmptyLinkFunctionForGeneratedCodePlayFabLeaderboardsAPI() {}
+
+// Begin Cross Module References
+COREUOBJECT_API UClass* Z_Construct_UClass_UObject_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UOnlineBlueprintCallProxyBase();
+PLAYFAB_API UClass* Z_Construct_UClass_UPlayFabJsonObject_NoRegister();
+PLAYFAB_API UClass* Z_Construct_UClass_UPlayFabLeaderboardsAPI();
+PLAYFAB_API UClass* Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature();
+PLAYFAB_API UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsCreateLeaderboardDefinitionRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsCreateStatisticDefinitionRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsDeleteLeaderboardDefinitionRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsDeleteLeaderboardEntriesRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsDeleteStatisticDefinitionRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsDeleteStatisticsRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsDeleteStatisticsResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsEmptyResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetEntityLeaderboardRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetEntityLeaderboardResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetFriendLeaderboardForEntityRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetLeaderboardAroundEntityRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetLeaderboardDefinitionRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetLeaderboardDefinitionResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetLeaderboardForEntitiesRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetStatisticDefinitionRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetStatisticDefinitionResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetStatisticDefinitionsRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetStatisticDefinitionsResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetStatisticsForEntitiesRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetStatisticsForEntitiesResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetStatisticsRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsGetStatisticsResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsIncrementLeaderboardVersionRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsIncrementLeaderboardVersionResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsIncrementStatisticVersionRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsIncrementStatisticVersionResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsListLeaderboardDefinitionsRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsListLeaderboardDefinitionsResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsListStatisticDefinitionsRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsListStatisticDefinitionsResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsUnlinkLeaderboardFromStatisticRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsUpdateLeaderboardEntriesRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsUpdateStatisticsRequest();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FLeaderboardsUpdateStatisticsResponse();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FPlayFabBaseModel();
+PLAYFAB_API UScriptStruct* Z_Construct_UScriptStruct_FPlayFabError();
+PLAYFABCOMMON_API UClass* Z_Construct_UClass_UPlayFabAuthenticationContext_NoRegister();
+UPackage* Z_Construct_UPackage__Script_PlayFab();
+// End Cross Module References
+
+// Begin Delegate FOnPlayFabLeaderboardsRequestCompleted
+struct Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics
+{
+	struct _Script_PlayFab_eventOnPlayFabLeaderboardsRequestCompleted_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_PlayFab_eventOnPlayFabLeaderboardsRequestCompleted_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_PlayFab_eventOnPlayFabLeaderboardsRequestCompleted_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((_Script_PlayFab_eventOnPlayFabLeaderboardsRequestCompleted_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(_Script_PlayFab_eventOnPlayFabLeaderboardsRequestCompleted_Parms), &Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UPackage__Script_PlayFab, nullptr, "OnPlayFabLeaderboardsRequestCompleted__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::_Script_PlayFab_eventOnPlayFabLeaderboardsRequestCompleted_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::_Script_PlayFab_eventOnPlayFabLeaderboardsRequestCompleted_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void FOnPlayFabLeaderboardsRequestCompleted_DelegateWrapper(const FMulticastScriptDelegate& OnPlayFabLeaderboardsRequestCompleted, FPlayFabBaseModel response, UObject* customData, bool successful)
+{
+	struct _Script_PlayFab_eventOnPlayFabLeaderboardsRequestCompleted_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+	_Script_PlayFab_eventOnPlayFabLeaderboardsRequestCompleted_Parms Parms;
+	Parms.response=response;
+	Parms.customData=customData;
+	Parms.successful=successful ? true : false;
+	OnPlayFabLeaderboardsRequestCompleted.ProcessMulticastDelegate<UObject>(&Parms);
+}
+// End Delegate FOnPlayFabLeaderboardsRequestCompleted
+
+// Begin Delegate FDelegateOnFailurePlayFabError
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnFailurePlayFabError_Parms
+	{
+		FPlayFabError error;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_error;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::NewProp_error = { "error", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnFailurePlayFabError_Parms, error), Z_Construct_UScriptStruct_FPlayFabError, METADATA_PARAMS(0, nullptr) }; // 1109941606
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnFailurePlayFabError_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::NewProp_error,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnFailurePlayFabError__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnFailurePlayFabError_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnFailurePlayFabError_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnFailurePlayFabError_DelegateWrapper(const FScriptDelegate& DelegateOnFailurePlayFabError, FPlayFabError error, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnFailurePlayFabError_Parms
+	{
+		FPlayFabError error;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnFailurePlayFabError_Parms Parms;
+	Parms.error=error;
+	Parms.customData=customData;
+	DelegateOnFailurePlayFabError.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnFailurePlayFabError
+
+// Begin Delegate FDelegateOnSuccessCreateLeaderboardDefinition
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateLeaderboardDefinition_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "///////////////////////////////////////////////////////\n// Leaderboards\n//////////////////////////////////////////////////////\n// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "/\n Leaderboards\n\n callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateLeaderboardDefinition_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsEmptyResponse, METADATA_PARAMS(0, nullptr) }; // 1707282111
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateLeaderboardDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateLeaderboardDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateLeaderboardDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessCreateLeaderboardDefinition_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessCreateLeaderboardDefinition, FLeaderboardsEmptyResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateLeaderboardDefinition_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateLeaderboardDefinition_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessCreateLeaderboardDefinition.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessCreateLeaderboardDefinition
+
+// Begin Delegate FDelegateOnSuccessDeleteLeaderboardDefinition
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardDefinition_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardDefinition_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsEmptyResponse, METADATA_PARAMS(0, nullptr) }; // 1707282111
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessDeleteLeaderboardDefinition_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessDeleteLeaderboardDefinition, FLeaderboardsEmptyResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardDefinition_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardDefinition_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessDeleteLeaderboardDefinition.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessDeleteLeaderboardDefinition
+
+// Begin Delegate FDelegateOnSuccessDeleteLeaderboardEntries
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardEntries_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardEntries_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsEmptyResponse, METADATA_PARAMS(0, nullptr) }; // 1707282111
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardEntries_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardEntries_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardEntries_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessDeleteLeaderboardEntries_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessDeleteLeaderboardEntries, FLeaderboardsEmptyResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardEntries_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteLeaderboardEntries_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessDeleteLeaderboardEntries.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessDeleteLeaderboardEntries
+
+// Begin Delegate FDelegateOnSuccessGetLeaderboardDefinition
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardDefinition_Parms
+	{
+		FLeaderboardsGetLeaderboardDefinitionResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardDefinition_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsGetLeaderboardDefinitionResponse, METADATA_PARAMS(0, nullptr) }; // 3238118768
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessGetLeaderboardDefinition_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetLeaderboardDefinition, FLeaderboardsGetLeaderboardDefinitionResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardDefinition_Parms
+	{
+		FLeaderboardsGetLeaderboardDefinitionResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardDefinition_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessGetLeaderboardDefinition.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessGetLeaderboardDefinition
+
+// Begin Delegate FDelegateOnSuccessIncrementLeaderboardVersion
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementLeaderboardVersion_Parms
+	{
+		FLeaderboardsIncrementLeaderboardVersionResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementLeaderboardVersion_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsIncrementLeaderboardVersionResponse, METADATA_PARAMS(0, nullptr) }; // 392003926
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementLeaderboardVersion_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementLeaderboardVersion_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementLeaderboardVersion_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessIncrementLeaderboardVersion_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessIncrementLeaderboardVersion, FLeaderboardsIncrementLeaderboardVersionResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementLeaderboardVersion_Parms
+	{
+		FLeaderboardsIncrementLeaderboardVersionResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementLeaderboardVersion_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessIncrementLeaderboardVersion.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessIncrementLeaderboardVersion
+
+// Begin Delegate FDelegateOnSuccessListLeaderboardDefinitions
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessListLeaderboardDefinitions_Parms
+	{
+		FLeaderboardsListLeaderboardDefinitionsResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessListLeaderboardDefinitions_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsListLeaderboardDefinitionsResponse, METADATA_PARAMS(0, nullptr) }; // 3998172070
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessListLeaderboardDefinitions_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessListLeaderboardDefinitions_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessListLeaderboardDefinitions_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessListLeaderboardDefinitions_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessListLeaderboardDefinitions, FLeaderboardsListLeaderboardDefinitionsResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessListLeaderboardDefinitions_Parms
+	{
+		FLeaderboardsListLeaderboardDefinitionsResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessListLeaderboardDefinitions_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessListLeaderboardDefinitions.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessListLeaderboardDefinitions
+
+// Begin Delegate FDelegateOnSuccessUnlinkLeaderboardFromStatistic
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessUnlinkLeaderboardFromStatistic_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessUnlinkLeaderboardFromStatistic_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsEmptyResponse, METADATA_PARAMS(0, nullptr) }; // 1707282111
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessUnlinkLeaderboardFromStatistic_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessUnlinkLeaderboardFromStatistic_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessUnlinkLeaderboardFromStatistic_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessUnlinkLeaderboardFromStatistic_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessUnlinkLeaderboardFromStatistic, FLeaderboardsEmptyResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessUnlinkLeaderboardFromStatistic_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessUnlinkLeaderboardFromStatistic_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessUnlinkLeaderboardFromStatistic.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessUnlinkLeaderboardFromStatistic
+
+// Begin Delegate FDelegateOnSuccessUpdateLeaderboardEntries
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateLeaderboardEntries_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateLeaderboardEntries_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsEmptyResponse, METADATA_PARAMS(0, nullptr) }; // 1707282111
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateLeaderboardEntries_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateLeaderboardEntries_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateLeaderboardEntries_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessUpdateLeaderboardEntries_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessUpdateLeaderboardEntries, FLeaderboardsEmptyResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateLeaderboardEntries_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateLeaderboardEntries_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessUpdateLeaderboardEntries.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessUpdateLeaderboardEntries
+
+// Begin Delegate FDelegateOnSuccessCreateStatisticDefinition
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateStatisticDefinition_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "///////////////////////////////////////////////////////\n// Statistics and Leaderboards\n//////////////////////////////////////////////////////\n// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "/\n Statistics and Leaderboards\n\n callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateStatisticDefinition_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsEmptyResponse, METADATA_PARAMS(0, nullptr) }; // 1707282111
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateStatisticDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessCreateStatisticDefinition__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateStatisticDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateStatisticDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessCreateStatisticDefinition_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessCreateStatisticDefinition, FLeaderboardsEmptyResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateStatisticDefinition_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessCreateStatisticDefinition_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessCreateStatisticDefinition.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessCreateStatisticDefinition
+
+// Begin Delegate FDelegateOnSuccessDeleteStatisticDefinition
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatisticDefinition_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatisticDefinition_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsEmptyResponse, METADATA_PARAMS(0, nullptr) }; // 1707282111
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatisticDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatisticDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatisticDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessDeleteStatisticDefinition_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessDeleteStatisticDefinition, FLeaderboardsEmptyResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatisticDefinition_Parms
+	{
+		FLeaderboardsEmptyResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatisticDefinition_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessDeleteStatisticDefinition.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessDeleteStatisticDefinition
+
+// Begin Delegate FDelegateOnSuccessDeleteStatistics
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatistics_Parms
+	{
+		FLeaderboardsDeleteStatisticsResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatistics_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsDeleteStatisticsResponse, METADATA_PARAMS(0, nullptr) }; // 1463845676
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatistics_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessDeleteStatistics__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatistics_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatistics_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessDeleteStatistics_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessDeleteStatistics, FLeaderboardsDeleteStatisticsResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatistics_Parms
+	{
+		FLeaderboardsDeleteStatisticsResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessDeleteStatistics_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessDeleteStatistics.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessDeleteStatistics
+
+// Begin Delegate FDelegateOnSuccessGetFriendLeaderboardForEntity
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetFriendLeaderboardForEntity_Parms
+	{
+		FLeaderboardsGetEntityLeaderboardResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetFriendLeaderboardForEntity_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsGetEntityLeaderboardResponse, METADATA_PARAMS(0, nullptr) }; // 4096382263
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetFriendLeaderboardForEntity_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetFriendLeaderboardForEntity_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetFriendLeaderboardForEntity_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessGetFriendLeaderboardForEntity_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetFriendLeaderboardForEntity, FLeaderboardsGetEntityLeaderboardResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetFriendLeaderboardForEntity_Parms
+	{
+		FLeaderboardsGetEntityLeaderboardResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetFriendLeaderboardForEntity_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessGetFriendLeaderboardForEntity.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessGetFriendLeaderboardForEntity
+
+// Begin Delegate FDelegateOnSuccessGetLeaderboard
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboard_Parms
+	{
+		FLeaderboardsGetEntityLeaderboardResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboard_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsGetEntityLeaderboardResponse, METADATA_PARAMS(0, nullptr) }; // 4096382263
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboard_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessGetLeaderboard__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboard_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboard_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessGetLeaderboard_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetLeaderboard, FLeaderboardsGetEntityLeaderboardResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboard_Parms
+	{
+		FLeaderboardsGetEntityLeaderboardResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboard_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessGetLeaderboard.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessGetLeaderboard
+
+// Begin Delegate FDelegateOnSuccessGetLeaderboardAroundEntity
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardAroundEntity_Parms
+	{
+		FLeaderboardsGetEntityLeaderboardResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardAroundEntity_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsGetEntityLeaderboardResponse, METADATA_PARAMS(0, nullptr) }; // 4096382263
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardAroundEntity_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardAroundEntity_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardAroundEntity_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessGetLeaderboardAroundEntity_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetLeaderboardAroundEntity, FLeaderboardsGetEntityLeaderboardResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardAroundEntity_Parms
+	{
+		FLeaderboardsGetEntityLeaderboardResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardAroundEntity_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessGetLeaderboardAroundEntity.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessGetLeaderboardAroundEntity
+
+// Begin Delegate FDelegateOnSuccessGetLeaderboardForEntities
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardForEntities_Parms
+	{
+		FLeaderboardsGetEntityLeaderboardResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardForEntities_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsGetEntityLeaderboardResponse, METADATA_PARAMS(0, nullptr) }; // 4096382263
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardForEntities_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardForEntities_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardForEntities_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessGetLeaderboardForEntities_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetLeaderboardForEntities, FLeaderboardsGetEntityLeaderboardResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardForEntities_Parms
+	{
+		FLeaderboardsGetEntityLeaderboardResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetLeaderboardForEntities_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessGetLeaderboardForEntities.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessGetLeaderboardForEntities
+
+// Begin Delegate FDelegateOnSuccessGetStatisticDefinition
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinition_Parms
+	{
+		FLeaderboardsGetStatisticDefinitionResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinition_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsGetStatisticDefinitionResponse, METADATA_PARAMS(0, nullptr) }; // 4242106806
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessGetStatisticDefinition__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessGetStatisticDefinition_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetStatisticDefinition, FLeaderboardsGetStatisticDefinitionResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinition_Parms
+	{
+		FLeaderboardsGetStatisticDefinitionResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinition_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessGetStatisticDefinition.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessGetStatisticDefinition
+
+// Begin Delegate FDelegateOnSuccessGetStatisticDefinitions
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinitions_Parms
+	{
+		FLeaderboardsGetStatisticDefinitionsResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinitions_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsGetStatisticDefinitionsResponse, METADATA_PARAMS(0, nullptr) }; // 3139977831
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinitions_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessGetStatisticDefinitions__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinitions_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinitions_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessGetStatisticDefinitions_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetStatisticDefinitions, FLeaderboardsGetStatisticDefinitionsResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinitions_Parms
+	{
+		FLeaderboardsGetStatisticDefinitionsResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticDefinitions_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessGetStatisticDefinitions.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessGetStatisticDefinitions
+
+// Begin Delegate FDelegateOnSuccessGetStatistics
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatistics_Parms
+	{
+		FLeaderboardsGetStatisticsResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatistics_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsGetStatisticsResponse, METADATA_PARAMS(0, nullptr) }; // 703329285
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatistics_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessGetStatistics__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatistics_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatistics_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessGetStatistics_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetStatistics, FLeaderboardsGetStatisticsResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatistics_Parms
+	{
+		FLeaderboardsGetStatisticsResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatistics_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessGetStatistics.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessGetStatistics
+
+// Begin Delegate FDelegateOnSuccessGetStatisticsForEntities
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticsForEntities_Parms
+	{
+		FLeaderboardsGetStatisticsForEntitiesResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticsForEntities_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsGetStatisticsForEntitiesResponse, METADATA_PARAMS(0, nullptr) }; // 913478776
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticsForEntities_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessGetStatisticsForEntities__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticsForEntities_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticsForEntities_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessGetStatisticsForEntities_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessGetStatisticsForEntities, FLeaderboardsGetStatisticsForEntitiesResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticsForEntities_Parms
+	{
+		FLeaderboardsGetStatisticsForEntitiesResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessGetStatisticsForEntities_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessGetStatisticsForEntities.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessGetStatisticsForEntities
+
+// Begin Delegate FDelegateOnSuccessIncrementStatisticVersion
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementStatisticVersion_Parms
+	{
+		FLeaderboardsIncrementStatisticVersionResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementStatisticVersion_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsIncrementStatisticVersionResponse, METADATA_PARAMS(0, nullptr) }; // 3645743905
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementStatisticVersion_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessIncrementStatisticVersion__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementStatisticVersion_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementStatisticVersion_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessIncrementStatisticVersion_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessIncrementStatisticVersion, FLeaderboardsIncrementStatisticVersionResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementStatisticVersion_Parms
+	{
+		FLeaderboardsIncrementStatisticVersionResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessIncrementStatisticVersion_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessIncrementStatisticVersion.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessIncrementStatisticVersion
+
+// Begin Delegate FDelegateOnSuccessListStatisticDefinitions
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessListStatisticDefinitions_Parms
+	{
+		FLeaderboardsListStatisticDefinitionsResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessListStatisticDefinitions_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsListStatisticDefinitionsResponse, METADATA_PARAMS(0, nullptr) }; // 4144721463
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessListStatisticDefinitions_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessListStatisticDefinitions__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessListStatisticDefinitions_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessListStatisticDefinitions_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessListStatisticDefinitions_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessListStatisticDefinitions, FLeaderboardsListStatisticDefinitionsResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessListStatisticDefinitions_Parms
+	{
+		FLeaderboardsListStatisticDefinitionsResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessListStatisticDefinitions_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessListStatisticDefinitions.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessListStatisticDefinitions
+
+// Begin Delegate FDelegateOnSuccessUpdateStatistics
+struct Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateStatistics_Parms
+	{
+		FLeaderboardsUpdateStatisticsResponse result;
+		UObject* customData;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// callbacks\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "callbacks" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_result;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::NewProp_result = { "result", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateStatistics_Parms, result), Z_Construct_UScriptStruct_FLeaderboardsUpdateStatisticsResponse, METADATA_PARAMS(0, nullptr) }; // 2138865466
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateStatistics_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::NewProp_result,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::NewProp_customData,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DelegateOnSuccessUpdateStatistics__DelegateSignature", nullptr, nullptr, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateStatistics_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00120000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateStatistics_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void UPlayFabLeaderboardsAPI::FDelegateOnSuccessUpdateStatistics_DelegateWrapper(const FScriptDelegate& DelegateOnSuccessUpdateStatistics, FLeaderboardsUpdateStatisticsResponse result, UObject* customData)
+{
+	struct PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateStatistics_Parms
+	{
+		FLeaderboardsUpdateStatisticsResponse result;
+		UObject* customData;
+	};
+	PlayFabLeaderboardsAPI_eventDelegateOnSuccessUpdateStatistics_Parms Parms;
+	Parms.result=result;
+	Parms.customData=customData;
+	DelegateOnSuccessUpdateStatistics.ProcessDelegate<UObject>(&Parms);
+}
+// End Delegate FDelegateOnSuccessUpdateStatistics
+
+// Begin Class UPlayFabLeaderboardsAPI Function CreateLeaderboardDefinition
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventCreateLeaderboardDefinition_Parms
+	{
+		FLeaderboardsCreateLeaderboardDefinitionRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Creates a new leaderboard definition. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Creates a new leaderboard definition." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventCreateLeaderboardDefinition_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsCreateLeaderboardDefinitionRequest, METADATA_PARAMS(0, nullptr) }; // 3309039794
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventCreateLeaderboardDefinition_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3630734122
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventCreateLeaderboardDefinition_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventCreateLeaderboardDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventCreateLeaderboardDefinition_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "CreateLeaderboardDefinition", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::PlayFabLeaderboardsAPI_eventCreateLeaderboardDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::PlayFabLeaderboardsAPI_eventCreateLeaderboardDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execCreateLeaderboardDefinition)
+{
+	P_GET_STRUCT(FLeaderboardsCreateLeaderboardDefinitionRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::CreateLeaderboardDefinition(Z_Param_request,FDelegateOnSuccessCreateLeaderboardDefinition(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function CreateLeaderboardDefinition
+
+// Begin Class UPlayFabLeaderboardsAPI Function CreateStatisticDefinition
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventCreateStatisticDefinition_Parms
+	{
+		FLeaderboardsCreateStatisticDefinitionRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Create a new entity statistic definition. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Create a new entity statistic definition." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventCreateStatisticDefinition_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsCreateStatisticDefinitionRequest, METADATA_PARAMS(0, nullptr) }; // 1669595923
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventCreateStatisticDefinition_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3077476079
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventCreateStatisticDefinition_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventCreateStatisticDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventCreateStatisticDefinition_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "CreateStatisticDefinition", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::PlayFabLeaderboardsAPI_eventCreateStatisticDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::PlayFabLeaderboardsAPI_eventCreateStatisticDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execCreateStatisticDefinition)
+{
+	P_GET_STRUCT(FLeaderboardsCreateStatisticDefinitionRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::CreateStatisticDefinition(Z_Param_request,FDelegateOnSuccessCreateStatisticDefinition(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function CreateStatisticDefinition
+
+// Begin Class UPlayFabLeaderboardsAPI Function DeleteLeaderboardDefinition
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDeleteLeaderboardDefinition_Parms
+	{
+		FLeaderboardsDeleteLeaderboardDefinitionRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Deletes a leaderboard definition. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Deletes a leaderboard definition." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteLeaderboardDefinition_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsDeleteLeaderboardDefinitionRequest, METADATA_PARAMS(0, nullptr) }; // 4277650012
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteLeaderboardDefinition_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 4233931063
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteLeaderboardDefinition_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteLeaderboardDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteLeaderboardDefinition_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DeleteLeaderboardDefinition", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::PlayFabLeaderboardsAPI_eventDeleteLeaderboardDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::PlayFabLeaderboardsAPI_eventDeleteLeaderboardDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execDeleteLeaderboardDefinition)
+{
+	P_GET_STRUCT(FLeaderboardsDeleteLeaderboardDefinitionRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::DeleteLeaderboardDefinition(Z_Param_request,FDelegateOnSuccessDeleteLeaderboardDefinition(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function DeleteLeaderboardDefinition
+
+// Begin Class UPlayFabLeaderboardsAPI Function DeleteLeaderboardEntries
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDeleteLeaderboardEntries_Parms
+	{
+		FLeaderboardsDeleteLeaderboardEntriesRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Deletes the specified entries from the given leaderboard. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Deletes the specified entries from the given leaderboard." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteLeaderboardEntries_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsDeleteLeaderboardEntriesRequest, METADATA_PARAMS(0, nullptr) }; // 1853838768
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteLeaderboardEntries_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 1146234264
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteLeaderboardEntries_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteLeaderboardEntries_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteLeaderboardEntries_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DeleteLeaderboardEntries", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::PlayFabLeaderboardsAPI_eventDeleteLeaderboardEntries_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::PlayFabLeaderboardsAPI_eventDeleteLeaderboardEntries_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execDeleteLeaderboardEntries)
+{
+	P_GET_STRUCT(FLeaderboardsDeleteLeaderboardEntriesRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::DeleteLeaderboardEntries(Z_Param_request,FDelegateOnSuccessDeleteLeaderboardEntries(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function DeleteLeaderboardEntries
+
+// Begin Class UPlayFabLeaderboardsAPI Function DeleteStatisticDefinition
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDeleteStatisticDefinition_Parms
+	{
+		FLeaderboardsDeleteStatisticDefinitionRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Delete an entity statistic definition. Will delete all statistics on entity profiles and leaderboards. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Delete an entity statistic definition. Will delete all statistics on entity profiles and leaderboards." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteStatisticDefinition_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsDeleteStatisticDefinitionRequest, METADATA_PARAMS(0, nullptr) }; // 2584280669
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteStatisticDefinition_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 847105354
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteStatisticDefinition_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteStatisticDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteStatisticDefinition_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DeleteStatisticDefinition", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::PlayFabLeaderboardsAPI_eventDeleteStatisticDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::PlayFabLeaderboardsAPI_eventDeleteStatisticDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execDeleteStatisticDefinition)
+{
+	P_GET_STRUCT(FLeaderboardsDeleteStatisticDefinitionRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::DeleteStatisticDefinition(Z_Param_request,FDelegateOnSuccessDeleteStatisticDefinition(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function DeleteStatisticDefinition
+
+// Begin Class UPlayFabLeaderboardsAPI Function DeleteStatistics
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventDeleteStatistics_Parms
+	{
+		FLeaderboardsDeleteStatisticsRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Delete statistics on an entity profile. This will remove all rankings from associated leaderboards. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Delete statistics on an entity profile. This will remove all rankings from associated leaderboards." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteStatistics_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsDeleteStatisticsRequest, METADATA_PARAMS(0, nullptr) }; // 89882871
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteStatistics_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 350441951
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteStatistics_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteStatistics_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventDeleteStatistics_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "DeleteStatistics", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::PlayFabLeaderboardsAPI_eventDeleteStatistics_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::PlayFabLeaderboardsAPI_eventDeleteStatistics_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execDeleteStatistics)
+{
+	P_GET_STRUCT(FLeaderboardsDeleteStatisticsRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::DeleteStatistics(Z_Param_request,FDelegateOnSuccessDeleteStatistics(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function DeleteStatistics
+
+// Begin Class UPlayFabLeaderboardsAPI Function GetFriendLeaderboardForEntity
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventGetFriendLeaderboardForEntity_Parms
+	{
+		FLeaderboardsGetFriendLeaderboardForEntityRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Get the friend leaderboard for the specified entity. A maximum of 100 friend entries are listed in the leaderboard. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Get the friend leaderboard for the specified entity. A maximum of 100 friend entries are listed in the leaderboard." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetFriendLeaderboardForEntity_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsGetFriendLeaderboardForEntityRequest, METADATA_PARAMS(0, nullptr) }; // 2436005779
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetFriendLeaderboardForEntity_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3697726147
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetFriendLeaderboardForEntity_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetFriendLeaderboardForEntity_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetFriendLeaderboardForEntity_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "GetFriendLeaderboardForEntity", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::PlayFabLeaderboardsAPI_eventGetFriendLeaderboardForEntity_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::PlayFabLeaderboardsAPI_eventGetFriendLeaderboardForEntity_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execGetFriendLeaderboardForEntity)
+{
+	P_GET_STRUCT(FLeaderboardsGetFriendLeaderboardForEntityRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::GetFriendLeaderboardForEntity(Z_Param_request,FDelegateOnSuccessGetFriendLeaderboardForEntity(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function GetFriendLeaderboardForEntity
+
+// Begin Class UPlayFabLeaderboardsAPI Function GetLeaderboard
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventGetLeaderboard_Parms
+	{
+		FLeaderboardsGetEntityLeaderboardRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Get the leaderboard for a specific entity type and statistic. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Get the leaderboard for a specific entity type and statistic." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboard_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsGetEntityLeaderboardRequest, METADATA_PARAMS(0, nullptr) }; // 2614315299
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboard_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 521806566
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboard_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboard_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboard_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "GetLeaderboard", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::PlayFabLeaderboardsAPI_eventGetLeaderboard_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::PlayFabLeaderboardsAPI_eventGetLeaderboard_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execGetLeaderboard)
+{
+	P_GET_STRUCT(FLeaderboardsGetEntityLeaderboardRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::GetLeaderboard(Z_Param_request,FDelegateOnSuccessGetLeaderboard(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function GetLeaderboard
+
+// Begin Class UPlayFabLeaderboardsAPI Function GetLeaderboardAroundEntity
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventGetLeaderboardAroundEntity_Parms
+	{
+		FLeaderboardsGetLeaderboardAroundEntityRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Get the leaderboard around a specific entity. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Get the leaderboard around a specific entity." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardAroundEntity_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsGetLeaderboardAroundEntityRequest, METADATA_PARAMS(0, nullptr) }; // 3938393632
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardAroundEntity_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 1306957048
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardAroundEntity_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardAroundEntity_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardAroundEntity_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "GetLeaderboardAroundEntity", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::PlayFabLeaderboardsAPI_eventGetLeaderboardAroundEntity_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::PlayFabLeaderboardsAPI_eventGetLeaderboardAroundEntity_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execGetLeaderboardAroundEntity)
+{
+	P_GET_STRUCT(FLeaderboardsGetLeaderboardAroundEntityRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::GetLeaderboardAroundEntity(Z_Param_request,FDelegateOnSuccessGetLeaderboardAroundEntity(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function GetLeaderboardAroundEntity
+
+// Begin Class UPlayFabLeaderboardsAPI Function GetLeaderboardDefinition
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventGetLeaderboardDefinition_Parms
+	{
+		FLeaderboardsGetLeaderboardDefinitionRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Gets the specified leaderboard definition. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Gets the specified leaderboard definition." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardDefinition_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsGetLeaderboardDefinitionRequest, METADATA_PARAMS(0, nullptr) }; // 2678920339
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardDefinition_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 472039003
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardDefinition_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardDefinition_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "GetLeaderboardDefinition", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::PlayFabLeaderboardsAPI_eventGetLeaderboardDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::PlayFabLeaderboardsAPI_eventGetLeaderboardDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execGetLeaderboardDefinition)
+{
+	P_GET_STRUCT(FLeaderboardsGetLeaderboardDefinitionRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::GetLeaderboardDefinition(Z_Param_request,FDelegateOnSuccessGetLeaderboardDefinition(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function GetLeaderboardDefinition
+
+// Begin Class UPlayFabLeaderboardsAPI Function GetLeaderboardForEntities
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventGetLeaderboardForEntities_Parms
+	{
+		FLeaderboardsGetLeaderboardForEntitiesRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Get the leaderboard limited to a set of entities. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Get the leaderboard limited to a set of entities." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardForEntities_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsGetLeaderboardForEntitiesRequest, METADATA_PARAMS(0, nullptr) }; // 1392271940
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardForEntities_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3238702181
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardForEntities_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardForEntities_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetLeaderboardForEntities_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "GetLeaderboardForEntities", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::PlayFabLeaderboardsAPI_eventGetLeaderboardForEntities_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::PlayFabLeaderboardsAPI_eventGetLeaderboardForEntities_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execGetLeaderboardForEntities)
+{
+	P_GET_STRUCT(FLeaderboardsGetLeaderboardForEntitiesRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::GetLeaderboardForEntities(Z_Param_request,FDelegateOnSuccessGetLeaderboardForEntities(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function GetLeaderboardForEntities
+
+// Begin Class UPlayFabLeaderboardsAPI Function GetStatisticDefinition
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventGetStatisticDefinition_Parms
+	{
+		FLeaderboardsGetStatisticDefinitionRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Get current statistic definition information */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Get current statistic definition information" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticDefinition_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsGetStatisticDefinitionRequest, METADATA_PARAMS(0, nullptr) }; // 306225676
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticDefinition_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 424731663
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticDefinition_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticDefinition_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "GetStatisticDefinition", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::PlayFabLeaderboardsAPI_eventGetStatisticDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::PlayFabLeaderboardsAPI_eventGetStatisticDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execGetStatisticDefinition)
+{
+	P_GET_STRUCT(FLeaderboardsGetStatisticDefinitionRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::GetStatisticDefinition(Z_Param_request,FDelegateOnSuccessGetStatisticDefinition(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function GetStatisticDefinition
+
+// Begin Class UPlayFabLeaderboardsAPI Function GetStatisticDefinitions
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventGetStatisticDefinitions_Parms
+	{
+		FLeaderboardsGetStatisticDefinitionsRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Get all current statistic definitions information */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Get all current statistic definitions information" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticDefinitions_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsGetStatisticDefinitionsRequest, METADATA_PARAMS(0, nullptr) }; // 968816932
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticDefinitions_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 2121316676
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticDefinitions_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticDefinitions_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticDefinitions_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "GetStatisticDefinitions", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::PlayFabLeaderboardsAPI_eventGetStatisticDefinitions_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::PlayFabLeaderboardsAPI_eventGetStatisticDefinitions_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execGetStatisticDefinitions)
+{
+	P_GET_STRUCT(FLeaderboardsGetStatisticDefinitionsRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::GetStatisticDefinitions(Z_Param_request,FDelegateOnSuccessGetStatisticDefinitions(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function GetStatisticDefinitions
+
+// Begin Class UPlayFabLeaderboardsAPI Function GetStatistics
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventGetStatistics_Parms
+	{
+		FLeaderboardsGetStatisticsRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Gets statistics for the specified entity. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Gets statistics for the specified entity." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatistics_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsGetStatisticsRequest, METADATA_PARAMS(0, nullptr) }; // 677667431
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatistics_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 479912798
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatistics_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatistics_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatistics_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "GetStatistics", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::PlayFabLeaderboardsAPI_eventGetStatistics_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::PlayFabLeaderboardsAPI_eventGetStatistics_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execGetStatistics)
+{
+	P_GET_STRUCT(FLeaderboardsGetStatisticsRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::GetStatistics(Z_Param_request,FDelegateOnSuccessGetStatistics(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function GetStatistics
+
+// Begin Class UPlayFabLeaderboardsAPI Function GetStatisticsForEntities
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventGetStatisticsForEntities_Parms
+	{
+		FLeaderboardsGetStatisticsForEntitiesRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Gets statistics for the specified collection of entities. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Gets statistics for the specified collection of entities." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticsForEntities_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsGetStatisticsForEntitiesRequest, METADATA_PARAMS(0, nullptr) }; // 2280346512
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticsForEntities_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 489953736
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticsForEntities_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticsForEntities_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventGetStatisticsForEntities_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "GetStatisticsForEntities", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::PlayFabLeaderboardsAPI_eventGetStatisticsForEntities_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::PlayFabLeaderboardsAPI_eventGetStatisticsForEntities_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execGetStatisticsForEntities)
+{
+	P_GET_STRUCT(FLeaderboardsGetStatisticsForEntitiesRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::GetStatisticsForEntities(Z_Param_request,FDelegateOnSuccessGetStatisticsForEntities(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function GetStatisticsForEntities
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperCreateLeaderboardDefinition
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperCreateLeaderboardDefinition_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperCreateLeaderboardDefinition_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperCreateLeaderboardDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperCreateLeaderboardDefinition_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperCreateLeaderboardDefinition_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperCreateLeaderboardDefinition", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::PlayFabLeaderboardsAPI_eventHelperCreateLeaderboardDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::PlayFabLeaderboardsAPI_eventHelperCreateLeaderboardDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperCreateLeaderboardDefinition)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperCreateLeaderboardDefinition(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperCreateLeaderboardDefinition
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperCreateStatisticDefinition
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperCreateStatisticDefinition_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperCreateStatisticDefinition_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperCreateStatisticDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperCreateStatisticDefinition_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperCreateStatisticDefinition_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperCreateStatisticDefinition", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::PlayFabLeaderboardsAPI_eventHelperCreateStatisticDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::PlayFabLeaderboardsAPI_eventHelperCreateStatisticDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperCreateStatisticDefinition)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperCreateStatisticDefinition(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperCreateStatisticDefinition
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperDeleteLeaderboardDefinition
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardDefinition_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardDefinition_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardDefinition_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardDefinition_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperDeleteLeaderboardDefinition", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperDeleteLeaderboardDefinition)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperDeleteLeaderboardDefinition(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperDeleteLeaderboardDefinition
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperDeleteLeaderboardEntries
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardEntries_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardEntries_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardEntries_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardEntries_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardEntries_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperDeleteLeaderboardEntries", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardEntries_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::PlayFabLeaderboardsAPI_eventHelperDeleteLeaderboardEntries_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperDeleteLeaderboardEntries)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperDeleteLeaderboardEntries(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperDeleteLeaderboardEntries
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperDeleteStatisticDefinition
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperDeleteStatisticDefinition_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperDeleteStatisticDefinition_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperDeleteStatisticDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperDeleteStatisticDefinition_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperDeleteStatisticDefinition_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperDeleteStatisticDefinition", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::PlayFabLeaderboardsAPI_eventHelperDeleteStatisticDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::PlayFabLeaderboardsAPI_eventHelperDeleteStatisticDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperDeleteStatisticDefinition)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperDeleteStatisticDefinition(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperDeleteStatisticDefinition
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperDeleteStatistics
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperDeleteStatistics_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperDeleteStatistics_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperDeleteStatistics_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperDeleteStatistics_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperDeleteStatistics_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperDeleteStatistics", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::PlayFabLeaderboardsAPI_eventHelperDeleteStatistics_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::PlayFabLeaderboardsAPI_eventHelperDeleteStatistics_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperDeleteStatistics)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperDeleteStatistics(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperDeleteStatistics
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperGetFriendLeaderboardForEntity
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperGetFriendLeaderboardForEntity_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetFriendLeaderboardForEntity_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetFriendLeaderboardForEntity_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperGetFriendLeaderboardForEntity_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperGetFriendLeaderboardForEntity_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperGetFriendLeaderboardForEntity", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::PlayFabLeaderboardsAPI_eventHelperGetFriendLeaderboardForEntity_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::PlayFabLeaderboardsAPI_eventHelperGetFriendLeaderboardForEntity_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperGetFriendLeaderboardForEntity)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperGetFriendLeaderboardForEntity(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperGetFriendLeaderboardForEntity
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperGetLeaderboard
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperGetLeaderboard_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetLeaderboard_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetLeaderboard_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperGetLeaderboard_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperGetLeaderboard_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperGetLeaderboard", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::PlayFabLeaderboardsAPI_eventHelperGetLeaderboard_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::PlayFabLeaderboardsAPI_eventHelperGetLeaderboard_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperGetLeaderboard)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperGetLeaderboard(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperGetLeaderboard
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperGetLeaderboardAroundEntity
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperGetLeaderboardAroundEntity_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetLeaderboardAroundEntity_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetLeaderboardAroundEntity_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperGetLeaderboardAroundEntity_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperGetLeaderboardAroundEntity_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperGetLeaderboardAroundEntity", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::PlayFabLeaderboardsAPI_eventHelperGetLeaderboardAroundEntity_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::PlayFabLeaderboardsAPI_eventHelperGetLeaderboardAroundEntity_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperGetLeaderboardAroundEntity)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperGetLeaderboardAroundEntity(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperGetLeaderboardAroundEntity
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperGetLeaderboardDefinition
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperGetLeaderboardDefinition_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetLeaderboardDefinition_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetLeaderboardDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperGetLeaderboardDefinition_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperGetLeaderboardDefinition_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperGetLeaderboardDefinition", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::PlayFabLeaderboardsAPI_eventHelperGetLeaderboardDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::PlayFabLeaderboardsAPI_eventHelperGetLeaderboardDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperGetLeaderboardDefinition)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperGetLeaderboardDefinition(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperGetLeaderboardDefinition
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperGetLeaderboardForEntities
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperGetLeaderboardForEntities_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetLeaderboardForEntities_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetLeaderboardForEntities_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperGetLeaderboardForEntities_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperGetLeaderboardForEntities_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperGetLeaderboardForEntities", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::PlayFabLeaderboardsAPI_eventHelperGetLeaderboardForEntities_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::PlayFabLeaderboardsAPI_eventHelperGetLeaderboardForEntities_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperGetLeaderboardForEntities)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperGetLeaderboardForEntities(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperGetLeaderboardForEntities
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperGetStatisticDefinition
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinition_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinition_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinition_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinition_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinition_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperGetStatisticDefinition", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinition_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinition_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperGetStatisticDefinition)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperGetStatisticDefinition(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperGetStatisticDefinition
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperGetStatisticDefinitions
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinitions_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinitions_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinitions_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinitions_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinitions_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperGetStatisticDefinitions", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinitions_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::PlayFabLeaderboardsAPI_eventHelperGetStatisticDefinitions_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperGetStatisticDefinitions)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperGetStatisticDefinitions(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperGetStatisticDefinitions
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperGetStatistics
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperGetStatistics_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetStatistics_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetStatistics_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperGetStatistics_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperGetStatistics_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperGetStatistics", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::PlayFabLeaderboardsAPI_eventHelperGetStatistics_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::PlayFabLeaderboardsAPI_eventHelperGetStatistics_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperGetStatistics)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperGetStatistics(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperGetStatistics
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperGetStatisticsForEntities
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperGetStatisticsForEntities_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetStatisticsForEntities_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperGetStatisticsForEntities_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperGetStatisticsForEntities_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperGetStatisticsForEntities_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperGetStatisticsForEntities", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::PlayFabLeaderboardsAPI_eventHelperGetStatisticsForEntities_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::PlayFabLeaderboardsAPI_eventHelperGetStatisticsForEntities_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperGetStatisticsForEntities)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperGetStatisticsForEntities(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperGetStatisticsForEntities
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperIncrementLeaderboardVersion
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperIncrementLeaderboardVersion_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperIncrementLeaderboardVersion_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperIncrementLeaderboardVersion_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperIncrementLeaderboardVersion_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperIncrementLeaderboardVersion_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperIncrementLeaderboardVersion", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::PlayFabLeaderboardsAPI_eventHelperIncrementLeaderboardVersion_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::PlayFabLeaderboardsAPI_eventHelperIncrementLeaderboardVersion_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperIncrementLeaderboardVersion)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperIncrementLeaderboardVersion(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperIncrementLeaderboardVersion
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperIncrementStatisticVersion
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperIncrementStatisticVersion_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperIncrementStatisticVersion_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperIncrementStatisticVersion_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperIncrementStatisticVersion_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperIncrementStatisticVersion_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperIncrementStatisticVersion", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::PlayFabLeaderboardsAPI_eventHelperIncrementStatisticVersion_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::PlayFabLeaderboardsAPI_eventHelperIncrementStatisticVersion_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperIncrementStatisticVersion)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperIncrementStatisticVersion(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperIncrementStatisticVersion
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperListLeaderboardDefinitions
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperListLeaderboardDefinitions_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperListLeaderboardDefinitions_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperListLeaderboardDefinitions_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperListLeaderboardDefinitions_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperListLeaderboardDefinitions_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperListLeaderboardDefinitions", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::PlayFabLeaderboardsAPI_eventHelperListLeaderboardDefinitions_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::PlayFabLeaderboardsAPI_eventHelperListLeaderboardDefinitions_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperListLeaderboardDefinitions)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperListLeaderboardDefinitions(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperListLeaderboardDefinitions
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperListStatisticDefinitions
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperListStatisticDefinitions_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperListStatisticDefinitions_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperListStatisticDefinitions_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperListStatisticDefinitions_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperListStatisticDefinitions_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperListStatisticDefinitions", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::PlayFabLeaderboardsAPI_eventHelperListStatisticDefinitions_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::PlayFabLeaderboardsAPI_eventHelperListStatisticDefinitions_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperListStatisticDefinitions)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperListStatisticDefinitions(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperListStatisticDefinitions
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperUnlinkLeaderboardFromStatistic
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperUnlinkLeaderboardFromStatistic_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperUnlinkLeaderboardFromStatistic_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperUnlinkLeaderboardFromStatistic_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperUnlinkLeaderboardFromStatistic_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperUnlinkLeaderboardFromStatistic_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperUnlinkLeaderboardFromStatistic", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::PlayFabLeaderboardsAPI_eventHelperUnlinkLeaderboardFromStatistic_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::PlayFabLeaderboardsAPI_eventHelperUnlinkLeaderboardFromStatistic_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperUnlinkLeaderboardFromStatistic)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperUnlinkLeaderboardFromStatistic(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperUnlinkLeaderboardFromStatistic
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperUpdateLeaderboardEntries
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperUpdateLeaderboardEntries_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperUpdateLeaderboardEntries_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperUpdateLeaderboardEntries_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperUpdateLeaderboardEntries_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperUpdateLeaderboardEntries_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperUpdateLeaderboardEntries", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::PlayFabLeaderboardsAPI_eventHelperUpdateLeaderboardEntries_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::PlayFabLeaderboardsAPI_eventHelperUpdateLeaderboardEntries_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperUpdateLeaderboardEntries)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperUpdateLeaderboardEntries(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperUpdateLeaderboardEntries
+
+// Begin Class UPlayFabLeaderboardsAPI Function HelperUpdateStatistics
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventHelperUpdateStatistics_Parms
+	{
+		FPlayFabBaseModel response;
+		UObject* customData;
+		bool successful;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// Implements FOnPlayFabLeaderboardsRequestCompleted\n" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Implements FOnPlayFabLeaderboardsRequestCompleted" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_response;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static void NewProp_successful_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_successful;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::NewProp_response = { "response", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperUpdateStatistics_Parms, response), Z_Construct_UScriptStruct_FPlayFabBaseModel, METADATA_PARAMS(0, nullptr) }; // 603195937
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventHelperUpdateStatistics_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+void Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::NewProp_successful_SetBit(void* Obj)
+{
+	((PlayFabLeaderboardsAPI_eventHelperUpdateStatistics_Parms*)Obj)->successful = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::NewProp_successful = { "successful", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(PlayFabLeaderboardsAPI_eventHelperUpdateStatistics_Parms), &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::NewProp_successful_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::NewProp_response,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::NewProp_successful,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "HelperUpdateStatistics", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::PlayFabLeaderboardsAPI_eventHelperUpdateStatistics_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::PlayFabLeaderboardsAPI_eventHelperUpdateStatistics_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execHelperUpdateStatistics)
+{
+	P_GET_STRUCT(FPlayFabBaseModel,Z_Param_response);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_GET_UBOOL(Z_Param_successful);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HelperUpdateStatistics(Z_Param_response,Z_Param_customData,Z_Param_successful);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function HelperUpdateStatistics
+
+// Begin Class UPlayFabLeaderboardsAPI Function IncrementLeaderboardVersion
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventIncrementLeaderboardVersion_Parms
+	{
+		FLeaderboardsIncrementLeaderboardVersionRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Increment a leaderboard version. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Increment a leaderboard version." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventIncrementLeaderboardVersion_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsIncrementLeaderboardVersionRequest, METADATA_PARAMS(0, nullptr) }; // 230069641
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventIncrementLeaderboardVersion_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 2993319280
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventIncrementLeaderboardVersion_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventIncrementLeaderboardVersion_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventIncrementLeaderboardVersion_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "IncrementLeaderboardVersion", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::PlayFabLeaderboardsAPI_eventIncrementLeaderboardVersion_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::PlayFabLeaderboardsAPI_eventIncrementLeaderboardVersion_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execIncrementLeaderboardVersion)
+{
+	P_GET_STRUCT(FLeaderboardsIncrementLeaderboardVersionRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::IncrementLeaderboardVersion(Z_Param_request,FDelegateOnSuccessIncrementLeaderboardVersion(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function IncrementLeaderboardVersion
+
+// Begin Class UPlayFabLeaderboardsAPI Function IncrementStatisticVersion
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventIncrementStatisticVersion_Parms
+	{
+		FLeaderboardsIncrementStatisticVersionRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Increment an entity statistic definition version. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Increment an entity statistic definition version." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventIncrementStatisticVersion_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsIncrementStatisticVersionRequest, METADATA_PARAMS(0, nullptr) }; // 3340646633
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventIncrementStatisticVersion_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 1661181327
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventIncrementStatisticVersion_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventIncrementStatisticVersion_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventIncrementStatisticVersion_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "IncrementStatisticVersion", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::PlayFabLeaderboardsAPI_eventIncrementStatisticVersion_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::PlayFabLeaderboardsAPI_eventIncrementStatisticVersion_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execIncrementStatisticVersion)
+{
+	P_GET_STRUCT(FLeaderboardsIncrementStatisticVersionRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::IncrementStatisticVersion(Z_Param_request,FDelegateOnSuccessIncrementStatisticVersion(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function IncrementStatisticVersion
+
+// Begin Class UPlayFabLeaderboardsAPI Function ListLeaderboardDefinitions
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventListLeaderboardDefinitions_Parms
+	{
+		FLeaderboardsListLeaderboardDefinitionsRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Lists the leaderboard definitions defined for the Title. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Lists the leaderboard definitions defined for the Title." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventListLeaderboardDefinitions_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsListLeaderboardDefinitionsRequest, METADATA_PARAMS(0, nullptr) }; // 2123262140
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventListLeaderboardDefinitions_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 1487746894
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventListLeaderboardDefinitions_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventListLeaderboardDefinitions_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventListLeaderboardDefinitions_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "ListLeaderboardDefinitions", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::PlayFabLeaderboardsAPI_eventListLeaderboardDefinitions_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::PlayFabLeaderboardsAPI_eventListLeaderboardDefinitions_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execListLeaderboardDefinitions)
+{
+	P_GET_STRUCT(FLeaderboardsListLeaderboardDefinitionsRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::ListLeaderboardDefinitions(Z_Param_request,FDelegateOnSuccessListLeaderboardDefinitions(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function ListLeaderboardDefinitions
+
+// Begin Class UPlayFabLeaderboardsAPI Function ListStatisticDefinitions
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventListStatisticDefinitions_Parms
+	{
+		FLeaderboardsListStatisticDefinitionsRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Get all current statistic definitions information */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Get all current statistic definitions information" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventListStatisticDefinitions_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsListStatisticDefinitionsRequest, METADATA_PARAMS(0, nullptr) }; // 2402477041
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventListStatisticDefinitions_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 4018328865
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventListStatisticDefinitions_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventListStatisticDefinitions_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventListStatisticDefinitions_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "ListStatisticDefinitions", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::PlayFabLeaderboardsAPI_eventListStatisticDefinitions_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::PlayFabLeaderboardsAPI_eventListStatisticDefinitions_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execListStatisticDefinitions)
+{
+	P_GET_STRUCT(FLeaderboardsListStatisticDefinitionsRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::ListStatisticDefinitions(Z_Param_request,FDelegateOnSuccessListStatisticDefinitions(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function ListStatisticDefinitions
+
+// Begin Class UPlayFabLeaderboardsAPI Function UnlinkLeaderboardFromStatistic
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventUnlinkLeaderboardFromStatistic_Parms
+	{
+		FLeaderboardsUnlinkLeaderboardFromStatisticRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Unlinks a leaderboard definition from it's linked statistic definition. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Unlinks a leaderboard definition from it's linked statistic definition." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUnlinkLeaderboardFromStatistic_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsUnlinkLeaderboardFromStatisticRequest, METADATA_PARAMS(0, nullptr) }; // 1914063927
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUnlinkLeaderboardFromStatistic_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3708204908
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUnlinkLeaderboardFromStatistic_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUnlinkLeaderboardFromStatistic_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUnlinkLeaderboardFromStatistic_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "UnlinkLeaderboardFromStatistic", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::PlayFabLeaderboardsAPI_eventUnlinkLeaderboardFromStatistic_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::PlayFabLeaderboardsAPI_eventUnlinkLeaderboardFromStatistic_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execUnlinkLeaderboardFromStatistic)
+{
+	P_GET_STRUCT(FLeaderboardsUnlinkLeaderboardFromStatisticRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::UnlinkLeaderboardFromStatistic(Z_Param_request,FDelegateOnSuccessUnlinkLeaderboardFromStatistic(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function UnlinkLeaderboardFromStatistic
+
+// Begin Class UPlayFabLeaderboardsAPI Function UpdateLeaderboardEntries
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventUpdateLeaderboardEntries_Parms
+	{
+		FLeaderboardsUpdateLeaderboardEntriesRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Adds or updates entries on the specified leaderboard. */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Adds or updates entries on the specified leaderboard." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUpdateLeaderboardEntries_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsUpdateLeaderboardEntriesRequest, METADATA_PARAMS(0, nullptr) }; // 644463315
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUpdateLeaderboardEntries_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 762191658
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUpdateLeaderboardEntries_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUpdateLeaderboardEntries_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUpdateLeaderboardEntries_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "UpdateLeaderboardEntries", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::PlayFabLeaderboardsAPI_eventUpdateLeaderboardEntries_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::PlayFabLeaderboardsAPI_eventUpdateLeaderboardEntries_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execUpdateLeaderboardEntries)
+{
+	P_GET_STRUCT(FLeaderboardsUpdateLeaderboardEntriesRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::UpdateLeaderboardEntries(Z_Param_request,FDelegateOnSuccessUpdateLeaderboardEntries(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function UpdateLeaderboardEntries
+
+// Begin Class UPlayFabLeaderboardsAPI Function UpdateStatistics
+struct Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics
+{
+	struct PlayFabLeaderboardsAPI_eventUpdateStatistics_Parms
+	{
+		FLeaderboardsUpdateStatisticsRequest request;
+		FScriptDelegate onSuccess;
+		FScriptDelegate onFailure;
+		UObject* customData;
+		UPlayFabLeaderboardsAPI* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "BlueprintInternalUseOnly", "true" },
+		{ "Category", "PlayFab | Leaderboards | Statistics and Leaderboards" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/**\n     * Update statistics on an entity profile. Depending on the statistic definition, this may result in entity being ranked on\n     * various leaderboards.\n     */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Update statistics on an entity profile. Depending on the statistic definition, this may result in entity being ranked on\nvarious leaderboards." },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_request;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onSuccess;
+	static const UECodeGen_Private::FDelegatePropertyParams NewProp_onFailure;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_customData;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::NewProp_request = { "request", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUpdateStatistics_Parms, request), Z_Construct_UScriptStruct_FLeaderboardsUpdateStatisticsRequest, METADATA_PARAMS(0, nullptr) }; // 4118220693
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::NewProp_onSuccess = { "onSuccess", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUpdateStatistics_Parms, onSuccess), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 772676692
+const UECodeGen_Private::FDelegatePropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::NewProp_onFailure = { "onFailure", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Delegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUpdateStatistics_Parms, onFailure), Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, METADATA_PARAMS(0, nullptr) }; // 3398873188
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::NewProp_customData = { "customData", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUpdateStatistics_Parms, customData), Z_Construct_UClass_UObject_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayFabLeaderboardsAPI_eventUpdateStatistics_Parms, ReturnValue), Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::NewProp_request,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::NewProp_onSuccess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::NewProp_onFailure,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::NewProp_customData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UPlayFabLeaderboardsAPI, nullptr, "UpdateStatistics", nullptr, nullptr, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::PropPointers), sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::PlayFabLeaderboardsAPI_eventUpdateStatistics_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::Function_MetaDataParams), Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::PlayFabLeaderboardsAPI_eventUpdateStatistics_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UPlayFabLeaderboardsAPI::execUpdateStatistics)
+{
+	P_GET_STRUCT(FLeaderboardsUpdateStatisticsRequest,Z_Param_request);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onSuccess);
+	P_GET_PROPERTY(FDelegateProperty,Z_Param_onFailure);
+	P_GET_OBJECT(UObject,Z_Param_customData);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPlayFabLeaderboardsAPI**)Z_Param__Result=UPlayFabLeaderboardsAPI::UpdateStatistics(Z_Param_request,FDelegateOnSuccessUpdateStatistics(Z_Param_onSuccess),FDelegateOnFailurePlayFabError(Z_Param_onFailure),Z_Param_customData);
+	P_NATIVE_END;
+}
+// End Class UPlayFabLeaderboardsAPI Function UpdateStatistics
+
+// Begin Class UPlayFabLeaderboardsAPI
+void UPlayFabLeaderboardsAPI::StaticRegisterNativesUPlayFabLeaderboardsAPI()
+{
+	UClass* Class = UPlayFabLeaderboardsAPI::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "CreateLeaderboardDefinition", &UPlayFabLeaderboardsAPI::execCreateLeaderboardDefinition },
+		{ "CreateStatisticDefinition", &UPlayFabLeaderboardsAPI::execCreateStatisticDefinition },
+		{ "DeleteLeaderboardDefinition", &UPlayFabLeaderboardsAPI::execDeleteLeaderboardDefinition },
+		{ "DeleteLeaderboardEntries", &UPlayFabLeaderboardsAPI::execDeleteLeaderboardEntries },
+		{ "DeleteStatisticDefinition", &UPlayFabLeaderboardsAPI::execDeleteStatisticDefinition },
+		{ "DeleteStatistics", &UPlayFabLeaderboardsAPI::execDeleteStatistics },
+		{ "GetFriendLeaderboardForEntity", &UPlayFabLeaderboardsAPI::execGetFriendLeaderboardForEntity },
+		{ "GetLeaderboard", &UPlayFabLeaderboardsAPI::execGetLeaderboard },
+		{ "GetLeaderboardAroundEntity", &UPlayFabLeaderboardsAPI::execGetLeaderboardAroundEntity },
+		{ "GetLeaderboardDefinition", &UPlayFabLeaderboardsAPI::execGetLeaderboardDefinition },
+		{ "GetLeaderboardForEntities", &UPlayFabLeaderboardsAPI::execGetLeaderboardForEntities },
+		{ "GetStatisticDefinition", &UPlayFabLeaderboardsAPI::execGetStatisticDefinition },
+		{ "GetStatisticDefinitions", &UPlayFabLeaderboardsAPI::execGetStatisticDefinitions },
+		{ "GetStatistics", &UPlayFabLeaderboardsAPI::execGetStatistics },
+		{ "GetStatisticsForEntities", &UPlayFabLeaderboardsAPI::execGetStatisticsForEntities },
+		{ "HelperCreateLeaderboardDefinition", &UPlayFabLeaderboardsAPI::execHelperCreateLeaderboardDefinition },
+		{ "HelperCreateStatisticDefinition", &UPlayFabLeaderboardsAPI::execHelperCreateStatisticDefinition },
+		{ "HelperDeleteLeaderboardDefinition", &UPlayFabLeaderboardsAPI::execHelperDeleteLeaderboardDefinition },
+		{ "HelperDeleteLeaderboardEntries", &UPlayFabLeaderboardsAPI::execHelperDeleteLeaderboardEntries },
+		{ "HelperDeleteStatisticDefinition", &UPlayFabLeaderboardsAPI::execHelperDeleteStatisticDefinition },
+		{ "HelperDeleteStatistics", &UPlayFabLeaderboardsAPI::execHelperDeleteStatistics },
+		{ "HelperGetFriendLeaderboardForEntity", &UPlayFabLeaderboardsAPI::execHelperGetFriendLeaderboardForEntity },
+		{ "HelperGetLeaderboard", &UPlayFabLeaderboardsAPI::execHelperGetLeaderboard },
+		{ "HelperGetLeaderboardAroundEntity", &UPlayFabLeaderboardsAPI::execHelperGetLeaderboardAroundEntity },
+		{ "HelperGetLeaderboardDefinition", &UPlayFabLeaderboardsAPI::execHelperGetLeaderboardDefinition },
+		{ "HelperGetLeaderboardForEntities", &UPlayFabLeaderboardsAPI::execHelperGetLeaderboardForEntities },
+		{ "HelperGetStatisticDefinition", &UPlayFabLeaderboardsAPI::execHelperGetStatisticDefinition },
+		{ "HelperGetStatisticDefinitions", &UPlayFabLeaderboardsAPI::execHelperGetStatisticDefinitions },
+		{ "HelperGetStatistics", &UPlayFabLeaderboardsAPI::execHelperGetStatistics },
+		{ "HelperGetStatisticsForEntities", &UPlayFabLeaderboardsAPI::execHelperGetStatisticsForEntities },
+		{ "HelperIncrementLeaderboardVersion", &UPlayFabLeaderboardsAPI::execHelperIncrementLeaderboardVersion },
+		{ "HelperIncrementStatisticVersion", &UPlayFabLeaderboardsAPI::execHelperIncrementStatisticVersion },
+		{ "HelperListLeaderboardDefinitions", &UPlayFabLeaderboardsAPI::execHelperListLeaderboardDefinitions },
+		{ "HelperListStatisticDefinitions", &UPlayFabLeaderboardsAPI::execHelperListStatisticDefinitions },
+		{ "HelperUnlinkLeaderboardFromStatistic", &UPlayFabLeaderboardsAPI::execHelperUnlinkLeaderboardFromStatistic },
+		{ "HelperUpdateLeaderboardEntries", &UPlayFabLeaderboardsAPI::execHelperUpdateLeaderboardEntries },
+		{ "HelperUpdateStatistics", &UPlayFabLeaderboardsAPI::execHelperUpdateStatistics },
+		{ "IncrementLeaderboardVersion", &UPlayFabLeaderboardsAPI::execIncrementLeaderboardVersion },
+		{ "IncrementStatisticVersion", &UPlayFabLeaderboardsAPI::execIncrementStatisticVersion },
+		{ "ListLeaderboardDefinitions", &UPlayFabLeaderboardsAPI::execListLeaderboardDefinitions },
+		{ "ListStatisticDefinitions", &UPlayFabLeaderboardsAPI::execListStatisticDefinitions },
+		{ "UnlinkLeaderboardFromStatistic", &UPlayFabLeaderboardsAPI::execUnlinkLeaderboardFromStatistic },
+		{ "UpdateLeaderboardEntries", &UPlayFabLeaderboardsAPI::execUpdateLeaderboardEntries },
+		{ "UpdateStatistics", &UPlayFabLeaderboardsAPI::execUpdateStatistics },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+}
+IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UPlayFabLeaderboardsAPI);
+UClass* Z_Construct_UClass_UPlayFabLeaderboardsAPI_NoRegister()
+{
+	return UPlayFabLeaderboardsAPI::StaticClass();
+}
+struct Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "IncludePath", "PlayFabLeaderboardsAPI.h" },
+		{ "IsBlueprintBase", "true" },
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnPlayFabResponse_MetaData[] = {
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CallAuthenticationContext_MetaData[] = {
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RequestJsonObj_MetaData[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Internal request data stored as JSON */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Internal request data stored as JSON" },
+#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ResponseJsonObj_MetaData[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "/** Response data stored as JSON */" },
+#endif
+		{ "ModuleRelativePath", "Classes/PlayFabLeaderboardsAPI.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Response data stored as JSON" },
+#endif
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnPlayFabResponse;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_CallAuthenticationContext;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_RequestJsonObj;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ResponseJsonObj;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateLeaderboardDefinition, "CreateLeaderboardDefinition" }, // 3518285293
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_CreateStatisticDefinition, "CreateStatisticDefinition" }, // 649743728
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnFailurePlayFabError__DelegateSignature, "DelegateOnFailurePlayFabError__DelegateSignature" }, // 3398873188
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature, "DelegateOnSuccessCreateLeaderboardDefinition__DelegateSignature" }, // 3630734122
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessCreateStatisticDefinition__DelegateSignature, "DelegateOnSuccessCreateStatisticDefinition__DelegateSignature" }, // 3077476079
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature, "DelegateOnSuccessDeleteLeaderboardDefinition__DelegateSignature" }, // 4233931063
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature, "DelegateOnSuccessDeleteLeaderboardEntries__DelegateSignature" }, // 1146234264
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature, "DelegateOnSuccessDeleteStatisticDefinition__DelegateSignature" }, // 847105354
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessDeleteStatistics__DelegateSignature, "DelegateOnSuccessDeleteStatistics__DelegateSignature" }, // 350441951
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature, "DelegateOnSuccessGetFriendLeaderboardForEntity__DelegateSignature" }, // 3697726147
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboard__DelegateSignature, "DelegateOnSuccessGetLeaderboard__DelegateSignature" }, // 521806566
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature, "DelegateOnSuccessGetLeaderboardAroundEntity__DelegateSignature" }, // 1306957048
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature, "DelegateOnSuccessGetLeaderboardDefinition__DelegateSignature" }, // 472039003
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature, "DelegateOnSuccessGetLeaderboardForEntities__DelegateSignature" }, // 3238702181
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinition__DelegateSignature, "DelegateOnSuccessGetStatisticDefinition__DelegateSignature" }, // 424731663
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticDefinitions__DelegateSignature, "DelegateOnSuccessGetStatisticDefinitions__DelegateSignature" }, // 2121316676
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatistics__DelegateSignature, "DelegateOnSuccessGetStatistics__DelegateSignature" }, // 479912798
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessGetStatisticsForEntities__DelegateSignature, "DelegateOnSuccessGetStatisticsForEntities__DelegateSignature" }, // 489953736
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature, "DelegateOnSuccessIncrementLeaderboardVersion__DelegateSignature" }, // 2993319280
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessIncrementStatisticVersion__DelegateSignature, "DelegateOnSuccessIncrementStatisticVersion__DelegateSignature" }, // 1661181327
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature, "DelegateOnSuccessListLeaderboardDefinitions__DelegateSignature" }, // 1487746894
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessListStatisticDefinitions__DelegateSignature, "DelegateOnSuccessListStatisticDefinitions__DelegateSignature" }, // 4018328865
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature, "DelegateOnSuccessUnlinkLeaderboardFromStatistic__DelegateSignature" }, // 3708204908
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature, "DelegateOnSuccessUpdateLeaderboardEntries__DelegateSignature" }, // 762191658
+		{ &Z_Construct_UDelegateFunction_UPlayFabLeaderboardsAPI_DelegateOnSuccessUpdateStatistics__DelegateSignature, "DelegateOnSuccessUpdateStatistics__DelegateSignature" }, // 772676692
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardDefinition, "DeleteLeaderboardDefinition" }, // 986876961
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteLeaderboardEntries, "DeleteLeaderboardEntries" }, // 2525236309
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatisticDefinition, "DeleteStatisticDefinition" }, // 2199399691
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_DeleteStatistics, "DeleteStatistics" }, // 1215675384
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetFriendLeaderboardForEntity, "GetFriendLeaderboardForEntity" }, // 1073517075
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboard, "GetLeaderboard" }, // 371527713
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardAroundEntity, "GetLeaderboardAroundEntity" }, // 3921448385
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardDefinition, "GetLeaderboardDefinition" }, // 3022618306
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetLeaderboardForEntities, "GetLeaderboardForEntities" }, // 1270052501
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinition, "GetStatisticDefinition" }, // 398819350
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticDefinitions, "GetStatisticDefinitions" }, // 3242680811
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatistics, "GetStatistics" }, // 602292879
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_GetStatisticsForEntities, "GetStatisticsForEntities" }, // 1299150590
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateLeaderboardDefinition, "HelperCreateLeaderboardDefinition" }, // 3315370502
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperCreateStatisticDefinition, "HelperCreateStatisticDefinition" }, // 2150174730
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardDefinition, "HelperDeleteLeaderboardDefinition" }, // 2538509291
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteLeaderboardEntries, "HelperDeleteLeaderboardEntries" }, // 3763739920
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatisticDefinition, "HelperDeleteStatisticDefinition" }, // 3829194425
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperDeleteStatistics, "HelperDeleteStatistics" }, // 4155086063
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetFriendLeaderboardForEntity, "HelperGetFriendLeaderboardForEntity" }, // 4005871571
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboard, "HelperGetLeaderboard" }, // 896270326
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardAroundEntity, "HelperGetLeaderboardAroundEntity" }, // 39354130
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardDefinition, "HelperGetLeaderboardDefinition" }, // 3236368614
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetLeaderboardForEntities, "HelperGetLeaderboardForEntities" }, // 653461612
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinition, "HelperGetStatisticDefinition" }, // 1474374736
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticDefinitions, "HelperGetStatisticDefinitions" }, // 2213539858
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatistics, "HelperGetStatistics" }, // 1793853697
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperGetStatisticsForEntities, "HelperGetStatisticsForEntities" }, // 2344529252
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementLeaderboardVersion, "HelperIncrementLeaderboardVersion" }, // 1897367217
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperIncrementStatisticVersion, "HelperIncrementStatisticVersion" }, // 1238287158
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListLeaderboardDefinitions, "HelperListLeaderboardDefinitions" }, // 1794364621
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperListStatisticDefinitions, "HelperListStatisticDefinitions" }, // 2414613493
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUnlinkLeaderboardFromStatistic, "HelperUnlinkLeaderboardFromStatistic" }, // 2203447586
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateLeaderboardEntries, "HelperUpdateLeaderboardEntries" }, // 2991572786
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_HelperUpdateStatistics, "HelperUpdateStatistics" }, // 735746002
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementLeaderboardVersion, "IncrementLeaderboardVersion" }, // 3312900980
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_IncrementStatisticVersion, "IncrementStatisticVersion" }, // 3552266430
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListLeaderboardDefinitions, "ListLeaderboardDefinitions" }, // 1939589301
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_ListStatisticDefinitions, "ListStatisticDefinitions" }, // 438527177
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UnlinkLeaderboardFromStatistic, "UnlinkLeaderboardFromStatistic" }, // 400164754
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateLeaderboardEntries, "UpdateLeaderboardEntries" }, // 2929175655
+		{ &Z_Construct_UFunction_UPlayFabLeaderboardsAPI_UpdateStatistics, "UpdateStatistics" }, // 665369873
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
+	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
+		TCppClassTypeTraits<UPlayFabLeaderboardsAPI>::IsAbstract,
+	};
+	static const UECodeGen_Private::FClassParams ClassParams;
+};
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::NewProp_OnPlayFabResponse = { "OnPlayFabResponse", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayFabLeaderboardsAPI, OnPlayFabResponse), Z_Construct_UDelegateFunction_PlayFab_OnPlayFabLeaderboardsRequestCompleted__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnPlayFabResponse_MetaData), NewProp_OnPlayFabResponse_MetaData) }; // 3514365815
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::NewProp_CallAuthenticationContext = { "CallAuthenticationContext", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayFabLeaderboardsAPI, CallAuthenticationContext), Z_Construct_UClass_UPlayFabAuthenticationContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CallAuthenticationContext_MetaData), NewProp_CallAuthenticationContext_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::NewProp_RequestJsonObj = { "RequestJsonObj", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayFabLeaderboardsAPI, RequestJsonObj), Z_Construct_UClass_UPlayFabJsonObject_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RequestJsonObj_MetaData), NewProp_RequestJsonObj_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::NewProp_ResponseJsonObj = { "ResponseJsonObj", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UPlayFabLeaderboardsAPI, ResponseJsonObj), Z_Construct_UClass_UPlayFabJsonObject_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ResponseJsonObj_MetaData), NewProp_ResponseJsonObj_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::NewProp_OnPlayFabResponse,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::NewProp_CallAuthenticationContext,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::NewProp_RequestJsonObj,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::NewProp_ResponseJsonObj,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::PropPointers) < 2048);
+UObject* (*const Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::DependentSingletons[])() = {
+	(UObject* (*)())Z_Construct_UClass_UOnlineBlueprintCallProxyBase,
+	(UObject* (*)())Z_Construct_UPackage__Script_PlayFab,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::DependentSingletons) < 16);
+const UECodeGen_Private::FClassParams Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::ClassParams = {
+	&UPlayFabLeaderboardsAPI::StaticClass,
+	nullptr,
+	&StaticCppClassTypeInfo,
+	DependentSingletons,
+	FuncInfo,
+	Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::PropPointers,
+	nullptr,
+	UE_ARRAY_COUNT(DependentSingletons),
+	UE_ARRAY_COUNT(FuncInfo),
+	UE_ARRAY_COUNT(Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::PropPointers),
+	0,
+	0x009000A0u,
+	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::Class_MetaDataParams), Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::Class_MetaDataParams)
+};
+UClass* Z_Construct_UClass_UPlayFabLeaderboardsAPI()
+{
+	if (!Z_Registration_Info_UClass_UPlayFabLeaderboardsAPI.OuterSingleton)
+	{
+		UECodeGen_Private::ConstructUClass(Z_Registration_Info_UClass_UPlayFabLeaderboardsAPI.OuterSingleton, Z_Construct_UClass_UPlayFabLeaderboardsAPI_Statics::ClassParams);
+	}
+	return Z_Registration_Info_UClass_UPlayFabLeaderboardsAPI.OuterSingleton;
+}
+template<> PLAYFAB_API UClass* StaticClass<UPlayFabLeaderboardsAPI>()
+{
+	return UPlayFabLeaderboardsAPI::StaticClass();
+}
+DEFINE_VTABLE_PTR_HELPER_CTOR(UPlayFabLeaderboardsAPI);
+UPlayFabLeaderboardsAPI::~UPlayFabLeaderboardsAPI() {}
+// End Class UPlayFabLeaderboardsAPI
+
+// Begin Registration
+struct Z_CompiledInDeferFile_FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_Statics
+{
+	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
+		{ Z_Construct_UClass_UPlayFabLeaderboardsAPI, UPlayFabLeaderboardsAPI::StaticClass, TEXT("UPlayFabLeaderboardsAPI"), &Z_Registration_Info_UClass_UPlayFabLeaderboardsAPI, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UPlayFabLeaderboardsAPI), 1636842173U) },
+	};
+};
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_4016370141(TEXT("/Script/PlayFab"),
+	Z_CompiledInDeferFile_FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_UEProjects_Popcorn_Plugins_PlayFabPlugin_PlayFab_Source_PlayFab_Classes_PlayFabLeaderboardsAPI_h_Statics::ClassInfo),
+	nullptr, 0,
+	nullptr, 0);
+// End Registration
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -30,11 +30,11 @@ void UPopcorn_GenericInputField::SetDefaultHintText(const FText& InDefaultHintTe
 
 void UPopcorn_GenericInputField::OnInputFieldFocused(const FText& Text)
 {
-	if (InputField)
+	/*if (InputField)
 	{
 		InputField->SetUserFocus(UGameplayStatics::GetPlayerController(GetWorld(), 0));
 		InputField->SetKeyboardFocus();
-	}
+	}*/
 }
 
 void UPopcorn_GenericInputField::NativePreConstruct()

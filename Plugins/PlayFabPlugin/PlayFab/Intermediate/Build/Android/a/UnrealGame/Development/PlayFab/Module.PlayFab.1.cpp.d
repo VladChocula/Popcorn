@@ -1892,11 +1892,11 @@ C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a
   C:/Users/nevet/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/bit \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a/UnrealGame/Development/PlayFab/Module.PlayFab.1.cpp \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a/UnrealGame/Development/PlayFab/Definitions.PlayFab.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Private/PlayFab.cpp \
-  Runtime/Core/Public/CoreMinimal.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Private/PlayFabPrivate.h \
-  Runtime/Core/Public/Delegates/Delegate.h \
-  Runtime/Online/HTTP/Public/Http.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFab.init.gen.cpp \
+  Runtime/CoreUObject/Public/UObject/GeneratedCppIncludes.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabAddonAPI.gen.cpp \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabAddonAPI.h \
+  Runtime/Core/Public/CoreMinimal.h Runtime/Online/HTTP/Public/Http.h \
   Runtime/Online/HTTP/Public/HttpModule.h \
   Runtime/Core/Public/Containers/Array.h \
   Runtime/Core/Public/Containers/Map.h \
@@ -1916,35 +1916,25 @@ C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a
   Runtime/Core/Public/Containers/StringFwd.h \
   Runtime/Core/Public/Containers/StringView.h \
   Runtime/Core/Public/HAL/Platform.h Runtime/Core/Public/Misc/Optional.h \
-  Runtime/Json/Public/Serialization/JsonWriter.h \
-  Runtime/Json/Public/Serialization/JsonReader.h \
-  Runtime/Json/Public/Serialization/JsonSerializer.h \
-  Runtime/Core/Public/Modules/ModuleManager.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Public/IPlayFab.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Public/PlayFabCommon.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabJsonValue.h \
-  Runtime/Json/Public/Dom/JsonValue.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabJsonValue.generated.h \
-  Runtime/CoreUObject/Public/UObject/ObjectMacros.h \
-  Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabJsonObject.h \
-  Runtime/Json/Public/Dom/JsonObject.h \
-  Runtime/Json/Public/Policies/CondensedJsonPrintPolicy.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabJsonObject.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabAdminAPI.h \
   Runtime/Engine/Public/Net/OnlineBlueprintCallProxyBase.h \
+  Runtime/CoreUObject/Public/UObject/ObjectMacros.h \
   Runtime/CoreUObject/Public/UObject/Object.h \
+  Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
   Runtime/Engine/Classes/Kismet/BlueprintAsyncActionBase.h \
   Runtime/CoreUObject/Public/UObject/WeakObjectPtr.h \
   ../Intermediate/Build/Android/UnrealGame/Inc/Engine/UHT/BlueprintAsyncActionBase.generated.h \
   ../Intermediate/Build/Android/UnrealGame/Inc/Engine/UHT/OnlineBlueprintCallProxyBase.generated.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabBaseModel.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabBaseModel.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabAdminModels.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabAddonModels.h \
   Runtime/Engine/Classes/Kismet/BlueprintFunctionLibrary.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabEnums.h \
   Runtime/CoreUObject/Public/UObject/Package.h \
   Runtime/Launch/Resources/Version.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabJsonObject.h \
+  Runtime/Json/Public/Dom/JsonObject.h \
+  Runtime/Json/Public/Policies/CondensedJsonPrintPolicy.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabJsonObject.generated.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabEnums.generated.h \
   Runtime/CoreUObject/Public/Templates/IsUEnumClass.h \
   Runtime/CoreUObject/Public/UObject/ReflectedTypeAccessors.h \
@@ -1959,65 +1949,5 @@ C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabResultCommon.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabResultCommon.generated.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabLoginResultCommon.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabAdminModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabAdminAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabClientAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabClientModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabClientModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabClientAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabServerAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabServerModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabServerModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabServerAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabAuthenticationAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabAuthenticationModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabAuthenticationModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabAuthenticationAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabCloudScriptAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabCloudScriptModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabCloudScriptModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabCloudScriptAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabDataAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabDataModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabDataModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabDataAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabEconomyAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabEconomyModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabEconomyModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabEconomyAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabEventsAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabEventsModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabEventsModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabEventsAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabExperimentationAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabExperimentationModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabExperimentationModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabExperimentationAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabInsightsAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabInsightsModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabInsightsModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabInsightsAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabGroupsAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabGroupsModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabGroupsModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabGroupsAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabProgressionAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabProgressionModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabProgressionModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabProgressionAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabLocalizationAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabLocalizationModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabLocalizationModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabLocalizationAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabMultiplayerAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabMultiplayerModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabMultiplayerModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabMultiplayerAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabProfilesAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabProfilesModels.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabProfilesModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabProfilesAPI.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabAddonAPI.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabAddonModels.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabAddonModels.generated.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabAddonAPI.generated.h

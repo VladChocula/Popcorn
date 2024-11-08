@@ -57,7 +57,7 @@ public:
 	TStaticArray<APC_PlayerInstance*, MAXPLAYERCOUNT> SessionPlayers;
 	
 	UFUNCTION(BlueprintCallable, Category = "GameSessionRanking")
-	TArray<FPlayerRanking> GetPlayerRankings() { return PlayerRankings; }
+	TArray<FPlayerRanking> GetPlayerRankings() { return _playerRankings; }
 
 	UFUNCTION(BlueprintCallable, Category = "GameSessionRanking")
 	void InitializePlayerRankings();
@@ -69,7 +69,7 @@ public:
 	void UpdatePlayerRankings();
 
 	UFUNCTION(BlueprintCallable, Category = "GameSessionState")
-	EGameSessionState GetGameSessionState() const { return this->GameSessionState; }
+	EGameSessionState GetGameSessionState() const { return this->_gameSessionState; }
 
 	void SetGameSessionState(EGameSessionState& NewGameSessionState);
 
@@ -112,12 +112,14 @@ public:
 private:
 
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, meta = (AllowPrivateAccess = "true"), Category = "GameSessionConfig")
-	uint8 CurrentPlayerCount = 0;
+	uint8 _currentPlayerCount = 0;
 
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, meta = (AllowPrivateAccess = "true"), Category = "GameSessionRanking")
-	TArray<FPlayerRanking> PlayerRankings;
+	TArray<FPlayerRanking> _playerRankings;
 
-	EGameSessionState GameSessionState = EGameSessionState::PreInitializeSession;
+	EGameSessionState _gameSessionState = EGameSessionState::PreInitializeSession;
+
+	FString _gameSessionId;
 	
 };
 

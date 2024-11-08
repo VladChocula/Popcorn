@@ -15,12 +15,12 @@ void APC_GM_Session::InitializePlayerRankings()
 {
 	if (SessionPlayers.Num() > 1)
 	{
-		PlayerRankings.SetNum(SessionPlayers.Num());
+		_playerRankings.SetNum(SessionPlayers.Num());
 
 		for (int i = 0; i < SessionPlayers.Num(); ++i)
 		{
-			PlayerRankings[i].Player = SessionPlayers[i];
-			PlayerRankings[i].CurrentRank = i;
+			_playerRankings[i].Player = SessionPlayers[i];
+			_playerRankings[i].CurrentRank = i;
 		}
 	}
 }
@@ -40,7 +40,7 @@ void APC_GM_Session::UpdatePlayerRankings()
 		PlayerToNewRankMap.Add(SessionPlayers[i], i);
 	}
 
-	for (FPlayerRanking& Ranking : PlayerRankings)
+	for (FPlayerRanking& Ranking : _playerRankings)
 	{
 		int32* NewRankPtr = PlayerToNewRankMap.Find(Ranking.Player);
 		if (NewRankPtr)
@@ -53,11 +53,11 @@ void APC_GM_Session::UpdatePlayerRankings()
 
 void APC_GM_Session::SetGameSessionState(EGameSessionState& NewGameSessionState)
 {
-	if (GameSessionState != NewGameSessionState)
+	if (_gameSessionState != NewGameSessionState)
 	{
-		GameSessionState = NewGameSessionState;
+		_gameSessionState = NewGameSessionState;
 
-		switch (GameSessionState)
+		switch (_gameSessionState)
 		{
 			case EGameSessionState::SessionInitialized:
 				HandleStateChangeToSessionInitialized();

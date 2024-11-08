@@ -10,7 +10,9 @@
 #include "PlayFab.h"
 #include "PlayFabUtilities.h"
 #include "Utils/LevelNames.h"
+#include "Utils/PC_PlayerData.h"
 #include "Kismet/GameplayStatics.h"
+#include "Misc/Guid.h"
 
 using namespace PlayFab;
 using namespace PlayFab::ClientModels;
@@ -57,6 +59,52 @@ void UGameInstance_Popcorn::InitializePlayFab()
 	_clientAPI = IPlayFabModuleInterface::Get().GetClientAPI();
 
 	UPlayFabUtilities::setPlayFabSettings(_titleId);
+}
+
+void UGameInstance_Popcorn::StorePlayerDataInPlayFab(const FPC_PlayerData& PlayerData)
+{
+	FString SerializedData = SerializePlayerData(PlayerData);
+
+	FUpdateUserDataRequest Request;
+	Request.Data.Add(TEXT("ActiveGameSessions"), SerializedData);
+	
+	
+	_clientAPI->UpdateUserData(Request,
+		UPlayFabClientAPI::FUpdateUserDataDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnUpdatePlayFabUserDataSuccess),
+		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnUpdatePlayFabUserDataError)
+	);
+}
+
+void UGameInstance_Popcorn::StorePlayerDataInPlayFab()
+{
+	FString SerializedData = SerializePlayerData();
+
+	FUpdateUserDataRequest Request;
+	Request.Data.Add(TEXT("ActiveGameSessions"), SerializedData);
+
+	_clientAPI->UpdateUserData(Request,
+		UPlayFabClientAPI::FUpdateUserDataDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnUpdatePlayFabUserDataSuccess),
+		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnUpdatePlayFabUserDataError)
+	);
+}
+
+void UGameInstance_Popcorn::RetrievePlayerDataInPlayFab(const FPC_PlayerData& PlayerData)
+{
+	FGetUserDataRequest Request;
+	Request.PlayFabId = PlayerData.PlayerId;
+	_clientAPI->GetUserData(Request,
+	UPlayFabClientAPI::FGetUserDataDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRetrievePlayFabUserDataSuccess),
+	FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRetrievePlayFabUserDataError));
+
+}
+
+void UGameInstance_Popcorn::RetrievePlayerDataInPlayFab()
+{
+	FGetUserDataRequest Request;
+	Request.PlayFabId = _playerData.PlayerId;
+	_clientAPI->GetUserData(Request,
+		UPlayFabClientAPI::FGetUserDataDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRetrievePlayFabUserDataSuccess),
+		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRetrievePlayFabUserDataError));
 
 }
 
@@ -64,8 +112,14 @@ void UGameInstance_Popcorn::OnLoginSuccess(const PlayFab::ClientModels::FLoginRe
 {
 	UE_LOG(LogTemp, Log, TEXT("PlayFab Login Successful. Session Ticket: %s"), *Result.SessionTicket);
 	_sessionTicket = *Result.SessionTicket;
+	
+	FGetAccountInfoRequest Request;
+	_clientAPI->GetAccountInfo(Request, 
+		UPlayFabClientAPI::FGetAccountInfoDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoSuccess),
+		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoFailure));
+	UGameplayStatics::OpenLevel(GetWorld(), FLevelNames::MainMenu);
 
-	UGameplayStatics::OpenLevel(GetWorld(), FLevelNames::DebugStarter);
+	RetrievePlayerDataInPlayFab();
 }
 
 void UGameInstance_Popcorn::OnLoginFailure(const PlayFab::FPlayFabCppError& ErrorResult)
@@ -97,13 +151,28 @@ void UGameInstance_Popcorn::OnRegistrationSuccess(const PlayFab::ClientModels::F
 	UE_LOG(LogTemp, Log, TEXT("Registration Success. Player ID: %s"), *Result.PlayFabId);
 	_sessionTicket = Result.SessionTicket;
 
-	//Load into the Main Menu - Set to DebugStarter for now.
-	UGameplayStatics::OpenLevel(GetWorld(), FLevelNames::DebugStarter);
+	FGetAccountInfoRequest Request;
+	_clientAPI->GetAccountInfo(Request,
+		UPlayFabClientAPI::FGetAccountInfoDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoSuccess),
+		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoFailure));
+	UGameplayStatics::OpenLevel(GetWorld(), FLevelNames::MainMenu);
 }
 
 void UGameInstance_Popcorn::OnRegistrationFailure(const PlayFab::FPlayFabCppError& ErrorResult)
 {
 	UE_LOG(LogTemp, Error, TEXT("Registration Failed: %s"), *ErrorResult.ErrorMessage);
+}
+
+void UGameInstance_Popcorn::OnGetAccountInfoSuccess(const PlayFab::ClientModels::FGetAccountInfoResult& Result)
+{
+	_playerData.Username = Result.AccountInfo->Username;
+	_playerData.PlayerId = Result.AccountInfo->PlayFabId;
+	_playerData.SessionTicket = _sessionTicket;
+}
+
+void UGameInstance_Popcorn::OnGetAccountInfoFailure(const PlayFab::FPlayFabCppError& ErrorResult)
+{
+	UE_LOG(LogTemp, Error, TEXT("Get Account Info Failed: %s"), *ErrorResult.ErrorMessage);
 }
 
 void UGameInstance_Popcorn::OnAccountRecoveryRequestSuccess(const ClientModels::FSendAccountRecoveryEmailResult& Result)
@@ -114,6 +183,59 @@ void UGameInstance_Popcorn::OnAccountRecoveryRequestSuccess(const ClientModels::
 void UGameInstance_Popcorn::OnAccountRecoveryRequestFailure(const PlayFab::FPlayFabCppError& ErrorResult)
 {
 	UE_LOG(LogTemp, Error, TEXT("Account Recovery Request Failed: %s"), *ErrorResult.ErrorMessage);
+}
+
+void UGameInstance_Popcorn::OnUpdatePlayFabUserDataSuccess(const FUpdateUserDataResult& Result)
+{
+	//UE_LOG(LogTemp, Log, TEXT("%s - User Data in PlayFab updated successfully."), *_playerData.PlayerId);
+}
+
+void UGameInstance_Popcorn::OnUpdatePlayFabUserDataError(const PlayFab::FPlayFabCppError& ErrorResult)
+{
+	UE_LOG(LogTemp, Error, TEXT("Updating User Data in PlayFab Failed: %s"), *ErrorResult.ErrorMessage);
+}
+
+void UGameInstance_Popcorn::OnRetrievePlayFabUserDataSuccess(const FGetUserDataResult& Result)
+{
+	UE_LOG(LogTemp, Log, TEXT("User Data Successfully retrieved from PlayFab: %s"), *Result.toJSONString());
+
+	if (Result.Data.Contains(TEXT("ActiveGameSessions")))
+	{
+		FString SerializedData = Result.Data[TEXT("ActiveGameSessions")].Value;
+
+		TSharedPtr<FJsonObject> JsonObject;
+		TSharedRef<TJsonReader<>> Reader = TJsonReaderFactory<>::Create(SerializedData);
+
+		if (FJsonSerializer::Deserialize(Reader, JsonObject) && JsonObject)
+		{
+			_playerData.ActiveGameSessions.Empty();
+
+			TArray<TSharedPtr<FJsonValue>> SessionArray = JsonObject->GetArrayField(TEXT("ActiveGameSessions"));
+
+			for (TSharedPtr<FJsonValue> SessionValue : SessionArray)
+			{
+				TSharedPtr<FJsonObject> SessionObject = SessionValue->AsObject();
+				if (SessionObject)
+				{
+					FString SessionId = SessionObject->GetStringField((TEXT("SessionId")));
+					_playerData.ActiveGameSessions.Add(SessionId);
+				}
+			}
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Failed to deserialize ActiveGameSessions JSON."));
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("No ActiveGameSessions found for this player in PlayFab."));
+	}
+}
+
+void UGameInstance_Popcorn::OnRetrievePlayFabUserDataError(const PlayFab::FPlayFabCppError& ErrorResult)
+{
+	UE_LOG(LogTemp, Error, TEXT("Retrieving User Data from PlayFab Failed: %s"), *ErrorResult.ErrorMessage);
 }
 
 void UGameInstance_Popcorn::ForgotPasswordHandler(const FText& Email)
@@ -163,4 +285,65 @@ void UGameInstance_Popcorn::SignupUserHandler(const FText& Email, const FText& P
 	FPlayFabErrorDelegate ErrorDelegate = FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRegistrationFailure);
 
 	clientAPI->RegisterPlayFabUser(Request, SuccessDelegate, ErrorDelegate);*/
+}
+
+FString UGameInstance_Popcorn::SerializePlayerData(const FPC_PlayerData& PlayerData)
+{
+	FString OutputString;
+	TSharedRef<TJsonWriter<>> Writer = TJsonWriterFactory<>::Create(&OutputString);
+
+	Writer->WriteObjectStart();
+	Writer->WriteArrayStart(TEXT("ActiveGameSessions"));
+
+	for (const FString& SessionId : PlayerData.ActiveGameSessions)
+	{
+		Writer->WriteObjectStart();
+		Writer->WriteValue(TEXT("SessionId"), SessionId);
+		Writer->WriteObjectEnd();
+	}
+
+	Writer->WriteArrayEnd();
+	Writer->WriteObjectEnd();
+
+	Writer->Close();
+
+	return OutputString;
+}
+
+FString UGameInstance_Popcorn::SerializePlayerData()
+{
+	FString OutputString;
+	TSharedRef<TJsonWriter<>> Writer = TJsonWriterFactory<>::Create(&OutputString);
+
+	Writer->WriteObjectStart();
+	Writer->WriteArrayStart(TEXT("ActiveGameSessions"));
+
+	for (const FString& SessionId : _playerData.ActiveGameSessions)
+	{
+		Writer->WriteObjectStart();
+		Writer->WriteValue(TEXT("SessionId"), SessionId);
+		Writer->WriteObjectEnd();
+	}
+
+	Writer->WriteArrayEnd();
+	Writer->WriteObjectEnd();
+
+	Writer->Close();
+
+	return OutputString;
+}
+
+FString UGameInstance_Popcorn::GenerateGameSessionId()
+{
+	const int32 IdLength = 7;
+	FString GameSessionId = TEXT("");
+	FString AllowedChars = TEXT("ABCEFGHIJKLMNOPQRSTUVWXYZ0123456789");
+
+	for (int32 i = 0; i < IdLength; i++)
+	{
+		int32 RandomIndex = FMath::RandRange(0, AllowedChars.Len() - 1);
+		GameSessionId += AllowedChars[RandomIndex];
+	}
+
+	return GameSessionId;
 }

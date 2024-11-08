@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
+#include "Utils/PC_PlayerData.h"
 #include "GameInstance_Popcorn.generated.h"
 
 namespace PlayFab
@@ -13,6 +14,9 @@ namespace PlayFab
 		struct FLoginResult;
 		struct FRegisterPlayFabUserResult;
 		struct FSendAccountRecoveryEmailResult;
+		struct FGetAccountInfoResult;
+		struct FGetUserDataResult;
+		struct FUpdateUserDataResult;
 	}
 
 	struct FPlayFabCppError;
@@ -23,6 +27,7 @@ namespace PlayFab
 }
 
 typedef TSharedPtr<class PlayFab::UPlayFabClientAPI> PlayFabClientPtr;
+struct FPC_PlayerData;
 
 UCLASS()
 class POPCORN_API UGameInstance_Popcorn : public UGameInstance
@@ -36,8 +41,12 @@ public:
 	virtual void StartGameInstance() override;
 	FString GetTitleId() const { return _titleId; }
 
-	//PlayFab Initialization
+	//PlayFab
 	void InitializePlayFab();
+	void StorePlayerDataInPlayFab(const FPC_PlayerData& PlayerData);
+	void StorePlayerDataInPlayFab();
+	void RetrievePlayerDataInPlayFab(const FPC_PlayerData& PlayerData);
+	void RetrievePlayerDataInPlayFab();
 
 	// Login Success/Failure Callbacks
 	void OnLoginSuccess(const PlayFab::ClientModels::FLoginResult& Result);
@@ -53,9 +62,19 @@ public:
 	void OnRegistrationSuccess(const PlayFab::ClientModels::FRegisterPlayFabUserResult& Result);
 	void OnRegistrationFailure(const PlayFab::FPlayFabCppError& ErrorResult);
 
+	//Get Account Info Callbacks
+	void OnGetAccountInfoSuccess(const PlayFab::ClientModels::FGetAccountInfoResult& Result);
+	void OnGetAccountInfoFailure(const PlayFab::FPlayFabCppError& ErrorResult);
+
 	//Account Recovery Callbacks
 	void OnAccountRecoveryRequestSuccess(const PlayFab::ClientModels::FSendAccountRecoveryEmailResult& Result);
 	void OnAccountRecoveryRequestFailure(const PlayFab::FPlayFabCppError& ErrorResult);
+
+	//Playfab UserData Callbacks
+	void OnUpdatePlayFabUserDataSuccess(const PlayFab::ClientModels::FUpdateUserDataResult& Result);
+	void OnUpdatePlayFabUserDataError(const PlayFab::FPlayFabCppError& ErrorResult);
+	void OnRetrievePlayFabUserDataSuccess(const PlayFab::ClientModels::FGetUserDataResult& Result);
+	void OnRetrievePlayFabUserDataError(const PlayFab::FPlayFabCppError& ErrorResult);
 
 	//Handlers for Playfab Login Screen
 	UFUNCTION(BlueprintCallable, Category = "Playfab Login")
@@ -65,9 +84,24 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Playfab Login")
 	void SignupUserHandler(const FText& Email, const FText& Password, const FText& Username);
 
+	//Custom UserData to be held in PlayFab
+	FString SerializePlayerData(const FPC_PlayerData& PlayerData);
+	FString SerializePlayerData();
+
+	//Game Session Utility Functions
+	UFUNCTION(BlueprintCallable, Category = "Game Session")
+	FString GenerateGameSessionId();
+	
+	//Setters
+
+
+	//Getters
+	FPC_PlayerData GetPlayerData() const { return _playerData; }
+
 private:
 	
 	PlayFabClientPtr _clientAPI = nullptr;
 	FString _sessionTicket;
 	FString _titleId = TEXT("FB15D");
+	FPC_PlayerData _playerData;
 };

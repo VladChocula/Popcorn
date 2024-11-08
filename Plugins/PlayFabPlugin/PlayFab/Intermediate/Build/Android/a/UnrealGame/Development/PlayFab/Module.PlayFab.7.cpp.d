@@ -1892,8 +1892,9 @@ C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a
   C:/Users/nevet/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/bit \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a/UnrealGame/Development/PlayFab/Module.PlayFab.7.cpp \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a/UnrealGame/Development/PlayFab/Definitions.PlayFab.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Private/PlayFabServerModelDecoder.cpp \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabServerModelDecoder.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabClientModelDecoder.gen.cpp \
+  Runtime/CoreUObject/Public/UObject/GeneratedCppIncludes.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabClientModelDecoder.h \
   Runtime/Core/Public/CoreMinimal.h \
   Runtime/Engine/Classes/Kismet/BlueprintFunctionLibrary.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabEnums.h \
@@ -1908,7 +1909,7 @@ C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabEnums.generated.h \
   Runtime/CoreUObject/Public/Templates/IsUEnumClass.h \
   Runtime/CoreUObject/Public/UObject/ReflectedTypeAccessors.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabServerModels.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabClientModels.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabRequestCommon.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Public/PlayFabAuthenticationContext.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Public/PlayFabCommonSettings.h \
@@ -1920,37 +1921,5 @@ C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabResultCommon.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabResultCommon.generated.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabLoginResultCommon.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabServerModels.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabServerModelDecoder.generated.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Private/PlayFabPrivate.h \
-  Runtime/Core/Public/Delegates/Delegate.h \
-  Runtime/Online/HTTP/Public/Http.h \
-  Runtime/Online/HTTP/Public/HttpModule.h \
-  Runtime/Core/Public/Containers/Array.h \
-  Runtime/Core/Public/Containers/Map.h \
-  Runtime/Core/Public/Containers/UnrealString.h \
-  Runtime/Core/Public/HAL/PlatformMath.h \
-  Runtime/Online/HTTP/Public/Interfaces/IHttpRequest.h \
-  Runtime/Online/HTTP/Public/Interfaces/IHttpBase.h \
-  Runtime/Core/Public/Misc/AssertionMacros.h \
-  Runtime/Core/Public/Misc/CoreMisc.h \
-  Runtime/Core/Public/Modules/ModuleInterface.h \
-  Runtime/Core/Public/Templates/SharedPointer.h \
-  Runtime/Online/HTTP/Public/Interfaces/IHttpResponse.h \
-  Runtime/Online/HTTP/Public/PlatformHttp.h \
-  Runtime/Online/HTTP/Public/Android/AndroidPlatformHttp.h \
-  Runtime/Online/HTTP/Public/GenericPlatform/GenericPlatformHttp.h \
-  Runtime/Core/Public/Containers/Set.h \
-  Runtime/Core/Public/Containers/StringFwd.h \
-  Runtime/Core/Public/Containers/StringView.h \
-  Runtime/Core/Public/HAL/Platform.h Runtime/Core/Public/Misc/Optional.h \
-  Runtime/Json/Public/Serialization/JsonWriter.h \
-  Runtime/Json/Public/Serialization/JsonReader.h \
-  Runtime/Json/Public/Serialization/JsonSerializer.h \
-  Runtime/Core/Public/Modules/ModuleManager.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Public/IPlayFab.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Public/PlayFabCommon.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Private/PlayFabServerModels.cpp \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Private/PlayFabUtilities.cpp \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFab/Classes/PlayFabUtilities.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabUtilities.generated.h
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabClientModels.generated.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFab/UHT/PlayFabClientModelDecoder.generated.h

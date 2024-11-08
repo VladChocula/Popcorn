@@ -1892,9 +1892,20 @@ C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a
   C:/Users/nevet/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/include/c++/v1/bit \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a/UnrealGame/Development/PlayFabCommon/Module.PlayFabCommon.cpp \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a/UnrealGame/Development/PlayFabCommon/Definitions.PlayFabCommon.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFabCommon/UHT/PlayFabAuthenticationContext.gen.cpp \
+  Runtime/CoreUObject/Public/UObject/GeneratedCppIncludes.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Public/PlayFabAuthenticationContext.h \
+  Runtime/Core/Public/CoreMinimal.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Public/PlayFabCommonSettings.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Public/PlayFabRuntimeSettings.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFabCommon/UHT/PlayFabRuntimeSettings.generated.h \
+  Runtime/CoreUObject/Public/UObject/ObjectMacros.h \
+  Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFabCommon/UHT/PlayFabAuthenticationContext.generated.h \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFabCommon/UHT/PlayFabCommon.init.gen.cpp \
+  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFabCommon/UHT/PlayFabRuntimeSettings.gen.cpp \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Private/PlayFabCommmonUtils.cpp \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Public/PlayFabCommonUtils.h \
-  Runtime/Core/Public/CoreMinimal.h \
   Runtime/Core/Public/Misc/FileHelper.h Runtime/Core/Public/Misc/Paths.h \
   Runtime/Json/Public/Dom/JsonObject.h \
   Runtime/Json/Public/Serialization/JsonReader.h \
@@ -1902,11 +1913,6 @@ C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/a
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Private/PlayFabCommon.cpp \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Public/PlayFabCommon.h \
   Runtime/Core/Public/Modules/ModuleManager.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Public/PlayFabCommonSettings.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Public/PlayFabRuntimeSettings.h \
-  C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Intermediate/Build/Android/UnrealGame/Inc/PlayFabCommon/UHT/PlayFabRuntimeSettings.generated.h \
-  Runtime/CoreUObject/Public/UObject/ObjectMacros.h \
-  Runtime/CoreUObject/Public/UObject/ScriptMacros.h \
   C:/UEProjects/Popcorn/Plugins/PlayFabPlugin/PlayFab/Source/PlayFabCommon/Private/PlayFabCommonSettings.cpp \
   Runtime/Engine/Classes/Kismet/GameplayStatics.h \
   Runtime/CoreUObject/Public/UObject/Object.h \

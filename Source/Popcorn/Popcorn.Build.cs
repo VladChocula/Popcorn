@@ -9,7 +9,17 @@ public class Popcorn : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "PlayFab", "PlayFabCommon", "PlayFabCpp" });
+		PublicDependencyModuleNames.AddRange(new string[] { 
+            "Core", 
+            "CoreUObject", 
+            "Engine", 
+            "InputCore", 
+            "EnhancedInput", 
+            "PlayFab", 
+            "PlayFabCommon", 
+            "PlayFabCpp",
+            "Json",
+            "JsonUtilities"});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

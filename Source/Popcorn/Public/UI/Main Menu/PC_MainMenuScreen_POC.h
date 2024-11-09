@@ -5,8 +5,8 @@
 #include "Utils/PC_GameConstants.h"
 #include "PC_MainMenuScreen_POC.generated.h"
 
-class UWidgetSwitcher;
 class UPC_MainMenuSubWidget_POC;
+class UPC_MainMenu_GameSessionSlot_POC;
 
 /**
  * 
@@ -16,8 +16,10 @@ class POPCORN_API UPC_MainMenuScreen_POC : public UUserWidget
 {
 	GENERATED_BODY()
 
-	UPROPERTY(meta = (BindWidget))
-	UWidgetSwitcher* SessionSlotWidgetSwitchers[GAME_SESSIONS_MAX];
+public:
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Main Menu Screen")
+	TSubclassOf<UPC_MainMenu_GameSessionSlot_POC> GameSessionSlotWidgetClass;
 	
 	UFUNCTION(BlueprintCallable, Category = "Main Menu Screen")
 	void ShowCreateSessionWidget(UWidgetSwitcher* GameSessionSlot);
@@ -25,9 +27,14 @@ class POPCORN_API UPC_MainMenuScreen_POC : public UUserWidget
 	UFUNCTION(BlueprintCallable, Category = "Main Menu Screen")
 	void ShowGameSessionWidget(UWidgetSwitcher* GameSessionSlot);
 
+	UFUNCTION(BlueprintCallable, Category = "Main Menu Screen")
+	void InitializeSessionSlots();
 
 private:
+
+	UPROPERTY()
+	TArray<UPC_MainMenuSubWidget_POC*> GameSessionSlotWidgetSwitchers;
 	
-	UFUNCTION()
 	void CreateGameSessionHandler();
+
 };

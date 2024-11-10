@@ -30,9 +30,11 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Main Menu Screen")
 	void InitializeSessionSlots();
 
+	virtual void NativePreConstruct() override;
+
 private:
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Game Sessions")
 	TArray<UPC_MainMenuSubWidget_POC*> GameSessionSlotWidgetSwitchers;
 	
 	void CreateGameSessionHandler();

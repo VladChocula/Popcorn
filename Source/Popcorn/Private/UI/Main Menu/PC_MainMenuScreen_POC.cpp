@@ -5,6 +5,7 @@
 #include "UI/Main Menu/PC_MainMenuSubWidget_POC.h"
 #include "UI/Main Menu/PC_MainMenu_GameSessionSlot_POC.h"
 #include "Components/ScaleBox.h"
+#include "Components/WidgetSwitcher.h"
 
 
 void UPC_MainMenuScreen_POC::ShowCreateSessionWidget(UWidgetSwitcher* GameSessionSlot)
@@ -48,6 +49,18 @@ void UPC_MainMenuScreen_POC::InitializeSessionSlots()
 			{
 				UE_LOG(LogTemp, Warning, TEXT("Could not find ScaleBox: %s"), *ScaleBoxName);
 			}
+			
+			if (NewSlot->GameSessionSlotWidgetSwitcher && NewSlot->CreateGameSessionSlotWidget)
+			{
+				NewSlot->GameSessionSlotWidgetSwitcher->SetActiveWidget(NewSlot->CreateGameSessionSlotWidget);
+			}
 		}
 	}
+}
+
+void UPC_MainMenuScreen_POC::NativePreConstruct()
+{
+	Super::NativePreConstruct();
+
+	InitializeSessionSlots();
 }

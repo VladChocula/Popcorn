@@ -25,7 +25,7 @@ public:
 protected:
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Game Session Widget")
-	UButton* JoinSessionButton;
+	UButton* JoinInProgressSessionButton;
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Game Session Widget")
 	UTextBlock* SessionIdText;

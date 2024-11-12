@@ -50,7 +50,7 @@ void UGameInstance_Popcorn::StartGameInstance()
 	UE_LOG(LogTemp, Log, TEXT("Game Instance Started"));
 
 	UE_LOG(LogTemp, Log, TEXT("Load into PlayerLogin"));
-	UGameplayStatics::OpenLevel(GetWorld(), FLevelNames::PlayFabLogin);
+	UGameplayStatics::OpenLevel(this, FLevelNames::PlayerLogin);
 }
 
 void UGameInstance_Popcorn::InitializePlayFab()
@@ -117,7 +117,7 @@ void UGameInstance_Popcorn::OnLoginSuccess(const PlayFab::ClientModels::FLoginRe
 	_clientAPI->GetAccountInfo(Request, 
 		UPlayFabClientAPI::FGetAccountInfoDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoSuccess),
 		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoFailure));
-	UGameplayStatics::OpenLevel(GetWorld(), FLevelNames::MainMenu);
+	UGameplayStatics::OpenLevel(this, FLevelNames::MainMenu);
 
 	RetrievePlayerDataInPlayFab();
 }
@@ -155,7 +155,7 @@ void UGameInstance_Popcorn::OnRegistrationSuccess(const PlayFab::ClientModels::F
 	_clientAPI->GetAccountInfo(Request,
 		UPlayFabClientAPI::FGetAccountInfoDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoSuccess),
 		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoFailure));
-	UGameplayStatics::OpenLevel(GetWorld(), FLevelNames::MainMenu);
+	UGameplayStatics::OpenLevel(this, FLevelNames::MainMenu);
 }
 
 void UGameInstance_Popcorn::OnRegistrationFailure(const PlayFab::FPlayFabCppError& ErrorResult)

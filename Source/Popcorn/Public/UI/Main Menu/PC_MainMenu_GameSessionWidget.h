@@ -40,4 +40,10 @@ private:
 
 	FString SessionID, GameSessionState;
 	int32 CurrentPlayers;
+
+	UFUNCTION(BlueprintCallable, meta = (AllowPrivateAccess = "true"), Category = "Create Session Widget")
+	void OnJoinInProgressSessionButtonPressed();
+
+
+
 };

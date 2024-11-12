@@ -21,5 +21,8 @@ protected:
 
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget), Category = "Create Session Widget")
 	UTextBlock* CreateSessionText;
-	
+
+private:
+	UFUNCTION(BlueprintCallable, meta = (AllowPrivateAccess = "true"), Category = "Create Session Widget")
+	void OnCreateSessionButtonPressed();
 };

@@ -12,6 +12,6 @@ struct FLevelNames
 	//Define all the level names
 	static const FName DebugStarter;
 	static const FName MainMenu;
-	static const FName PlayFabLogin;
+	static const FName PlayerLogin;
 	static const FName Credits;
 };

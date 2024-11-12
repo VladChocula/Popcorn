@@ -7,6 +7,7 @@
 
 class UPC_MainMenuSubWidget_POC;
 class UPC_MainMenu_GameSessionSlot_POC;
+class UPC_MainMenu_JoinSession_POC;
 
 /**
  * 
@@ -18,9 +19,30 @@ class POPCORN_API UPC_MainMenuScreen_POC : public UUserWidget
 
 public:
 
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Main Menu Screen")
-	TSubclassOf<UPC_MainMenu_GameSessionSlot_POC> GameSessionSlotWidgetClass;
-	
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget), Category = "Game Session Slot")
+	UPC_MainMenu_GameSessionSlot_POC* GameSlot0;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget), Category = "Game Session Slot")
+	UPC_MainMenu_GameSessionSlot_POC* GameSlot1;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget), Category = "Game Session Slot")
+	UPC_MainMenu_GameSessionSlot_POC* GameSlot2;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget), Category = "Game Session Slot")
+	UPC_MainMenu_GameSessionSlot_POC* GameSlot3;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget), Category = "Game Session Slot")
+	UPC_MainMenu_GameSessionSlot_POC* GameSlot4;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget), Category = "Game Session Slot")
+	UPC_MainMenu_GameSessionSlot_POC* GameSlot5;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget), Category = "Game Session Slot")
+	TArray<UPC_MainMenu_GameSessionSlot_POC*> GameSlotSwitchers;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget), Category = "Join Session Widget")
+	UPC_MainMenu_JoinSession_POC* JoinSessionWidget;
+
 	UFUNCTION(BlueprintCallable, Category = "Main Menu Screen")
 	void ShowCreateSessionWidget(UWidgetSwitcher* GameSessionSlot);
 
@@ -34,9 +56,6 @@ public:
 
 private:
 
-	UPROPERTY(BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Game Sessions")
-	TArray<UPC_MainMenuSubWidget_POC*> GameSessionSlotWidgetSwitchers;
-	
 	void CreateGameSessionHandler();
 
 };

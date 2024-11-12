@@ -3,8 +3,8 @@
 
 #include "Utils/LevelNames.h"
 
-const FName FLevelNames::PlayFabLogin = FName(TEXT("PlayerLogin"));
-const FName FLevelNames::MainMenu = FName(TEXT("MainMenu"));
+const FName FLevelNames::PlayerLogin = FName(TEXT("/Game/Maps/PlayerLogin"));
+const FName FLevelNames::MainMenu = FName(TEXT("/Game/Maps/MainMenu"));
 const FName FLevelNames::DebugStarter = FName(TEXT("DebugStarter"));
-const FName FLevelNames::Credits = FName(TEXT("Credits"));
+const FName FLevelNames::Credits = FName(TEXT("/Game/Maps/Credits"));
 

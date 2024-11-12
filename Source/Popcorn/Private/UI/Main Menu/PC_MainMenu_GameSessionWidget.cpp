@@ -26,3 +26,8 @@ void UPC_MainMenu_GameSessionWidget::InitSessionWidget(const FString& InSessionI
 		GameSessionStateText->SetText(FText::FromString(GameSessionState));
 	}
 }
+
+void UPC_MainMenu_GameSessionWidget::OnJoinInProgressSessionButtonPressed()
+{
+	UE_LOG(LogTemp, Log, TEXT("On Join In-Progress Session Button has been pressed!"));
+}

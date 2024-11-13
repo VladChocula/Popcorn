@@ -1,0 +1,22 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\x64\\unrealgame\\development\\playfabcpp\\module.playfabcpp.9.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueprojects\\popcorn\\intermediate\\build\\win64\\x64\\popcorn\\development\\engine\\sharedpch.engine.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\x64\\unrealgame\\development\\playfabcpp\\definitions.playfabcpp.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\private\\core\\playfabserverdatamodels.cpp",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfabserverdatamodels.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfabcppbasemodel.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabauthenticationcontext.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabcommonsettings.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabruntimesettings.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfabcommon\\uht\\playfabruntimesettings.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfabcommon\\uht\\playfabauthenticationcontext.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfabjsonhelpers.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

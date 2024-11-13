@@ -1,0 +1,30 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfab\\uht\\playfabdatamodels.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueprojects\\popcorn\\intermediate\\build\\win64\\x64\\popcorn\\development\\engine\\sharedpch.engine.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\x64\\unrealgame\\development\\playfab\\definitions.playfab.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfab\\classes\\playfabdatamodels.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfab\\classes\\playfabenums.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfab\\classes\\playfabjsonobject.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfab\\uht\\playfabjsonobject.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfab\\uht\\playfabenums.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfab\\classes\\playfabrequestcommon.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabauthenticationcontext.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabcommonsettings.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabruntimesettings.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfabcommon\\uht\\playfabruntimesettings.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfabcommon\\uht\\playfabauthenticationcontext.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfab\\uht\\playfabrequestcommon.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfab\\classes\\playfabloginresultcommon.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfab\\classes\\playfabresultcommon.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfab\\uht\\playfabresultcommon.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfab\\uht\\playfabloginresultcommon.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfab\\uht\\playfabdatamodels.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

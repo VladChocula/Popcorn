@@ -1,0 +1,32 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\x64\\unrealgame\\development\\playfabcommon\\module.playfabcommon.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueprojects\\popcorn\\intermediate\\build\\win64\\x64\\popcorn\\development\\engine\\sharedpch.engine.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\x64\\unrealgame\\development\\playfabcommon\\definitions.playfabcommon.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\private\\playfabcommmonutils.cpp",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabcommonutils.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\private\\playfabcommon.cpp",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabcommon.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabcommonsettings.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabruntimesettings.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfabcommon\\uht\\playfabruntimesettings.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\private\\playfabcommonsettings.cpp",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystatics.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\arfilter.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\sound\\dialoguetypes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\dialoguetypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystaticstypes.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\gameplaystatics.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\private\\playfabruntimesettings.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

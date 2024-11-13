@@ -1,0 +1,40 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\x64\\unrealgame\\development\\playfabcpp\\module.playfabcpp.4.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\ueprojects\\popcorn\\intermediate\\build\\win64\\x64\\popcorn\\development\\engine\\sharedpch.engine.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\x64\\unrealgame\\development\\playfabcpp\\definitions.playfabcpp.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\private\\core\\playfabclientinstanceapi.cpp",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfabclientinstanceapi.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfaberror.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfabclientdatamodels.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfabcppbasemodel.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabauthenticationcontext.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabcommonsettings.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcommon\\public\\playfabruntimesettings.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfabcommon\\uht\\playfabruntimesettings.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\intermediate\\build\\win64\\unrealgame\\inc\\playfabcommon\\uht\\playfabauthenticationcontext.generated.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfabsettings.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfabapisettings.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\online\\http\\public\\interfaces\\ihttprequest.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\online\\http\\public\\interfaces\\ihttpbase.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\online\\http\\public\\interfaces\\ihttpresponse.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfabresulthandler.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\online\\http\\public\\http.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\online\\http\\public\\httpmodule.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\online\\http\\public\\platformhttp.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\online\\http\\public\\windows\\windowsplatformhttp.h",
+            "c:\\program files\\epic games\\ue_5.4\\engine\\source\\runtime\\online\\http\\public\\genericplatform\\genericplatformhttp.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\playfab.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\private\\core\\playfabcloudscriptapi.cpp",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfabcloudscriptapi.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfabcloudscriptdatamodels.h",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\private\\core\\playfabcloudscriptdatamodels.cpp",
+            "c:\\ueprojects\\popcorn\\plugins\\playfabplugin\\playfab\\source\\playfabcpp\\public\\core\\playfabjsonhelpers.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

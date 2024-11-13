@@ -13,6 +13,8 @@
 #include "Utils/PC_PlayerData.h"
 #include "Kismet/GameplayStatics.h"
 #include "Misc/Guid.h"
+#include "Audio/PC_AudioManager.h"
+#include "Levels/PC_LevelManagerSubsystem.h"
 
 using namespace PlayFab;
 using namespace PlayFab::ClientModels;
@@ -30,10 +32,34 @@ void UGameInstance_Popcorn::Init()
 	//Rabbit hole of getting the RunTimeSettings and editing them in the Init() call
 	//GetMutableDefault<UPlayFabRuntimeSettings>()->TitleId = titleId;
 
-	UE_LOG(LogTemp, Log, TEXT("Initializing PlayFab with TitleId: %s"), *_titleId);
+	UE_LOG(LogTemp, Log, TEXT("Initializing PlayFab with TitleId: %s"), *titleId_);
 	InitializePlayFab();
-	
-	UE_LOG(LogTemp, Log, TEXT("Loading Player Settings"));
+
+	UE_LOG(LogTemp, Log, TEXT("Setting audioManager_ reference...."));
+	audioManager_ = GetSubsystem<UPC_AudioManager>();
+
+	if (audioManager_)
+	{
+		UE_LOG(LogTemp, Log, TEXT("AudioManager has been set properly"));
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("AUDIOMANAGER PTR IS REFERENCING NULL"));
+	}
+
+	UE_LOG(LogTemp, Log, TEXT("Setting levelManager_ reference...."));
+	levelManager_ = GetSubsystem<UPC_LevelManagerSubsystem>();
+
+	if (levelManager_)
+	{
+		UE_LOG(LogTemp, Log, TEXT("levelManager_ reference has been set properly"));
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("LEVELMANAGER PTR IS REFERENCING NULL"));
+	}
+
+
 }
 
 void UGameInstance_Popcorn::Shutdown()
@@ -47,8 +73,6 @@ void UGameInstance_Popcorn::StartGameInstance()
 {
 	Super::StartGameInstance();
 
-	UE_LOG(LogTemp, Log, TEXT("Game Instance Started"));
-
 	UE_LOG(LogTemp, Log, TEXT("Load into PlayerLogin"));
 	UGameplayStatics::OpenLevel(this, FLevelNames::PlayerLogin);
 }
@@ -56,9 +80,9 @@ void UGameInstance_Popcorn::StartGameInstance()
 void UGameInstance_Popcorn::InitializePlayFab()
 {
 
-	_clientAPI = IPlayFabModuleInterface::Get().GetClientAPI();
+	clientAPI_ = IPlayFabModuleInterface::Get().GetClientAPI();
 
-	UPlayFabUtilities::setPlayFabSettings(_titleId);
+	UPlayFabUtilities::setPlayFabSettings(titleId_);
 }
 
 void UGameInstance_Popcorn::StorePlayerDataInPlayFab(const FPC_PlayerData& PlayerData)
@@ -69,7 +93,7 @@ void UGameInstance_Popcorn::StorePlayerDataInPlayFab(const FPC_PlayerData& Playe
 	Request.Data.Add(TEXT("ActiveGameSessions"), SerializedData);
 	
 	
-	_clientAPI->UpdateUserData(Request,
+	clientAPI_->UpdateUserData(Request,
 		UPlayFabClientAPI::FUpdateUserDataDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnUpdatePlayFabUserDataSuccess),
 		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnUpdatePlayFabUserDataError)
 	);
@@ -82,7 +106,7 @@ void UGameInstance_Popcorn::StorePlayerDataInPlayFab()
 	FUpdateUserDataRequest Request;
 	Request.Data.Add(TEXT("ActiveGameSessions"), SerializedData);
 
-	_clientAPI->UpdateUserData(Request,
+	clientAPI_->UpdateUserData(Request,
 		UPlayFabClientAPI::FUpdateUserDataDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnUpdatePlayFabUserDataSuccess),
 		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnUpdatePlayFabUserDataError)
 	);
@@ -92,7 +116,7 @@ void UGameInstance_Popcorn::RetrievePlayerDataInPlayFab(const FPC_PlayerData& Pl
 {
 	FGetUserDataRequest Request;
 	Request.PlayFabId = PlayerData.PlayerId;
-	_clientAPI->GetUserData(Request,
+	clientAPI_->GetUserData(Request,
 	UPlayFabClientAPI::FGetUserDataDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRetrievePlayFabUserDataSuccess),
 	FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRetrievePlayFabUserDataError));
 
@@ -101,8 +125,8 @@ void UGameInstance_Popcorn::RetrievePlayerDataInPlayFab(const FPC_PlayerData& Pl
 void UGameInstance_Popcorn::RetrievePlayerDataInPlayFab()
 {
 	FGetUserDataRequest Request;
-	Request.PlayFabId = _playerData.PlayerId;
-	_clientAPI->GetUserData(Request,
+	Request.PlayFabId = playerData_.PlayerId;
+	clientAPI_->GetUserData(Request,
 		UPlayFabClientAPI::FGetUserDataDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRetrievePlayFabUserDataSuccess),
 		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRetrievePlayFabUserDataError));
 
@@ -111,10 +135,10 @@ void UGameInstance_Popcorn::RetrievePlayerDataInPlayFab()
 void UGameInstance_Popcorn::OnLoginSuccess(const PlayFab::ClientModels::FLoginResult& Result)
 {
 	UE_LOG(LogTemp, Log, TEXT("PlayFab Login Successful. Session Ticket: %s"), *Result.SessionTicket);
-	_sessionTicket = *Result.SessionTicket;
+	sessionTicket_ = *Result.SessionTicket;
 	
 	FGetAccountInfoRequest Request;
-	_clientAPI->GetAccountInfo(Request, 
+	clientAPI_->GetAccountInfo(Request, 
 		UPlayFabClientAPI::FGetAccountInfoDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoSuccess),
 		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoFailure));
 	UGameplayStatics::OpenLevel(this, FLevelNames::MainMenu);
@@ -133,7 +157,7 @@ void UGameInstance_Popcorn::LoginWithEmail(const FString& Email, const FString& 
 	Request.Email = Email;
 	Request.Password = Password;
 
-	_clientAPI->LoginWithEmailAddress(Request,
+	clientAPI_->LoginWithEmailAddress(Request,
 		PlayFab::UPlayFabClientAPI::FLoginWithEmailAddressDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnLoginSuccess),
 		PlayFab::FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnLoginFailure));
 }
@@ -149,10 +173,10 @@ void UGameInstance_Popcorn::RegisterUserWithEmail(const FString& Email, const FS
 void UGameInstance_Popcorn::OnRegistrationSuccess(const PlayFab::ClientModels::FRegisterPlayFabUserResult& Result)
 {
 	UE_LOG(LogTemp, Log, TEXT("Registration Success. Player ID: %s"), *Result.PlayFabId);
-	_sessionTicket = Result.SessionTicket;
+	sessionTicket_ = Result.SessionTicket;
 
 	FGetAccountInfoRequest Request;
-	_clientAPI->GetAccountInfo(Request,
+	clientAPI_->GetAccountInfo(Request,
 		UPlayFabClientAPI::FGetAccountInfoDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoSuccess),
 		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoFailure));
 	UGameplayStatics::OpenLevel(this, FLevelNames::MainMenu);
@@ -165,9 +189,9 @@ void UGameInstance_Popcorn::OnRegistrationFailure(const PlayFab::FPlayFabCppErro
 
 void UGameInstance_Popcorn::OnGetAccountInfoSuccess(const PlayFab::ClientModels::FGetAccountInfoResult& Result)
 {
-	_playerData.Username = Result.AccountInfo->Username;
-	_playerData.PlayerId = Result.AccountInfo->PlayFabId;
-	_playerData.SessionTicket = _sessionTicket;
+	playerData_.Username = Result.AccountInfo->Username;
+	playerData_.PlayerId = Result.AccountInfo->PlayFabId;
+	playerData_.SessionTicket = sessionTicket_;
 }
 
 void UGameInstance_Popcorn::OnGetAccountInfoFailure(const PlayFab::FPlayFabCppError& ErrorResult)
@@ -208,7 +232,7 @@ void UGameInstance_Popcorn::OnRetrievePlayFabUserDataSuccess(const FGetUserDataR
 
 		if (FJsonSerializer::Deserialize(Reader, JsonObject) && JsonObject)
 		{
-			_playerData.ActiveGameSessions.Empty();
+			playerData_.ActiveGameSessions.Empty();
 
 			TArray<TSharedPtr<FJsonValue>> SessionArray = JsonObject->GetArrayField(TEXT("ActiveGameSessions"));
 
@@ -218,7 +242,7 @@ void UGameInstance_Popcorn::OnRetrievePlayFabUserDataSuccess(const FGetUserDataR
 				if (SessionObject)
 				{
 					FString SessionId = SessionObject->GetStringField((TEXT("SessionId")));
-					_playerData.ActiveGameSessions.Add(SessionId);
+					playerData_.ActiveGameSessions.Add(SessionId);
 				}
 			}
 		}
@@ -248,7 +272,7 @@ void UGameInstance_Popcorn::ForgotPasswordHandler(const FText& Email)
 	UPlayFabRuntimeSettings* pfRuntimeSettings = GetMutableDefault<UPlayFabRuntimeSettings>();
 	Request.TitleId = pfRuntimeSettings->TitleId;
 
-	_clientAPI->SendAccountRecoveryEmail(Request, 
+	clientAPI_->SendAccountRecoveryEmail(Request, 
 	UPlayFabClientAPI::FSendAccountRecoveryEmailDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnAccountRecoveryRequestSuccess),
 	FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnAccountRecoveryRequestFailure));
 	
@@ -262,7 +286,7 @@ void UGameInstance_Popcorn::LoginUserHandler(const FText& Email, const FText& Pa
 	Request.Email = Email.ToString();
 	Request.Password = Password.ToString();
 
-	_clientAPI->LoginWithEmailAddress(Request, 
+	clientAPI_->LoginWithEmailAddress(Request, 
 	UPlayFabClientAPI::FLoginWithEmailAddressDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnLoginSuccess),
 	FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnLoginFailure));
 }
@@ -276,7 +300,7 @@ void UGameInstance_Popcorn::SignupUserHandler(const FText& Email, const FText& P
 	Request.Password = Password.ToString();
 	Request.Email = Email.ToString();
 
-	_clientAPI->RegisterPlayFabUser(Request, 
+	clientAPI_->RegisterPlayFabUser(Request, 
 	UPlayFabClientAPI::FRegisterPlayFabUserDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRegistrationSuccess),
 	FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnRegistrationFailure));
 
@@ -318,7 +342,7 @@ FString UGameInstance_Popcorn::SerializePlayerData()
 	Writer->WriteObjectStart();
 	Writer->WriteArrayStart(TEXT("ActiveGameSessions"));
 
-	for (const FString& SessionId : _playerData.ActiveGameSessions)
+	for (const FString& SessionId : playerData_.ActiveGameSessions)
 	{
 		Writer->WriteObjectStart();
 		Writer->WriteValue(TEXT("SessionId"), SessionId);

@@ -28,6 +28,8 @@ namespace PlayFab
 
 typedef TSharedPtr<class PlayFab::UPlayFabClientAPI> PlayFabClientPtr;
 struct FPC_PlayerData;
+class UPC_AudioManager;
+class UPC_LevelManagerSubsystem;
 
 UCLASS()
 class POPCORN_API UGameInstance_Popcorn : public UGameInstance
@@ -39,7 +41,7 @@ public:
 	virtual void Init() override;
 	virtual void Shutdown() override;
 	virtual void StartGameInstance() override;
-	FString GetTitleId() const { return _titleId; }
+	FString GetTitleId() const { return titleId_; }
 
 	//PlayFab
 	void InitializePlayFab();
@@ -96,12 +98,23 @@ public:
 
 
 	//Getters
-	FPC_PlayerData GetPlayerData() const { return _playerData; }
+	UFUNCTION(BlueprintCallable, Category = "Player Data")
+	FPC_PlayerData GetPlayerData() const { return playerData_; }
+
+	UFUNCTION(BlueprintCallable, Category = "Audio Manager")
+	UPC_AudioManager* GetAudioManager() const { return GetSubsystem<UPC_AudioManager>(); }
 
 private:
 	
-	PlayFabClientPtr _clientAPI = nullptr;
-	FString _sessionTicket;
-	FString _titleId = TEXT("FB15D");
-	FPC_PlayerData _playerData;
+	PlayFabClientPtr clientAPI_ = nullptr;
+	FString sessionTicket_;
+	FString titleId_ = TEXT("FB15D");
+	FPC_PlayerData playerData_;
+
+	UPROPERTY()
+	UPC_AudioManager* audioManager_;
+
+	UPROPERTY()
+	UPC_LevelManagerSubsystem* levelManager_;
+
 };

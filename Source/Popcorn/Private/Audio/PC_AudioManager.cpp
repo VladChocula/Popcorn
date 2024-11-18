@@ -6,12 +6,15 @@
 #include "Sound/SoundBase.h"
 #include "Engine/World.h"
 #include "Kismet/GameplayStatics.h"
+#include "GameInstance_Popcorn.h"
 
 void UPC_AudioManager::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
 
 	LoadAudioSettings();
+	UE_LOG(LogTemp, Log, TEXT("Audio Settings have been loaded"));
+	UE_LOG(LogTemp, Log, TEXT("Audio Subsystem Has been Initialized"));
 }
 
 void UPC_AudioManager::SetMusicVolume(float NewVolume)

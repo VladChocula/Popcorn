@@ -8,6 +8,7 @@
 class UPC_MainMenuSubWidget_POC;
 class UPC_MainMenu_GameSessionSlot_POC;
 class UPC_MainMenu_JoinSession_POC;
+class UTextBlock;
 
 /**
  * 
@@ -42,6 +43,9 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget), Category = "Join Session Widget")
 	UPC_MainMenu_JoinSession_POC* JoinSessionWidget;
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (BindWidget), Category = "Main Menu Screen")
+	UTextBlock* UsernameTextBlock;
 
 	UFUNCTION(BlueprintCallable, Category = "Main Menu Screen")
 	void ShowCreateSessionWidget(UWidgetSwitcher* GameSessionSlot);

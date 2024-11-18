@@ -4,31 +4,25 @@
 #include "Levels/PC_LevelManagerSubsystem.h"
 #include "Audio/PC_AudioManager.h"
 #include "Kismet/GameplayStatics.h"
-#include "Utils/MusicFileNames.h"
+#include "Utils/LevelNames.h"
+#include "GameInstance_Popcorn.h"
 
 void UPC_LevelManagerSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
 
-	//FWorldDelegates::OnPostLoadMapWithWorld.AddUObject(this, &UPC_LevelManagerSubsystem::OnLevelTransition);
+	pcGameInstance_ = Cast<UGameInstance_Popcorn>(GetGameInstance());
+
+	pcGameInstance_->OnLevelTransition.AddDynamic(this, &UPC_LevelManagerSubsystem::OnLevelChanged);
+
+	UE_LOG(LogTemp, Log, TEXT("LevelManager Subsystem Initialized"));
 }
 
-void UPC_LevelManagerSubsystem::OnLevelTransition(const FName& NewLevel)
+void UPC_LevelManagerSubsystem::OnLevelChanged(const FName& NewLevel, const FName& CurrentLevel)
 {
-	SetBackgroundMusicForLevel(NewLevel);
-}
-
-void UPC_LevelManagerSubsystem::SetBackgroundMusicForLevel(const FName& NewLevel)
-{
-	UPC_AudioManager* AudioManager = GetSubsystem<UPC_AudioManager>();
-
-	if (AudioManager)
-	{
-		USoundBase* BackgroundMusic = nullptr;
-		
-		if (NewLevel == "MainMenu")
-		{
-			BackgroundMusic = Cast<USoundBase>(StaticLoadObject(USoundBase::StaticClass(), nullptr, FMusicFileNames::MainMenu));
-		}
-	}
+	UE_LOG(LogTemp, Warning, TEXT("Pre-Level Load PlayerData\n Username: %s"), *pcGameInstance_->GetPlayerData().Username);
+	UGameplayStatics::OpenLevel(pcGameInstance_, NewLevel);
+	UE_LOG(LogTemp, Warning, TEXT("Post-Level Load PlayerData\n Username: %s"), *pcGameInstance_->GetPlayerData().Username);
+	pcGameInstance_->SetCurrentLevel(NewLevel);
+	UE_LOG(LogTemp, Warning, TEXT("Post-Level Load PlayerData\n Username: %s"), *pcGameInstance_->GetPlayerData().Username);
 }

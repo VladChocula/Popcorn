@@ -6,6 +6,9 @@
 #include "UI/Main Menu/PC_MainMenu_GameSessionSlot_POC.h"
 #include "Components/ScaleBox.h"
 #include "Components/WidgetSwitcher.h"
+#include "Components/Textblock.h"
+#include "Utils/PC_PlayerData.h"
+#include "GameInstance_Popcorn.h"
 
 
 void UPC_MainMenuScreen_POC::ShowCreateSessionWidget(UWidgetSwitcher* GameSessionSlot)
@@ -76,4 +79,13 @@ void UPC_MainMenuScreen_POC::NativePreConstruct()
 	Super::NativePreConstruct();
 
 	InitializeSessionSlots();
+
+	UGameInstance_Popcorn* GI = Cast<UGameInstance_Popcorn>(GetGameInstance());
+
+	if (GI)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("MainMenu Screen PlayerData:\n Username: %s"), *GI->GetPlayerData().Username);
+		UsernameTextBlock->SetText(FText::FromString(GI->GetPlayerData().Username));
+		UE_LOG(LogTemp, Warning, TEXT("Username in MainMenu: %s"), *UsernameTextBlock->GetText().ToString());
+	}
 }

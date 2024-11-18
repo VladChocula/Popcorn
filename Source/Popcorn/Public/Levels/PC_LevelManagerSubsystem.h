@@ -9,6 +9,8 @@
 /**
  * 
  */
+
+class UGameInstance_Popcorn;
 UCLASS()
 class POPCORN_API UPC_LevelManagerSubsystem : public UGameInstanceSubsystem
 {
@@ -19,9 +21,8 @@ public:
 	void Initialize(FSubsystemCollectionBase& Collection) override;
 
 	UFUNCTION()
-	void OnLevelTransition(const FName& NewLevel);
-
-	UFUNCTION(BlueprintCallable, Category = "Level Transition")
-	void SetBackgroundMusicForLevel(const FName& NewLevel);
+	void OnLevelChanged(const FName& NewLevel, const FName& CurrentLevel);
 	
+private:
+	UGameInstance_Popcorn* pcGameInstance_;
 };

@@ -8,6 +8,7 @@
 
 
 class UAudioComponent;
+class UGameInstance_Popcorn;
 /**
  * 
  */
@@ -35,8 +36,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Audio Manager")
 	void PlayBackgroundMusic(USoundBase* BackgroundMusicTrack);
 
-	
-
 	UFUNCTION(BlueprintCallable, Category = "Audio Manager")
 	UAudioComponent* CreateMusicComponent();
 
@@ -49,6 +48,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Audio Manager")
 	void LoadAudioSettings();
 
+	void SetGameInstanceRef(UGameInstance_Popcorn* GI) { pcGameInstance_ = GI;}
+
 private:
 
 	UPROPERTY()
@@ -59,5 +60,8 @@ private:
 
 	UPROPERTY()
 	UAudioComponent* musicAudioComponent_;
+
+	UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = "true"), Category = "Audio Manager")
+	UGameInstance_Popcorn* pcGameInstance_;
 	
 };

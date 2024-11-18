@@ -41,6 +41,7 @@ void UGameInstance_Popcorn::Init()
 	if (audioManager_)
 	{
 		UE_LOG(LogTemp, Log, TEXT("AudioManager has been set properly"));
+		audioManager_->SetGameInstanceRef(this);
 	}
 	else
 	{
@@ -73,8 +74,7 @@ void UGameInstance_Popcorn::StartGameInstance()
 {
 	Super::StartGameInstance();
 
-	UE_LOG(LogTemp, Log, TEXT("Load into PlayerLogin"));
-	UGameplayStatics::OpenLevel(this, FLevelNames::PlayerLogin);
+	OnLevelTransition.Broadcast(FLevelNames::PlayerLogin, FLevelNames::PlayerLogin);
 }
 
 void UGameInstance_Popcorn::InitializePlayFab()
@@ -141,9 +141,11 @@ void UGameInstance_Popcorn::OnLoginSuccess(const PlayFab::ClientModels::FLoginRe
 	clientAPI_->GetAccountInfo(Request, 
 		UPlayFabClientAPI::FGetAccountInfoDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoSuccess),
 		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoFailure));
-	UGameplayStatics::OpenLevel(this, FLevelNames::MainMenu);
 
+	UE_LOG(LogTemp, Warning, TEXT("OnLoginSuccess, Post-GetAccountInfoSuccess PlayerData\nUsername: %s"), *playerData_.Username);
 	RetrievePlayerDataInPlayFab();
+	UE_LOG(LogTemp, Warning, TEXT("Post-Login Success PlayerData\nUsername: %s"), *playerData_.Username);
+	OnLevelTransition.Broadcast(FLevelNames::MainMenu, currentLevel_);
 }
 
 void UGameInstance_Popcorn::OnLoginFailure(const PlayFab::FPlayFabCppError& ErrorResult)
@@ -179,7 +181,8 @@ void UGameInstance_Popcorn::OnRegistrationSuccess(const PlayFab::ClientModels::F
 	clientAPI_->GetAccountInfo(Request,
 		UPlayFabClientAPI::FGetAccountInfoDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoSuccess),
 		FPlayFabErrorDelegate::CreateUObject(this, &UGameInstance_Popcorn::OnGetAccountInfoFailure));
-	UGameplayStatics::OpenLevel(this, FLevelNames::MainMenu);
+	RetrievePlayerDataInPlayFab();
+	OnLevelTransition.Broadcast(FLevelNames::MainMenu, currentLevel_);
 }
 
 void UGameInstance_Popcorn::OnRegistrationFailure(const PlayFab::FPlayFabCppError& ErrorResult)
@@ -192,6 +195,7 @@ void UGameInstance_Popcorn::OnGetAccountInfoSuccess(const PlayFab::ClientModels:
 	playerData_.Username = Result.AccountInfo->Username;
 	playerData_.PlayerId = Result.AccountInfo->PlayFabId;
 	playerData_.SessionTicket = sessionTicket_;
+	UE_LOG(LogTemp, Warning, TEXT("OnGetAccountInfoSuccess - PlayerData\nUsername: %s"), *playerData_.Username);
 }
 
 void UGameInstance_Popcorn::OnGetAccountInfoFailure(const PlayFab::FPlayFabCppError& ErrorResult)

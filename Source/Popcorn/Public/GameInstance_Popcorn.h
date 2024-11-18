@@ -31,12 +31,17 @@ struct FPC_PlayerData;
 class UPC_AudioManager;
 class UPC_LevelManagerSubsystem;
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnLevelTransition, const FName&, NewLevel, const FName&, CurrentLevel);
+
 UCLASS()
 class POPCORN_API UGameInstance_Popcorn : public UGameInstance
 {
 	GENERATED_BODY()
 
 public:
+
+	//Delegates
+	FOnLevelTransition OnLevelTransition;
 	
 	virtual void Init() override;
 	virtual void Shutdown() override;
@@ -95,6 +100,7 @@ public:
 	FString GenerateGameSessionId();
 	
 	//Setters
+	void SetCurrentLevel(const FName NewCurrentLevel) { currentLevel_ = NewCurrentLevel; }
 
 
 	//Getters
@@ -104,12 +110,16 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Audio Manager")
 	UPC_AudioManager* GetAudioManager() const { return GetSubsystem<UPC_AudioManager>(); }
 
+	FName GetCurrentLevel() const { return currentLevel_; }
+
 private:
 	
 	PlayFabClientPtr clientAPI_ = nullptr;
 	FString sessionTicket_;
 	FString titleId_ = TEXT("FB15D");
 	FPC_PlayerData playerData_;
+	FName currentLevel_;
+
 
 	UPROPERTY()
 	UPC_AudioManager* audioManager_;

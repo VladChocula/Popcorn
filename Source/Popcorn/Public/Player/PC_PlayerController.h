@@ -6,6 +6,7 @@
 #include "GameFramework/PlayerController.h"
 #include "PC_PlayerController.generated.h"
 
+class UInputMappingContext;
 /**
  * 
  */
@@ -14,4 +15,14 @@ class POPCORN_API APC_PlayerController : public APlayerController
 {
 	GENERATED_BODY()
 	
+public:
+
+	UFUNCTION(BlueprintCallable, Category = "Input")
+	void AddInputMappingContext(UInputMappingContext* MappingContext, int32 Priority = 0);
+
+	UFUNCTION(BlueprintCallable, Category = "Input")
+	void RemoveInputMappingContext(UInputMappingContext* MappingContext);
+
+protected:
+	virtual void BeginPlay() override;
 };

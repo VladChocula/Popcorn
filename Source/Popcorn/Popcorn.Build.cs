@@ -19,7 +19,8 @@ public class Popcorn : ModuleRules
             "PlayFabCommon", 
             "PlayFabCpp",
             "Json",
-            "JsonUtilities"});
+            "JsonUtilities",
+            "NetCore"});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

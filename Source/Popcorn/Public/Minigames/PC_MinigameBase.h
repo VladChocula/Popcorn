@@ -8,6 +8,7 @@
 
 class APC_GM_Session;
 class APC_PlayerController;
+class UInputMappingContext;
 /**
  * 
  */
@@ -26,11 +27,24 @@ public:
 	// Replication setup
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-	UFUNCTION(BlueprintCallable)
-	virtual void AdjustForPlayerCount(int32 InPlayerCount);
-
 	UFUNCTION()
 	void OnRep_PlayerCount();
+
+	virtual void BeginPlay() override;
+
+	virtual void HandleInput(APC_PlayerController* PlayerController, const FString& InputAction);
+
+	UFUNCTION(BlueprintCallable, Category = "MiniGame")
+	virtual void OnMiniGameStart();
+
+	UFUNCTION(BlueprintCallable, Category = "MiniGame")
+	virtual void OnMiniGameEnd();
+
+	UFUNCTION(BlueprintCallable, Category = "MiniGame")
+	virtual void TickMiniGame(float DeltaTime);
+
+	UFUNCTION(BlueprintCallable)
+	virtual void AdjustForPlayerCount(int32 InPlayerCount);
 
 	UFUNCTION(BlueprintCallable, Category = "Debug")
 	bool IsSinglePlayerMode() const;
@@ -49,7 +63,15 @@ public:
 
 
 protected:
-	virtual void BeginPlay() override;
+
+	UPROPERTY()
+	TArray<APC_PlayerController*> ActivePlayerControllers;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	TObjectPtr<UInputMappingContext> MiniGameInputMappingContext;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Input")
+	int32 IMC_InputPriority = 1;
 
 private:
 	APC_GM_Session* OwnerGameSession;

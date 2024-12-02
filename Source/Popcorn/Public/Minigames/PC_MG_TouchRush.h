@@ -6,7 +6,7 @@
 #include "Minigames/PC_MinigameBase.h"
 #include "PC_MG_TouchRush.generated.h"
 
-class UInputMappingContext;
+class UInputAction;
 /**
  * 
  */
@@ -15,13 +15,24 @@ class POPCORN_API APC_MG_TouchRush : public APC_MinigameBase
 {
 	GENERATED_BODY()
 
-protected:
+public:
+
+	UFUNCTION(BlueprintCallable, Category = "Input")
+	virtual void HandleInput(APC_PlayerController* PlayerController, const FString& InputAction) override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
-	UInputMappingContext* TouchRushMappingContext;
-	
-	virtual void BeginPlay() override;
+	UInputAction* TapAction;
 
-private:
-	void SetupPlayerInput();
+	virtual void OnMiniGameStart() override;
+	virtual void OnMiniGameEnd() override;
+
+protected:
+
+	TMap<APC_PlayerController*, int32> TapCounts;
+
+	FTimerHandle TimerHandle;
+
+	virtual void BeginPlay() override;
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+
 };

@@ -26,6 +26,9 @@ public:
 	virtual void OnMiniGameStart() override;
 	virtual void OnMiniGameEnd() override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "TouchRush")
+	float TouchRushGameLength = 10.f;
+
 protected:
 
 	TMap<APC_PlayerController*, int32> TapCounts;
